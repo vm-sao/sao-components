@@ -1,0 +1,279 @@
+.sao-badge {
+  &-dot {
+    --sao-badge-size: 6px;
+    --sao-badge-background-color: transparent;
+    --sao-badge-shadow-width: 2px;
+    --sao-badge-shadow-color: transparent;
+    width: var(--sao-badge-size);
+    height: var(--sao-badge-size);
+    border-radius: 9999px;
+    background-color: var(--sao-badge-background-color);
+    box-shadow: 0 0 0 var(--sao-badge-shadow-width)
+      var(--sao-badge-shadow-color);
+
+    &--pink {
+      --sao-badge-background-color: var(--sao-palette-color-global-pink-400);
+    }
+
+    &--red {
+      --sao-badge-background-color: var(--sao-palette-color-branding-error-600);
+    }
+
+    &--yellow {
+      --sao-badge-background-color: var(--sao-palette-color-global-yellow-300);
+    }
+
+    &--orange {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-warning-600
+      );
+    }
+
+    &--cyan {
+      --sao-badge-background-color: var(--sao-palette-color-global-cyan-400);
+    }
+
+    &--green {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-success-600
+      );
+    }
+
+    &--blue {
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-500);
+    }
+
+    &--purple {
+      --sao-badge-background-color: var(--sao-palette-color-global-purple-500);
+    }
+
+    &--lime {
+      --sao-badge-background-color: var(--sao-palette-color-global-lime-400);
+    }
+
+    &--dark-pink {
+      --sao-badge-background-color: var(--sao-palette-color-global-pink-600);
+    }
+
+    &--gray {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-foreground-400
+      );
+    }
+
+    &--processing {
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-500);
+    }
+
+    &--processing-animating {
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-500);
+      --sao-badge-shadow-color: rgba(
+        var(--sao-palette-color-global-blue-500-rgb),
+        0.24
+      );
+    }
+  }
+
+  &-status {
+    --sao-badge-background-color: var(
+      --sao-palette-color-branding-foreground-400
+    );
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sao-palette-color-branding-foreground-50);
+    font-family: 'Work Sans', serif;
+    font-size: var(--sao-typography-b4-font-size);
+    line-height: var(--sao-typography-b4-line-height);
+    font-weight: 400;
+    width: max-content;
+
+    &::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background-color: var(--sao-badge-background-color);
+    }
+
+    &--success {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-success-600
+      );
+    }
+
+    &--error {
+      --sao-badge-background-color: var(--sao-palette-color-branding-error-600);
+    }
+
+    &--warning {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-warning-600
+      );
+    }
+
+    &--processing {
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-500);
+    }
+
+    &--default {
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-foreground-400
+      );
+    }
+  }
+
+  &-count {
+    --sao-badge-padding-y: 0;
+    --sao-badge-padding-x: 6px;
+    padding: var(--sao-badge-padding-y) var(--sao-badge-padding-x);
+    border-radius: 9999px;
+    font-family: 'Work Sans', serif;
+    font-size: var(--sao-typography-b5-font-size);
+    line-height: var(--sao-typography-b5-line-height);
+    font-weight: 400;
+    color: var(--sao-badge-text-color);
+    background-color: var(--sao-badge-background-color);
+    box-shadow: 0 0 4px 2px rgba(var(--sao-badge-background-color), 0.32);
+    width: max-content;
+
+    &--small {
+      --sao-badge-padding-y: 0;
+      --sao-badge-padding-x: 6px;
+    }
+
+    &--medium {
+      --sao-badge-padding-y: 1px;
+      --sao-badge-padding-x: 8px;
+    }
+
+    &--red {
+      --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+      --sao-badge-background-color: var(--sao-palette-color-global-pink-500);
+    }
+
+    &--gray {
+      --sao-badge-text-color: var(--sao-palette-color-branding-foreground-800);
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-foreground-50
+      );
+    }
+
+    &--green {
+      --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+      --sao-badge-background-color: var(
+        --sao-palette-color-branding-success-700
+      );
+    }
+
+    &--blue-invert {
+      --sao-badge-text-color: var(--sao-palette-color-global-blue-500);
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-50);
+    }
+
+    &--blue {
+      --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+      --sao-badge-background-color: var(--sao-palette-color-global-blue-500);
+    }
+  }
+
+  &-text {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: 'Work Sans', serif;
+    font-weight: 500;
+    color: var(--sao-badge-text-color);
+    background-color: var(--sao-badge-background-color);
+    width: max-content;
+
+    &--xsmall {
+      font-size: var(--sao-typography-b5-font-size);
+      line-height: var(--sao-typography-b5-line-height);
+    }
+
+    &--small {
+      font-size: var(--sao-typography-b4-font-size);
+      line-height: var(--sao-typography-b4-line-height);
+    }
+
+    &--transparent {
+      &--gray {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-foreground-o24
+        );
+      }
+      &--blue {
+        --sao-badge-text-color: var(--sao-palette-color-global-blue-400);
+        --sao-badge-background-color: var(--sao-palette-color-global-blue-24);
+      }
+      &--purple {
+        --sao-badge-text-color: var(--sao-palette-color-global-purple-400);
+        --sao-badge-background-color: var(--sao-palette-color-global-purple-24);
+      }
+      &--error {
+        --sao-badge-text-color: var(--sao-palette-color-branding-error-500);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-error-o24
+        );
+      }
+      &--success {
+        --sao-badge-text-color: var(--sao-palette-color-branding-success-500);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-success-o24
+        );
+      }
+      &--warning {
+        --sao-badge-text-color: var(--sao-palette-color-branding-warning-500);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-warning-o24
+        );
+      }
+      &--cyan {
+        --sao-badge-text-color: var(--sao-palette-color-global-cyan-400);
+        --sao-badge-background-color: var(--sao-palette-color-global-cyan-24);
+      }
+    }
+
+    &--solid {
+      &--gray {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-foreground-700
+        );
+      }
+      &--blue {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(--sao-palette-color-global-blue-700);
+      }
+      &--purple {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-global-purple-700
+        );
+      }
+      &--error {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-error-700
+        );
+      }
+      &--success {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-success-700
+        );
+      }
+      &--warning {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(
+          --sao-palette-color-branding-warning-600
+        );
+      }
+      &--cyan {
+        --sao-badge-text-color: var(--sao-palette-color-branding-foreground-50);
+        --sao-badge-background-color: var(--sao-palette-color-global-cyan-500);
+      }
+    }
+  }
+}

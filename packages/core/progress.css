@@ -1,0 +1,49 @@
+.sao-progress-bar {
+  --sao-progress-bar-percentage: 0;
+  display: inline-flex;
+  row-gap: 12px;
+  column-gap: 8px;
+  width: 100%;
+  color: var(--sao-palette-color-branding-foreground-50);
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  font-weight: 500;
+}
+.sao-progress-bar--small {
+  --sao-progress-bar-height: 4px;
+}
+.sao-progress-bar--default {
+  --sao-progress-bar-height: 8px;
+}
+.sao-progress-bar--horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+.sao-progress-bar--vertical {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.sao-progress-bar > :first-child {
+  flex: 1 1 0;
+  height: var(--sao-progress-bar-height);
+  border-radius: 100px;
+  position: relative;
+}
+.sao-progress-bar > :first-child::before,
+.sao-progress-bar > :first-child::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: inherit;
+}
+.sao-progress-bar > :first-child::before {
+  width: 100%;
+  background-color: var(--sao-palette-color-branding-background-800);
+}
+.sao-progress-bar > :first-child::after {
+  width: var(--sao-progress-bar-percentage);
+  background-color: var(--sao-palette-color-branding-primary-500);
+}

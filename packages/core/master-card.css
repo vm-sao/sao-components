@@ -1,0 +1,214 @@
+.sao-master-card {
+  width: 100%;
+  max-width: var(--sao-master-card-max-width);
+  padding: var(--sao-master-card-padding);
+  border-radius: var(--sao-master-card-border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sao-master-card-gap);
+  position: relative;
+}
+.sao-master-card--large {
+  --sao-master-card-border-radius: 20px;
+  --sao-master-card-padding: 24px;
+  --sao-master-card-max-width: 335px;
+  --sao-master-card-header-height: 30px;
+  --sao-master-card-header-image-height: 24px;
+  --sao-master-card-header-circle-size: 30px;
+  --sao-master-card-gap: 63px;
+  --sao-master-card-content-gap: 6px;
+  --sao-master-card-content-label-width: 160px;
+  --sao-master-card-content-display: inline-block;
+  --sao-master-card-content-card-holder-font-size: var(
+    --sao-typography-b4-font-size
+  );
+  --sao-master-card-content-card-holder-line-height: var(
+    --sao-typography-b4-line-height
+  );
+  --sao-master-card-content-card-number-font-size: var(
+    --sao-typography-b5-font-size
+  );
+  --sao-master-card-content-card-number-line-height: var(
+    --sao-typography-b5-line-height
+  );
+  --sao-master-card-background-image: var(
+    --sao-master-card-background-image-large
+  );
+}
+.sao-master-card--small {
+  --sao-master-card-border-radius: 20px;
+  --sao-master-card-padding: 16px;
+  --sao-master-card-max-width: 145px;
+  --sao-master-card-header-height: 16px;
+  --sao-master-card-header-image-height: 16px;
+  --sao-master-card-header-circle-size: 16px;
+  --sao-master-card-gap: 85px;
+  --sao-master-card-content-gap: 8px;
+  --sao-master-card-content-label-width: 100%;
+  --sao-master-card-content-display: none;
+  --sao-master-card-content-card-holder-font-size: var(
+    --sao-typography-b5-font-size
+  );
+  --sao-master-card-content-card-holder-line-height: var(
+    --sao-typography-b5-line-height
+  );
+  --sao-master-card-content-card-number-font-size: var(
+    --sao-typography-b5-font-size
+  );
+  --sao-master-card-content-card-number-line-height: var(
+    --sao-typography-b5-line-height
+  );
+  --sao-master-card-background-image: var(
+    --sao-master-card-background-image-small
+  );
+}
+.sao-master-card--purple {
+  --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20234)"/><g filter="url(%23filter0_b_18_20234)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M0 23.8296V164.904C0 175.949 8.95431 184.904 20 184.904H301.466C313.251 144.825 276.414 98.617 129.93 75.6135C49.5228 62.9865 2.87004 49.7808 0 23.8296ZM0.190598 17.1312C0.290924 16.4077 0.429951 15.6966 0.60552 15C0.439363 15.7191 0.301108 16.4294 0.190598 17.1312Z" fill="white" fill-opacity="0.08"/><defs><filter id="filter0_b_18_20234" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20234"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20234" result="shape"/></filter><linearGradient id="paint0_linear_18_20234" x1="-48" y1="-20" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.155325" stop-color="%233431C2"/><stop offset="0.91738" stop-color="%23CD2525"/></linearGradient></defs></svg>');
+  --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20269)"/><g filter="url(%23filter0_b_18_20269)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M-95 23.8296V164.904C-95 175.949 -86.0457 184.904 -75 184.904H206.466C218.251 144.825 181.414 98.617 34.9303 75.6135C-45.4772 62.9865 -92.13 49.7808 -95 23.8296ZM-94.8094 17.1312C-94.7091 16.4077 -94.57 15.6966 -94.3945 15C-94.5606 15.7191 -94.6989 16.4294 -94.8094 17.1312Z" fill="white" fill-opacity="0.08"/><defs><filter id="filter0_b_18_20269" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20269"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20269" result="shape"/></filter><linearGradient id="paint0_linear_18_20269" x1="-143" y1="-20" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.155325" stop-color="%233431C2"/><stop offset="0.91738" stop-color="%23CD2525"/></linearGradient></defs></svg>');
+}
+.sao-master-card--ocean-blue {
+  --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20196)"/><g filter="url(%23filter0_b_18_20196)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M133.862 57.8437C147.776 90.2916 161.144 121.467 222.558 119.792C278.911 118.255 314.654 123.935 335 133.758V165C335 176.046 326.046 185 315 185H20C8.95431 185 0 176.046 0 165V20C0 8.95427 8.95431 -3.05176e-05 20 -3.05176e-05L89.7935 -3.05176e-05C114.777 13.3373 124.444 35.882 133.862 57.8437Z" fill="white" fill-opacity="0.08"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.1863 0.196356C7.47288 1.56399 0 9.90929 0 20V165C0 176.046 8.95431 185 20 185H315C322.656 185 329.308 180.698 332.669 174.379C340.614 146.551 310.583 123.134 205.5 126C146.857 127.599 134.092 97.8309 120.806 66.847C106.437 33.3395 91.4595 -1.58952 17.1863 0.196356Z" fill="white" fill-opacity="0.08"/><defs><filter id="filter0_b_18_20196" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20196"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20196" result="shape"/></filter><linearGradient id="paint0_linear_18_20196" x1="-48" y1="-20" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%2352B6FE"/><stop offset="0.878935" stop-color="%236154FE"/></linearGradient></defs></svg>');
+  --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20302)"/><g filter="url(%23filter0_b_18_20302)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M38.8616 57.8437C52.7756 90.2916 66.1437 121.467 127.558 119.792C183.911 118.255 219.654 123.935 240 133.758V165C240 176.046 231.046 185 220 185H-75C-86.0457 185 -95 176.046 -95 165V20C-95 8.95427 -86.0457 -3.05176e-05 -75 -3.05176e-05L-5.2065 -3.05176e-05C19.7769 13.3373 29.4443 35.882 38.8616 57.8437Z" fill="white" fill-opacity="0.08"/><path fill-rule="evenodd" clip-rule="evenodd" d="M-77.8137 0.196356C-87.5271 1.56399 -95 9.90929 -95 20V165C-95 176.046 -86.0457 185 -75 185H220C227.656 185 234.308 180.698 237.669 174.379C245.614 146.551 215.583 123.134 110.5 126C51.8568 127.599 39.0918 97.8309 25.8057 66.847C11.4373 33.3395 -3.54054 -1.58952 -77.8137 0.196356Z" fill="white" fill-opacity="0.08"/><defs><filter id="filter0_b_18_20302" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20302"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20302" result="shape"/></filter><linearGradient id="paint0_linear_18_20302" x1="-143" y1="-20" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%2352B6FE"/><stop offset="0.878935" stop-color="%236154FE"/></linearGradient></defs></svg>');
+}
+.sao-master-card--future-blue {
+  --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="47.0001" cy="51.4999" rx="66" ry="65.5" fill="%2303045E"/><circle cx="86.5001" cy="151.5" r="74.5" fill="%2390E0EF"/><circle cx="270.5" cy="25.4999" r="91.5" fill="%2300B4D8"/><circle cx="188.5" cy="116.5" r="84.5" fill="%230077B6"/><circle cx="277.5" cy="167.5" r="84.5" fill="%23CAF0F8"/></svg>');
+  --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="-47.9999" cy="51.4999" rx="66" ry="65.5" fill="%2303045E"/><circle cx="-8.49994" cy="151.5" r="74.5" fill="%2390E0EF"/><circle cx="175.5" cy="25.4999" r="91.5" fill="%2300B4D8"/><circle cx="93.5001" cy="116.5" r="84.5" fill="%230077B6"/><circle cx="182.5" cy="167.5" r="84.5" fill="%23CAF0F8"/></svg>');
+}
+.sao-master-card--future-blue::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    136.38deg,
+    rgba(255, 255, 255, 0.36) -15.49%,
+    rgba(255, 255, 255, 0.1) 109.75%
+  );
+  backdrop-filter: blur(53.5px);
+  border-radius: var(--sao-master-card-border-radius);
+}
+.sao-master-card--dark-green {
+  --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20478)"/><g filter="url(%23filter0_b_18_20478)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M257.364 185C264.87 166.301 269 145.883 269 124.5C269 74.5193 246.435 29.8088 210.938 0L20 0C8.95431 0 0 8.9543 0 20V165C0 176.046 8.95431 185 20 185H257.364Z" fill="white" fill-opacity="0.06"/><path fill-rule="evenodd" clip-rule="evenodd" d="M239.635 185C245.699 167.964 249 149.617 249 130.5C249 77.0432 223.188 29.6152 183.347 0L20 0C8.95431 0 0 8.9543 0 20V165C0 176.046 8.95431 185 20 185H239.635Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20478" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20478"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20478" result="shape"/></filter><linearGradient id="paint0_linear_18_20478" x1="-85" y1="-38.5" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.0364583"/><stop offset="0.878935" stop-color="%230FB8B8"/></linearGradient></defs></svg>');
+  --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20374)"/><g filter="url(%23filter0_b_18_20374)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M162.364 185C169.87 166.301 174 145.883 174 124.5C174 74.5193 151.435 29.8088 115.938 0L-75 0C-86.0457 0 -95 8.9543 -95 20V165C-95 176.046 -86.0457 185 -75 185H162.364Z" fill="white" fill-opacity="0.06"/><path fill-rule="evenodd" clip-rule="evenodd" d="M144.635 185C150.699 167.964 154 149.617 154 130.5C154 77.0432 128.188 29.6152 88.3468 0L-75 0C-86.0457 0 -95 8.9543 -95 20V165C-95 176.046 -86.0457 185 -75 185H144.635Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20374" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20374"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20374" result="shape"/></filter><linearGradient id="paint0_linear_18_20374" x1="-180" y1="-38.5" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.0364583"/><stop offset="0.878935" stop-color="%230FB8B8"/></linearGradient></defs></svg>');
+}
+.sao-master-card--charcoal {
+  --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20444)"/><g filter="url(%23filter0_b_18_20444)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M335 110.883V165C335 176.046 326.046 185 315 185H52.0508C66.7183 110.33 132.531 54 211.5 54C260.925 54 305.196 76.0655 335 110.883Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20444" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20444"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20444" result="shape"/></filter><linearGradient id="paint0_linear_18_20444" x1="-48" y1="-20" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%23042843"/><stop offset="0.878935" stop-color="%23726E9E"/></linearGradient></defs></svg>');
+  --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20411)"/><g filter="url(%23filter0_b_18_20411)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M240 110.883V165C240 176.046 231.046 185 220 185H-42.9492C-28.2817 110.33 37.5309 54 116.5 54C165.925 54 210.196 76.0655 240 110.883Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20411" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20411"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20411" result="shape"/></filter><linearGradient id="paint0_linear_18_20411" x1="-143" y1="-20" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%23042843"/><stop offset="0.878935" stop-color="%23726E9E"/></linearGradient></defs></svg>');
+}
+.sao-master-card > header {
+  position: relative;
+  height: var(--sao-master-card-header-height);
+  width: 100%;
+  z-index: 1;
+}
+.sao-master-card > header > img {
+  height: var(--sao-master-card-header-image-height);
+  width: calc(var(--sao-master-card-header-image-height) * 2.6);
+  object-fit: cover;
+}
+.sao-master-card > header::after,
+.sao-master-card > header::before {
+  content: '';
+  position: absolute;
+  width: var(--sao-master-card-header-circle-size);
+  height: var(--sao-master-card-header-circle-size);
+  top: 0;
+  border-radius: 9999px;
+}
+.sao-master-card > header::after {
+  right: 0;
+  background-color: rgba(0, 1, 0);
+}
+.sao-master-card > header::before {
+  right: calc(var(--sao-master-card-header-circle-size) * 0.6);
+  background-color: rgba(0, 1, 0);
+}
+.sao-master-card > main {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+.sao-master-card > main > aside {
+  display: flex;
+  align-items: end;
+  overflow-x: hidden;
+}
+.sao-master-card > main > aside > label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sao-master-card-content-gap);
+  width: var(--sao-master-card-content-label-width);
+}
+.sao-master-card > main > aside > label h6 {
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-master-card-content-card-holder-font-size);
+  line-height: var(--sao-master-card-content-card-holder-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  margin: 0;
+}
+.sao-master-card > main > aside > label span {
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-master-card-content-card-number-font-size);
+  line-height: var(--sao-master-card-content-card-number-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  margin: 0;
+}
+.sao-master-card > main > aside > span {
+  display: var(--sao-master-card-content-display);
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-master-card-content-card-number-font-size);
+  line-height: var(--sao-master-card-content-card-number-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  margin: 0;
+}
+.sao-master-card > main > i {
+  display: var(--sao-master-card-content-display);
+  --sao-icon-size: 16px;
+  --sao-icon-color: var(--sao-palette-color-branding-foreground-100);
+}
+.sao-master-card > main::after {
+  content: '';
+  position: absolute;
+  transform: rotate(90deg);
+  left: 0;
+  top: -43px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-mask-image: var(--sao-icon-filtered-notification-wifi);
+  mask-image: var(--sao-icon-filtered-notification-wifi);
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: rgba(0, 1, 0);
+}
+.sao-master-card > main::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: -43px;
+  width: 24px;
+  height: 16px;
+  background-image: url('data:image/svg+xml,<svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="16" rx="3" fill="white" fill-opacity="0.5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.0689 3.40336C13.1045 1.89114 10.8959 1.89038 9.93143 3.4026V3.4026C9.55128 3.99867 9.4495 4.72908 9.57386 5.42503C9.77017 6.52363 9.96323 8.30854 9.61428 10.0758C9.47917 10.7601 9.53005 11.4823 9.87405 12.0891L9.90839 12.1497C10.8295 13.7744 13.1704 13.7744 14.0915 12.1497V12.1497C14.4547 11.509 14.5042 10.7345 14.3707 10.0102C14.1695 8.91865 14.0287 7.0792 14.5796 4.69814C14.6346 4.46029 14.6013 4.23814 14.47 4.03231C14.3664 3.86983 14.2278 3.65251 14.0689 3.40336Z" stroke="white" stroke-opacity="0.5" stroke-width="1.3" stroke-linejoin="bevel"/><path d="M0 4.53265H9.33333" stroke="white" stroke-opacity="0.5" stroke-width="1.3" stroke-linejoin="bevel"/><path d="M14.3997 4.53265H23.9997" stroke="white" stroke-opacity="0.5" stroke-width="1.3" stroke-linejoin="bevel"/><path d="M0 10.9323H9.33333" stroke="white" stroke-opacity="0.5" stroke-width="1.3" stroke-linejoin="bevel"/><path d="M14.3997 10.9323H23.9997" stroke="white" stroke-opacity="0.5" stroke-width="1.3" stroke-linejoin="bevel"/></svg>');
+}
+.sao-master-card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: var(--sao-master-card-background-image);
+  border-radius: var(--sao-master-card-border-radius);
+}

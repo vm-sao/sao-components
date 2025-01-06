@@ -1,0 +1,62 @@
+.sao-progress {
+  &-bar {
+    --sao-progress-bar-percentage: 0;
+    display: inline-flex;
+    row-gap: 12px;
+    column-gap: 8px;
+    width: 100%;
+    color: var(--sao-palette-color-branding-foreground-50);
+    font-family: 'Work Sans', serif;
+    font-size: var(--sao-typography-b4-font-size);
+    line-height: var(--sao-typography-b4-line-height);
+    font-weight: 500;
+
+    &--small {
+      --sao-progress-bar-height: 4px;
+    }
+
+    &--default {
+      --sao-progress-bar-height: 8px;
+    }
+
+    &--horizontal {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &--vertical {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    > :first-child {
+      flex: 1 1 0;
+      height: var(--sao-progress-bar-height);
+      border-radius: 100px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      &::before {
+        width: 100%;
+        background-color: var(--sao-palette-color-branding-background-800);
+      }
+
+      &::after {
+        width: var(--sao-progress-bar-percentage);
+        background-color: var(--sao-palette-color-branding-primary-500);
+      }
+    }
+  }
+
+  &-circle {
+  }
+}

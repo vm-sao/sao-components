@@ -1,0 +1,49 @@
+.sao-carousel {
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    > * {
+      width: 4px;
+      border-radius: 16px;
+      transition-property: height, background-color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+
+      &:not(.active) {
+        height: 16px;
+        background-color: var(--sao-palette-color-branding-foreground-o30);
+      }
+
+      &.active {
+        height: 32px;
+        background-color: var(--sao-palette-color-branding-foreground-50);
+      }
+    }
+  }
+
+  &--horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+
+    > * {
+      height: 4px;
+      border-radius: 16px;
+      transition-property: width, background-color;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in-out;
+
+      &:not(.active) {
+        width: 16px;
+        background-color: var(--sao-palette-color-branding-foreground-o30);
+      }
+
+      &.active {
+        width: 32px;
+        background-color: var(--sao-palette-color-branding-foreground-50);
+      }
+    }
+  }
+}
