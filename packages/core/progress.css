@@ -1,8 +1,7 @@
 .sao-progress-bar {
-  --sao-progress-bar-percentage: 0;
+  --sao-progress-percentage: 0;
+  --sao-progress-height: 8px;
   display: inline-flex;
-  row-gap: 12px;
-  column-gap: 8px;
   width: 100%;
   color: var(--sao-palette-color-branding-foreground-50);
   font-family: 'Work Sans', serif;
@@ -11,22 +10,29 @@
   font-weight: 500;
 }
 .sao-progress-bar--small {
-  --sao-progress-bar-height: 4px;
+  --sao-progress-height: 4px;
 }
 .sao-progress-bar--default {
-  --sao-progress-bar-height: 8px;
+  --sao-progress-height: 8px;
 }
 .sao-progress-bar--horizontal {
   flex-direction: row;
   align-items: center;
+  gap: 12px;
+}
+.sao-progress-bar--horizontal > :first-child {
+  flex: 1 1 0;
 }
 .sao-progress-bar--vertical {
   flex-direction: column;
   align-items: flex-end;
+  gap: 8px;
+}
+.sao-progress-bar--vertical > :first-child {
+  width: 100%;
 }
 .sao-progress-bar > :first-child {
-  flex: 1 1 0;
-  height: var(--sao-progress-bar-height);
+  height: var(--sao-progress-height);
   border-radius: 100px;
   position: relative;
 }
@@ -44,6 +50,71 @@
   background-color: var(--sao-palette-color-branding-background-800);
 }
 .sao-progress-bar > :first-child::after {
-  width: var(--sao-progress-bar-percentage);
+  width: var(--sao-progress-percentage);
   background-color: var(--sao-palette-color-branding-primary-500);
+}
+.sao-progress-circle {
+  --sao-progress-pi: 3.14159;
+  width: calc(var(--sao-progress-size) * 1px);
+  height: calc(var(--sao-progress-size) * 1px);
+}
+.sao-progress-circle--xsmall {
+  --sao-progress-size: 60;
+  --sao-progress-font-size: var(--sao-typography-b5-font-size);
+  --sao-progress-line-height: var(--sao-typography-b5-line-height);
+}
+.sao-progress-circle--small {
+  --sao-progress-size: 120;
+  --sao-progress-font-size: var(--sao-typography-b2-font-size);
+  --sao-progress-line-height: var(--sao-typography-b2-line-height);
+}
+.sao-progress-circle--medium {
+  --sao-progress-size: 144;
+  --sao-progress-font-size: var(--sao-typography-b1-font-size);
+  --sao-progress-line-height: var(--sao-typography-b1-line-height);
+}
+.sao-progress-circle--large {
+  --sao-progress-size: 220;
+  --sao-progress-font-size: var(--sao-typography-h5-font-size);
+  --sao-progress-line-height: var(--sao-typography-h5-line-height);
+}
+.sao-progress-circle--xlarge {
+  --sao-progress-size: 260;
+  --sao-progress-font-size: var(--sao-typography-h4-font-size);
+  --sao-progress-line-height: var(--sao-typography-h4-line-height);
+}
+.sao-progress-circle > circle {
+  --sao-progress-stroke-width: calc(var(--sao-progress-size) / 10);
+  fill: none;
+}
+.sao-progress-circle > circle:nth-child(1) {
+  stroke: var(--sao-palette-color-branding-background-800);
+  stroke-width: var(--sao-progress-stroke-width);
+}
+.sao-progress-circle > circle:nth-child(2) {
+  --sao-progress-stroke-dasharray: calc(
+    calc(var(--sao-progress-size) - var(--sao-progress-stroke-width)) *
+      var(--sao-progress-pi)
+  );
+  --sao-progress-percentage-transform: calc(
+    calc(100 - var(--sao-progress-percentage, 0)) / 100
+  );
+  stroke-dasharray: var(--sao-progress-stroke-dasharray);
+  stroke-dashoffset: calc(
+    var(--sao-progress-stroke-dasharray) *
+      var(--sao-progress-percentage-transform)
+  );
+  stroke: var(--sao-palette-color-branding-primary-500);
+  stroke-width: var(--sao-progress-stroke-width);
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 0.3s ease;
+}
+.sao-progress-circle > text {
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-progress-font-size);
+  line-height: var(--sao-progress-line-height);
+  fill: var(--sao-palette-color-branding-foreground-50);
 }

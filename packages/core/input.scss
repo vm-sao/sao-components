@@ -1,0 +1,23 @@
+.sao-input {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-control-font-size, var(--sao-typography-b3-font-size));
+  line-height: var(
+    --sao-control-line-height,
+    var(--sao-typography-b3-line-height)
+  );
+  color: var(
+    --sao-control-text-color,
+    var(--sao-palette-color-branding-foreground-50)
+  );
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  &::placeholder {
+    color: var(
+      --sao-control-placeholder-color,
+      var(--sao-palette-color-branding-foreground-600)
+    );
+  }
+}

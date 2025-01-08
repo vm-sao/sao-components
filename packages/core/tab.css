@@ -1,0 +1,61 @@
+.sao-tab {
+  --sao-tab-gap: 8px;
+  --sao-tab-padding: 10px 16px;
+  --sao-tab-padding-line: 10px 16px 8px 16px;
+  --sao-tab-icon-size: 18px;
+  --sao-tab-font-size: var(--sao-typography-b3-font-size);
+  --sao-tab-line-height: var(--sao-typography-b3-line-height);
+  --sao-tab-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-tab-background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sao-tab-gap);
+}
+.sao-tab > i {
+  --sao-icon-size: var(--sao-tab-icon-size);
+  --sao-icon-color: var(--sao-tab-color);
+}
+.sao-tab > span {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-tab-font-size);
+  line-height: var(--sao-tab-line-height);
+  font-weight: 500;
+  color: var(--sao-tab-color);
+}
+.sao-tab:not(.disabled) {
+  --sao-tab-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-tab-background-color: transparent;
+}
+.sao-tab:not(.disabled):hover,
+.sao-tab:not(.disabled).active {
+  --sao-tab-background-color: var(--sao-palette-color-branding-primary-500);
+}
+.sao-tab.disabled {
+  --sao-tab-color: var(--sao-palette-color-branding-foreground-600);
+  --sao-tab-background-color: var(--sao-palette-color-branding-foreground-800);
+}
+.sao-tab--fill {
+  background-color: var(--sao-tab-background-color);
+  padding: var(--sao-tab-padding);
+  border-radius: 8px;
+}
+.sao-tab--line {
+  border-bottom: 2px solid var(--sao-tab-background-color);
+  padding: var(--sao-tab-padding-line);
+}
+.sao-tab--default {
+  --sao-tab-gap: 8px;
+  --sao-tab-padding: 10px 16px;
+  --sao-tab-padding-line: 10px 16px 8px 16px;
+  --sao-tab-icon-size: 18px;
+  --sao-tab-font-size: var(--sao-typography-b3-font-size);
+  --sao-tab-line-height: var(--sao-typography-b3-line-height);
+}
+.sao-tab--large {
+  --sao-tab-gap: 8px;
+  --sao-tab-padding: 8px 16px;
+  --sao-tab-padding-line: 8px 16px 6px 16px;
+  --sao-tab-icon-size: 20px;
+  --sao-tab-font-size: var(--sao-typography-b2-font-size);
+  --sao-tab-line-height: var(--sao-typography-b2-line-height);
+}

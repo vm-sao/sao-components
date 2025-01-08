@@ -1,0 +1,76 @@
+.sao-tag {
+  --sao-tag-shadow-color: var(--sao-palette-color-branding-background-700);
+  --sao-tag-background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  padding: var(--sao-tag-padding);
+  box-shadow: 0 0 0 1px var(--sao-tag-shadow-color);
+  background-color: var(--sao-tag-background-color);
+
+  > * {
+    &:not(i):not(img) {
+      font-family: 'Work Sans', serif;
+      font-size: var(--sao-tag-font-size);
+      line-height: var(--sao-tag-line-height);
+      color: var(--sao-palette-color-branding-foreground-50);
+      font-weight: 500;
+    }
+
+    &:is(i) {
+      --sao-icon-size: var(--sao-tag-icon-size);
+      --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+    }
+
+    &:is(img) {
+      width: var(--sao-tag-icon-size);
+      height: var(--sao-tag-icon-size);
+      object-fit: cover;
+      border-radius: 9999px;
+    }
+  }
+
+  &:hover {
+    --sao-tag-shadow-color: var(--sao-palette-color-branding-background-700);
+    --sao-tag-background-color: var(
+      --sao-palette-color-branding-background-800
+    );
+  }
+
+  &:focus-visible {
+    --sao-tag-shadow-color: var(--sao-palette-color-branding-foreground-100);
+    --sao-tag-background-color: var(
+      --sao-palette-color-branding-background-800
+    );
+  }
+
+  &:active,
+  &.active {
+    --sao-tag-shadow-color: var(--sao-palette-color-global-blue-600);
+    --sao-tag-background-color: var(--sao-palette-color-global-blue-600);
+  }
+
+  &--small {
+    --sao-tag-icon-size: 20px;
+    --sao-tag-padding: 4px 12px;
+    --sao-tag-font-size: var(--sao-typography-b4-font-size);
+    --sao-tag-line-height: var(--sao-typography-b4-line-height);
+  }
+
+  &--default {
+    --sao-tag-icon-size: 24px;
+    --sao-tag-padding: 6px 16px;
+    --sao-tag-font-size: var(--sao-typography-b3-font-size);
+    --sao-tag-line-height: var(--sao-typography-b3-line-height);
+  }
+
+  &--large {
+    --sao-tag-icon-size: 32px;
+    --sao-tag-padding: 8px 20px;
+    --sao-tag-font-size: var(--sao-typography-b2-font-size);
+    --sao-tag-line-height: var(--sao-typography-b2-line-height);
+  }
+}
