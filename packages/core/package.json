@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/core",
-  "version": "0.0.1-beta.37",
+  "version": "0.0.1-beta.39",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -113,7 +113,7 @@
     "./input.css": "./input.css",
     "./input.scss": "./input.scss",
     "./input.sass": "./input.scss",
-    "./forwards": "./forwards/index.css",
+    "./forwards": "./forwards/index.scss",
     "./forwards/index.scss": "./forwards/index.scss",
     "./forwards/index.sass": "./forwards/index.scss",
     "./forwards/common": "./forwards/common.scss",
