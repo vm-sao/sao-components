@@ -1,0 +1,34 @@
+.sao-mention {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 5px;
+  border: 1px solid
+    var(
+      --sao-mention-border-color,
+      var(--sao-palette-color-branding-background-700)
+    );
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  font-weight: 400;
+  color: var(
+    --sao-mention-color,
+    var(--sao-palette-color-branding-foreground-50)
+  );
+  background-color: var(
+    --sao-mention-background-color,
+    var(--sao-palette-color-branding-background-700)
+  );
+  border-radius: 25px;
+  cursor: pointer;
+}
+.sao-mention:not(.no-access).highlighted {
+  --sao-mention-background-color: var(--sao-palette-color-branding-primary-600);
+  --sao-mention-border-color: var(--sao-palette-color-branding-primary-600);
+  --sao-mention-color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-mention.no-access {
+  --sao-mention-background-color: rgba(0, 0, 0);
+  --sao-mention-border-color: var(--sao-palette-color-branding-foreground-500);
+  --sao-mention-color: var(--sao-palette-color-branding-foreground-500);
+}

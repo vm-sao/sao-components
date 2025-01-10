@@ -1,0 +1,138 @@
+.sao-checkbox {
+  padding: 2px;
+  border: 1px solid
+    var(
+      --sao-checkbox-border-color,
+      var(--sao-palette-color-branding-background-500)
+    );
+  background-color: var(
+    --sao-checkbox-background-color,
+    var(--sao-palette-color-branding-background-800)
+  );
+  border-radius: var(--sao-checkbox-border-radius, 8px);
+  width: var(--sao-checkbox-size, 24px);
+  height: var(--sao-checkbox-size, 24px);
+  position: relative;
+}
+.sao-checkbox::before {
+  display: block;
+  width: var(--sao-checkbox-icon-size, 18px);
+  height: var(--sao-checkbox-icon-size, 18px);
+  background-size: contain;
+  background-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-color: var(
+    --sao-checkbox-icon-color,
+    var(--sao-palette-color-branding-background-50)
+  );
+}
+.sao-checkbox > input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.sao-checkbox--small {
+  --sao-checkbox-size: 18px;
+  --sao-checkbox-border-radius: 6px;
+  --sao-checkbox-icon-size: 12px;
+}
+.sao-checkbox--default {
+  --sao-checkbox-size: 24px;
+  --sao-checkbox-border-radius: 8px;
+  --sao-checkbox-icon-size: 18px;
+}
+.sao-checkbox:has(> input.is-indeterminate)::before {
+  -webkit-mask-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 6.7H9.7V6.5V5.5V5.3H9.5H2.5H2.3V5.5V6.5V6.7H2.5H9.5Z" fill="white" stroke="white" stroke-width="0.4"/></svg>');
+  mask-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 6.7H9.7V6.5V5.5V5.3H9.5H2.5H2.3V5.5V6.5V6.7H2.5H9.5Z" fill="white" stroke="white" stroke-width="0.4"/></svg>');
+}
+.sao-checkbox:not(:has(> input.is-indeterminate))::before {
+  -webkit-mask-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.45393 5.71108L2.31301 5.57016L2.17159 5.71058L1.46159 6.41558L1.31917 6.557L1.46109 6.69892L4.25609 9.49392L4.39751 9.63534L4.53893 9.49392L10.5389 3.49392L10.6804 3.3525L10.5389 3.21108L9.83393 2.50608L9.69258 2.36472L9.55115 2.50601L4.39758 7.65472L2.45393 5.71108Z" fill="white" stroke="white" stroke-width="0.4"/></svg>');
+  mask-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.45393 5.71108L2.31301 5.57016L2.17159 5.71058L1.46159 6.41558L1.31917 6.557L1.46109 6.69892L4.25609 9.49392L4.39751 9.63534L4.53893 9.49392L10.5389 3.49392L10.6804 3.3525L10.5389 3.21108L9.83393 2.50608L9.69258 2.36472L9.55115 2.50601L4.39758 7.65472L2.45393 5.71108Z" fill="white" stroke="white" stroke-width="0.4"/></svg>');
+}
+.sao-checkbox:has(> input:disabled),
+.sao-checkbox.disabled {
+  --sao-checkbox-background-color: var(
+    --sao-palette-color-branding-foreground-800
+  );
+  --sao-checkbox-border-color: var(--sao-palette-color-branding-foreground-800);
+  --sao-checkbox-icon-color: var(--sao-palette-color-branding-foreground-600);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(> input:checked) {
+  --sao-checkbox-background-color: var(--sao-palette-color-global-blue-500);
+  --sao-checkbox-border-color: var(--sao-palette-color-global-blue-500);
+  --sao-checkbox-icon-color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(
+    > input:checked
+  ):hover {
+  --sao-checkbox-background-color: var(--sao-palette-color-global-blue-400);
+  --sao-checkbox-border-color: var(--sao-palette-color-global-blue-400);
+  --sao-checkbox-icon-color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(
+    > input:checked
+  ):has(> input:focus),
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(
+    > input:checked
+  ):has(> input:active),
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(
+    > input:checked
+  ).active {
+  --sao-checkbox-background-color: var(--sao-palette-color-global-blue-300);
+  --sao-checkbox-border-color: var(--sao-palette-color-global-blue-300);
+  --sao-checkbox-icon-color: var(--sao-palette-color-global-blue-700);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):has(
+    > input:checked
+  ):has(> input:focus-visible) {
+  --sao-checkbox-background-color: var(--sao-palette-color-global-blue-500);
+  --sao-checkbox-border-color: var(--sao-palette-color-global-blue-500);
+  --sao-checkbox-icon-color: var(--sao-palette-color-branding-foreground-50);
+  box-shadow: 0 0 0 3px rgba(0, 1, 0);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ) {
+  --sao-checkbox-background-color: var(
+    --sao-palette-color-branding-background-800
+  );
+  --sao-checkbox-border-color: var(--sao-palette-color-branding-background-500);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ):hover {
+  --sao-checkbox-background-color: var(
+    --sao-palette-color-branding-background-600
+  );
+  --sao-checkbox-border-color: var(--sao-palette-color-branding-background-500);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ):has(> input:focus),
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ):has(> input:active),
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ).active {
+  --sao-checkbox-background-color: var(--sao-palette-color-global-blue-300);
+  --sao-checkbox-border-color: var(--sao-palette-color-global-blue-300);
+}
+.sao-checkbox:not(:has(> input:disabled)):not(.disabled):not(
+    :has(> input:checked)
+  ):has(> input:focus-visible) {
+  --sao-checkbox-background-color: var(
+    --sao-palette-color-branding-background-800
+  );
+  --sao-checkbox-border-color: var(--sao-palette-color-branding-background-500);
+  box-shadow: 0 0 0 3px rgba(0, 1, 0);
+}
+.sao-checkbox:has(> input:checked)::before {
+  content: '';
+}

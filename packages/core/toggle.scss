@@ -1,0 +1,118 @@
+.sao-toggle {
+  padding: 2px;
+  width: var(--sao-toggle-width, 32px);
+  border-radius: var(--sao-toggle-radius, 8px);
+  position: relative;
+  background-color: var(
+    --sao-toggle-background-color,
+    var(--sao-palette-color-branding-background-700)
+  );
+
+  &::after {
+    position: relative;
+    left: 0;
+    content: '';
+    width: var(--sao-toggle-circle-size, 12px);
+    height: var(--sao-toggle-circle-size, 12px);
+    display: block;
+    border-radius: 9999px;
+    background-color: var(
+      --sao-toggle-circle-color,
+      var(--sao-palette-color-branding-foreground-50)
+    );
+    transition-property: left;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 100px;
+  }
+
+  > input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &:has(> input:checked) {
+    &::after {
+      left: var(--sao-toggle-circle-left, 16px);
+    }
+  }
+
+  &:has(> input:disabled),
+  &.disabled {
+    --sao-toggle-background-color: var(
+      --sao-palette-color-branding-foreground-700
+    );
+    --sao-toggle-circle-color: var(--sao-palette-color-branding-foreground-600);
+  }
+
+  &:not(:has(> input:disabled)):not(.disabled) {
+    --sao-toggle-background-color: var(
+      --sao-palette-color-branding-background-700
+    );
+    --sao-toggle-circle-color: var(--sao-palette-color-branding-foreground-50);
+
+    &:has(> input:checked) {
+      &:hover {
+        --sao-toggle-background-color: var(
+          --sao-palette-color-branding-primary-400
+        );
+      }
+
+      &:has(> input:focus-visible) {
+        --sao-toggle-background-color: var(
+          --sao-palette-color-branding-primary-500
+        );
+
+        &::before {
+          box-shadow: 0 0 0 2px var(--sao-palette-color-branding-primary-400);
+        }
+      }
+    }
+
+    &:not(:has(> input:checked)) {
+      &:hover {
+        --sao-toggle-background-color: var(
+          --sao-palette-color-branding-background-400
+        );
+      }
+
+      &:has(> input:focus-visible) {
+        --sao-toggle-background-color: var(
+          --sao-palette-color-branding-background-700
+        );
+
+        &::before {
+          box-shadow: 0 0 0 2px var(--sao-palette-color-branding-primary-400);
+        }
+      }
+    }
+  }
+
+  &--default {
+    --sao-toggle-width: 32px;
+    --sao-toggle-radius: 8px;
+    --sao-toggle-circle-size: 12px;
+    --sao-toggle-circle-left: 16px;
+  }
+
+  &--large {
+    --sao-toggle-width: 40px;
+    --sao-toggle-radius: 10px;
+    --sao-toggle-circle-size: 16px;
+    --sao-toggle-circle-left: 20px;
+  }
+}
