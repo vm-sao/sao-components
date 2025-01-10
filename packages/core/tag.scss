@@ -5,7 +5,7 @@
   border-radius: 100px;
   outline: none;
   border: none;
-  padding: var(--sao-tag-padding);
+  padding: var(--sao-tag-padding, 6px 16px);
   box-shadow: 0 0 0 1px
     var(
       --sao-tag-shadow-color,
@@ -16,20 +16,23 @@
   > * {
     &:not(i):not(img) {
       font-family: 'Work Sans', serif;
-      font-size: var(--sao-tag-font-size);
-      line-height: var(--sao-tag-line-height);
+      font-size: var(--sao-tag-font-size, var(--sao-typography-b3-font-size));
+      line-height: var(
+        --sao-tag-line-height,
+        var(--sao-typography-b3-line-height)
+      );
       color: var(--sao-palette-color-branding-foreground-50);
       font-weight: 500;
     }
 
     &:is(i) {
-      --sao-icon-size: var(--sao-tag-icon-size);
+      --sao-icon-size: var(--sao-tag-icon-size, 24px);
       --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
     }
 
     &:is(img) {
-      width: var(--sao-tag-icon-size);
-      height: var(--sao-tag-icon-size);
+      width: var(--sao-tag-icon-size, 24px);
+      height: var(--sao-tag-icon-size, 24px);
       object-fit: cover;
       border-radius: 9999px;
     }
