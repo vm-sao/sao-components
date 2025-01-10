@@ -1,0 +1,275 @@
+.sao-calendar-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 24px;
+}
+.sao-calendar-picker--border-left {
+  border-left: 1px solid var(--sao-palette-color-branding-background-600);
+}
+.sao-calendar-picker--border-right {
+  border-right: 1px solid var(--sao-palette-color-branding-background-600);
+}
+.sao-calendar-picker--border-top {
+  border-top: 1px solid var(--sao-palette-color-branding-background-600);
+}
+.sao-calendar-picker--border-bottom {
+  border-bottom: 1px solid var(--sao-palette-color-branding-background-600);
+}
+.sao-calendar-footer-action {
+  width: 100%;
+  padding: 16px;
+  border-top: 1px solid var(--sao-palette-color-branding-background-600);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.sao-calendar-footer-action--border-left {
+  border-left: 1px solid var(--sao-palette-color-branding-background-600);
+}
+.sao-calendar-footer-submit {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sao-calendar-input-range {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+.sao-calendar-input-range > * {
+  width: calc(50% - 12px);
+}
+.sao-calendar-input-range::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 1px;
+  background-color: var(--sao-palette-color-branding-foreground-700);
+}
+.sao-calendar-input-single {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sao-calendar-input-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px 0 8px;
+}
+.sao-calendar-navigation {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sao-calendar-navigation > span {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-typography-b3-font-size);
+  line-height: var(--sao-typography-b3-line-height);
+  font-weight: 600;
+  color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-calendar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: var(--sao-calendar-options-width, 192px);
+  padding: 12px 16px;
+  list-style: none;
+  margin: 0;
+}
+.sao-calendar-options > li,
+.sao-calendar-options-item {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-typography-b3-font-size);
+  line-height: var(--sao-typography-b3-line-height);
+  font-weight: 500;
+  border-radius: 6px;
+  width: 100%;
+  padding: 8px 16px;
+}
+.sao-calendar-options > li.disabled,
+.sao-calendar-options-item.disabled {
+  color: var(--sao-palette-color-branding-foreground-600);
+}
+.sao-calendar-options > li:not(.disabled),
+.sao-calendar-options-item:not(.disabled) {
+  color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-calendar-options > li:not(.disabled):hover,
+.sao-calendar-options-item:not(.disabled):hover,
+.sao-calendar-options > li:not(.disabled).selected,
+.sao-calendar-options-item:not(.disabled).selected {
+  background-color: var(--sao-palette-color-branding-background-o30);
+}
+.sao-calendar-button {
+  height: 40px;
+  width: var(--sao-calendar-button-width, 40px);
+  position: relative;
+  background: var(--sao-calendar-button-background-color, transparent);
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.sao-calendar-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 4px;
+  --sao-calendar-button-width: calc(
+    100% / var(--sao-calendar-button-group-count, 7)
+  );
+}
+.sao-calendar-button > span {
+  position: relative;
+  z-index: 1;
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-typography-b3-font-size);
+  line-height: var(--sao-typography-b3-line-height);
+  font-weight: 500;
+  color: var(
+    --sao-calendar-button-color,
+    var(--sao-palette-color-branding-foreground-50)
+  );
+}
+.sao-calendar-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--sao-calendar-button-circle-color, transparent);
+}
+.sao-calendar-button::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background-color: var(
+    --sao-calendar-button-current-color,
+    var(--sao-palette-color-branding-primary-600)
+  );
+}
+.sao-calendar-button.is-current::after {
+  content: '';
+}
+.sao-calendar-button:not(.is-label):disabled,
+.sao-calendar-button:not(.is-label).disabled {
+  --sao-calendar-button-current-color: var(
+    --sao-palette-color-branding-foreground-600
+  );
+  --sao-calendar-button-color: var(--sao-palette-color-branding-foreground-700);
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled) {
+  --sao-calendar-button-current-color: var(
+    --sao-palette-color-branding-primary-600
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled):not(
+    .is-selected
+  ):hover {
+  --sao-calendar-button-in-range-circle-color: var(
+    --sao-palette-color-branding-background-800
+  );
+  --sao-calendar-button-out-range-circle-color: var(
+    --sao-palette-color-branding-background-800
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled).in-range {
+  --sao-calendar-button-circle-color: var(
+    --sao-calendar-button-in-range-circle-color
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected.is-start {
+  --sao-calendar-button-background-color: linear-gradient(
+    to left,
+    var(--sao-palette-color-branding-background-800) 50%,
+    transparent 50%
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected.is-end {
+  --sao-calendar-button-background-color: linear-gradient(
+    to right,
+    var(--sao-palette-color-branding-background-800) 50%,
+    transparent 50%
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected.is-start,
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected.is-end {
+  --sao-calendar-button-in-range-circle-color: var(
+    --sao-palette-color-gradient-primary-100
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected:not(.is-start):not(.is-end) {
+  --sao-calendar-button-background-color: var(
+    --sao-palette-color-branding-background-800
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(
+    .disabled
+  ).in-range.is-selected:not(.is-start):not(.is-end):hover {
+  --sao-calendar-button-in-range-circle-color: var(
+    --sao-palette-color-branding-background-700
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled):not(
+    .in-range
+  ) {
+  --sao-calendar-button-circle-color: var(
+    --sao-calendar-button-out-range-circle-color
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled):not(
+    .in-range
+  ).is-selected {
+  --sao-calendar-button-out-range-circle-color: var(
+    --sao-palette-color-gradient-primary-100
+  );
+}
+.sao-calendar-button:not(.is-label):not(:disabled):not(.disabled):hover {
+  cursor: pointer;
+}
+.sao-calendar-box {
+  background-color: var(--sao-palette-color-branding-background-900);
+  border-radius: 12px;
+  border: 1px solid var(--sao-palette-color-branding-background-600);
+  box-shadow: var(--sao-palette-shadow-xl);
+  display: flex;
+}
+.sao-calendar-box--range > aside {
+  display: flex;
+  flex-direction: column;
+}
+.sao-calendar-box--range > aside > main {
+  display: flex;
+  height: calc(100% - 76px);
+}
+.sao-calendar-box--range > aside > main > * {
+  width: 328px;
+}
+.sao-calendar-box--single {
+  flex-direction: column;
+  width: 328px;
+}

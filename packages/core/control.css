@@ -13,6 +13,7 @@
   background-color: var(--sao-control-background-color);
   box-shadow: 0 0 0 4px var(--sao-control-shadow-color);
   position: relative;
+  min-width: 0;
 }
 .sao-control > i {
   --sao-icon-size: 24px;
@@ -39,28 +40,24 @@
   --sao-control-placeholder-color: var(
     --sao-palette-color-branding-foreground-600
   );
-  --sao-control-border-color: var(--sao-palette-color-branding-foreground-600);
+  --sao-control-border-color: var(--sao-palette-color-branding-background-600);
   --sao-control-background-color: var(
-    --sao-palette-color-branding-foreground-900
+    --sao-palette-color-branding-background-900
   );
 }
 .sao-control:has(> .sao-input):has(
     > .sao-input:not(:disabled):not(.disabled)
   ):has(> .sao-input:not(.invalid):not(.valid)):has(
-    > .sao-input:not(.invalid):not(.valid):not(:focus):not(:active):hover
+    > .sao-input:not(:focus):not(:active):hover
   ) {
   --sao-control-border-color: var(--sao-palette-color-branding-foreground-300);
 }
 .sao-control:has(> .sao-input):has(
     > .sao-input:not(:disabled):not(.disabled)
-  ):has(> .sao-input:not(.invalid):not(.valid)):has(
-    > .sao-input:not(.invalid):not(.valid):focus
-  ),
+  ):has(> .sao-input:not(.invalid):not(.valid)):has(> .sao-input:focus),
 .sao-control:has(> .sao-input):has(
     > .sao-input:not(:disabled):not(.disabled)
-  ):has(> .sao-input:not(.invalid):not(.valid)):has(
-    > .sao-input:not(.invalid):not(.valid):active
-  ) {
+  ):has(> .sao-input:not(.invalid):not(.valid)):has(> .sao-input:active) {
   --sao-control-shadow-color: rgba(0, 1, 0);
 }
 .sao-control:has(> .sao-input):has(
