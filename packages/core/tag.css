@@ -1,6 +1,4 @@
 .sao-tag {
-  --sao-tag-shadow-color: var(--sao-palette-color-branding-background-700);
-  --sao-tag-background-color: transparent;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -8,8 +6,12 @@
   outline: none;
   border: none;
   padding: var(--sao-tag-padding);
-  box-shadow: 0 0 0 1px var(--sao-tag-shadow-color);
-  background-color: var(--sao-tag-background-color);
+  box-shadow: 0 0 0 1px
+    var(
+      --sao-tag-shadow-color,
+      var(--sao-palette-color-branding-background-700)
+    );
+  background-color: var(--sao-tag-background-color, transparent);
 }
 .sao-tag > *:not(i):not(img) {
   font-family: 'Work Sans', serif;

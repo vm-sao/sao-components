@@ -32,7 +32,7 @@
   width: 100%;
 }
 .sao-progress-bar > :first-child {
-  height: var(--sao-progress-height);
+  height: var(--sao-progress-height, 8px);
   border-radius: 100px;
   position: relative;
 }

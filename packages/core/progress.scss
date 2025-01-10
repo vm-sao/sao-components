@@ -1,7 +1,7 @@
 .sao-progress {
   &-bar {
     --sao-progress-percentage: 0;
-    --sao-progress-height: 8px;
+
     display: inline-flex;
     width: 100%;
     color: var(--sao-palette-color-branding-foreground-50);
@@ -39,7 +39,7 @@
     }
 
     > :first-child {
-      height: var(--sao-progress-height);
+      height: var(--sao-progress-height, 8px);
       border-radius: 100px;
       position: relative;
 
