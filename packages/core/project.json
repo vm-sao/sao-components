@@ -11,7 +11,7 @@
         "commands": [
           "rm -rf dist/packages/core",
           "mkdir -p dist/packages/core",
-          "rsync -a --exclude='project.json' packages/core/ dist/packages/core/"
+          "rsync -a --exclude='project.json' --exclude='node_modules' packages/core/ dist/packages/core/"
         ],
         "parallel": false
       }

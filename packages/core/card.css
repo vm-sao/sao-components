@@ -1,0 +1,164 @@
+.sao-card {
+  --sao-card-border-radius: 12px;
+  --sao-card-border-color: var(--sao-palette-color-branding-background-600);
+  --sao-card-max-width: 424px;
+  --sao-card-content-title-font-size: var(--sao-typography-h6-font-size);
+  --sao-card-content-title-line-height: var(--sao-typography-h6-line-height);
+  --sao-card-content-description-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-content-description-line-height: var(
+    --sao-typography-b3-line-height
+  );
+  --sao-card-content-gap: 12px;
+  --sao-card-content-padding: 24px;
+  --sao-card-header-padding: 24px;
+  --sao-card-header-gap: 12px;
+  --sao-card-header-title-gap: 2px;
+  --sao-card-header-avatar-size: 40px;
+  --sao-card-header-title-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-header-title-line-height: var(--sao-typography-b3-line-height);
+  --sao-card-header-sub-title-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-header-sub-title-line-height: var(--sao-typography-b3-line-height);
+  --sao-card-header-icon-size: 28px;
+  --sao-card-footer-padding: 24px;
+  --sao-card-footer-gap: 16px;
+  max-width: var(--sao-card-max-width);
+  border-radius: var(--sao-card-border-radius);
+  border: 1px solid var(--sao-card-border-color);
+  background-color: var(--sao-palette-color-branding-background-900);
+  box-shadow: 0 4px 6px -1px #00000014;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sao-card > img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: inherit;
+}
+.sao-card > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--sao-card-header-padding);
+}
+.sao-card > header > aside {
+  display: flex;
+  align-items: center;
+  gap: var(--sao-card-header-gap);
+}
+.sao-card > header > aside > img {
+  width: var(--sao-card-header-avatar-size);
+  height: var(--sao-card-header-avatar-size);
+  border-radius: 9999px;
+  border: 1px solid var(--sao-palette-color-branding-background-800);
+}
+.sao-card > header > aside > label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sao-card-header-title-gap);
+}
+.sao-card > header > aside > label > h6 {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-card-header-title-font-size);
+  line-height: var(--sao-card-header-title-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  font-weight: 600;
+  margin: 0;
+}
+.sao-card > header > aside > label > p {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-card-header-sub-title-font-size);
+  line-height: var(--sao-card-header-sub-title-line-height);
+  color: var(--sao-palette-color-branding-foreground-600);
+  font-weight: 400;
+  margin: 0;
+}
+.sao-card > header > i {
+  --sao-icon-size: var(--sao-card-header-icon-size);
+  --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+}
+.sao-card > header + img {
+  aspect-ratio: 24 / 9;
+}
+.sao-card > header + main {
+  padding: 0 var(--sao-card-content-padding) var(--sao-card-content-padding)
+    var(--sao-card-content-padding);
+}
+.sao-card > main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sao-card-content-gap);
+  padding: var(--sao-card-content-padding);
+}
+.sao-card > main > h2 {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-card-content-title-font-size);
+  line-height: var(--sao-card-content-title-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  font-weight: 600;
+  margin: 0;
+}
+.sao-card > main > p {
+  font-family: 'Work Sans', serif;
+  font-size: var(--sao-card-content-description-font-size);
+  line-height: var(--sao-card-content-description-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  font-weight: 400;
+  margin: 0;
+}
+.sao-card > footer {
+  width: 100%;
+  padding: 0 var(--sao-card-footer-padding) var(--sao-card-footer-padding)
+    var(--sao-card-footer-padding);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--sao-card-footer-gap);
+}
+.sao-card--small {
+  --sao-card-max-width: 360px;
+  --sao-card-content-title-font-size: var(--sao-typography-b1-font-size);
+  --sao-card-content-title-line-height: var(--sao-typography-b1-line-height);
+  --sao-card-content-description-font-size: var(--sao-typography-b4-font-size);
+  --sao-card-content-description-line-height: var(
+    --sao-typography-b4-line-height
+  );
+  --sao-card-content-gap: 8px;
+  --sao-card-content-padding: 16px;
+  --sao-card-header-padding: 16px;
+  --sao-card-header-gap: 12px;
+  --sao-card-header-title-gap: 2px;
+  --sao-card-header-avatar-size: 32px;
+  --sao-card-header-title-font-size: var(--sao-typography-b4-font-size);
+  --sao-card-header-title-line-height: var(--sao-typography-b4-line-height);
+  --sao-card-header-sub-title-font-size: var(--sao-typography-b4-font-size);
+  --sao-card-header-sub-title-line-height: var(--sao-typography-b4-line-height);
+  --sao-card-header-icon-size: 24px;
+  --sao-card-footer-padding: 16px;
+  --sao-card-footer-gap: 16px;
+}
+.sao-card--default {
+  --sao-card-max-width: 424px;
+  --sao-card-content-title-font-size: var(--sao-typography-h6-font-size);
+  --sao-card-content-title-line-height: var(--sao-typography-h6-line-height);
+  --sao-card-content-description-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-content-description-line-height: var(
+    --sao-typography-b3-line-height
+  );
+  --sao-card-content-gap: 12px;
+  --sao-card-content-padding: 24px;
+  --sao-card-header-padding: 24px;
+  --sao-card-header-gap: 12px;
+  --sao-card-header-title-gap: 2px;
+  --sao-card-header-avatar-size: 40px;
+  --sao-card-header-title-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-header-title-line-height: var(--sao-typography-b3-line-height);
+  --sao-card-header-sub-title-font-size: var(--sao-typography-b3-font-size);
+  --sao-card-header-sub-title-line-height: var(--sao-typography-b3-line-height);
+  --sao-card-header-icon-size: 28px;
+  --sao-card-footer-padding: 24px;
+  --sao-card-footer-gap: 16px;
+}

@@ -1,0 +1,212 @@
+.sao-upload-file {
+  &-selecting {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid
+      var(
+        --sao-upload-file-border-color,
+        var(--sao-palette-color-branding-background-600)
+      );
+    background-color: var(
+      --sao-upload-file-background-color,
+      var(--sao-palette-color-branding-background-900)
+    );
+
+    &.disabled,
+    &:has(> input[type='file']:disabled) {
+      --sao-upload-file-background-color: var(
+        --sao-palette-color-branding-background-900
+      );
+      --sao-upload-file-border-color: var(
+        --sao-palette-color-branding-foreground-800
+      );
+      --sao-upload-file-icon: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_303_20312)"><circle cx="20" cy="20" r="20" fill="%23CDD5DF" fill-opacity="0.16"/><circle cx="20" cy="20" r="16" fill="%23CDD5DF" fill-opacity="0.16"/><g clip-path="url(%23clip1_303_20312)"><path d="M24.9 18.6933C24.4467 16.3933 22.4267 14.6667 20 14.6667C18.0733 14.6667 16.4 15.76 15.5667 17.36C13.56 17.5733 12 19.2733 12 21.3333C12 23.54 13.7933 25.3333 16 25.3333H24.6667C26.5067 25.3333 28 23.84 28 22C28 20.24 26.6333 18.8133 24.9 18.6933ZM24.6667 24H16C14.5267 24 13.3333 22.8067 13.3333 21.3333C13.3333 19.9667 14.3533 18.8267 15.7067 18.6867L16.42 18.6133L16.7533 17.98C17.3867 16.76 18.6267 16 20 16C21.7467 16 23.2533 17.24 23.5933 18.9533L23.7933 19.9533L24.8133 20.0267C25.8533 20.0933 26.6667 20.9667 26.6667 22C26.6667 23.1 25.7667 24 24.6667 24ZM17.3333 20.6667H19.0333V22.6667H20.9667V20.6667H22.6667L20 18L17.3333 20.6667Z" fill="%239AA4B2"/></g></g><defs><clipPath id="clip0_303_20312"><rect width="40" height="40" fill="white"/></clipPath><clipPath id="clip1_303_20312"><rect width="16" height="16" fill="white" transform="translate(12 12)"/></clipPath></defs></svg>');
+      --sao-upload-file-color: var(--sao-palette-color-branding-foreground-600);
+      --sao-upload-file-strong-color: var(
+        --sao-palette-color-branding-foreground-600
+      );
+    }
+
+    &:not(.disabled):not(:has(> input[type='file']:disabled)) {
+      > main > span > strong:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &.dragging,
+      &:has(> input[type='file']:focus) {
+        --sao-upload-file-background-color: var(
+          --sao-palette-color-branding-primary-o16
+        );
+        --sao-upload-file-border-color: var(
+          --sao-palette-color-global-blue-400
+        );
+        --sao-upload-file-icon: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_303_20343)"><circle cx="20" cy="20" r="20" fill="%235850EC" fill-opacity="0.24"/><circle cx="20" cy="20" r="16" fill="%235850EC" fill-opacity="0.16"/><g clip-path="url(%23clip1_303_20343)"><path d="M24.9 18.6933C24.4467 16.3933 22.4267 14.6667 20 14.6667C18.0733 14.6667 16.4 15.76 15.5667 17.36C13.56 17.5733 12 19.2733 12 21.3333C12 23.54 13.7933 25.3333 16 25.3333H24.6667C26.5067 25.3333 28 23.84 28 22C28 20.24 26.6333 18.8133 24.9 18.6933ZM24.6667 24H16C14.5267 24 13.3333 22.8067 13.3333 21.3333C13.3333 19.9667 14.3533 18.8267 15.7067 18.6867L16.42 18.6133L16.7533 17.98C17.3867 16.76 18.6267 16 20 16C21.7467 16 23.2533 17.24 23.5933 18.9533L23.7933 19.9533L24.8133 20.0267C25.8533 20.0933 26.6667 20.9667 26.6667 22C26.6667 23.1 25.7667 24 24.6667 24ZM17.3333 20.6667H19.0333V22.6667H20.9667V20.6667H22.6667L20 18L17.3333 20.6667Z" fill="%23CDDBFE"/></g></g><defs><clipPath id="clip0_303_20343"><rect width="40" height="40" fill="white"/></clipPath><clipPath id="clip1_303_20343"><rect width="16" height="16" fill="white" transform="translate(12 12)"/></clipPath></defs></svg>');
+        --sao-upload-file-color: var(
+          --sao-palette-color-branding-foreground-50
+        );
+        --sao-upload-file-strong-color: var(
+          --sao-palette-color-global-blue-400
+        );
+      }
+    }
+
+    > input {
+      display: none;
+    }
+
+    > main {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+
+      > span {
+        font-family: 'Work Sans', serif;
+        font-size: var(--sao-typography-b4-font-size);
+        line-height: var(--sao-typography-b4-line-height);
+        font-weight: 400;
+        color: var(
+          --sao-upload-file-color,
+          var(--sao-palette-color-branding-foreground-50)
+        );
+
+        > strong {
+          font-weight: 500;
+          color: var(
+            --sao-upload-file-strong-color,
+            var(--sao-palette-color-global-blue-400)
+          );
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background-image: var(
+        --sao-upload-file-icon,
+        url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_303_20305)"><circle cx="20" cy="20" r="20" fill="%23CDD5DF" fill-opacity="0.16"/><circle cx="20" cy="20" r="16" fill="%23CDD5DF" fill-opacity="0.16"/><g clip-path="url(%23clip1_303_20305)"><path d="M24.9 18.6933C24.4467 16.3933 22.4267 14.6667 20 14.6667C18.0733 14.6667 16.4 15.76 15.5667 17.36C13.56 17.5733 12 19.2733 12 21.3333C12 23.54 13.7933 25.3333 16 25.3333H24.6667C26.5067 25.3333 28 23.84 28 22C28 20.24 26.6333 18.8133 24.9 18.6933ZM24.6667 24H16C14.5267 24 13.3333 22.8067 13.3333 21.3333C13.3333 19.9667 14.3533 18.8267 15.7067 18.6867L16.42 18.6133L16.7533 17.98C17.3867 16.76 18.6267 16 20 16C21.7467 16 23.2533 17.24 23.5933 18.9533L23.7933 19.9533L24.8133 20.0267C25.8533 20.0933 26.6667 20.9667 26.6667 22C26.6667 23.1 25.7667 24 24.6667 24ZM17.3333 20.6667H19.0333V22.6667H20.9667V20.6667H22.6667L20 18L17.3333 20.6667Z" fill="white"/></g></g><defs><clipPath id="clip0_303_20305"><rect width="40" height="40" fill="white"/></clipPath><clipPath id="clip1_303_20305"><rect width="16" height="16" fill="white" transform="translate(12 12)"/></clipPath></defs></svg>')
+      );
+    }
+  }
+
+  &-selected {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid
+      var(
+        --sao-upload-file-border-color,
+        var(--sao-palette-color-branding-background-600)
+      );
+    background-color: var(
+      --sao-upload-file-background-color,
+      var(--sao-palette-color-branding-background-900)
+    );
+    overflow: hidden;
+
+    > i {
+      margin-left: 4px;
+      --sao-icon-size: 18px;
+      --sao-icon-color: var(
+        --sao-upload-file-icon-color,
+        var(--sao-palette-color-branding-foreground-50)
+      );
+    }
+
+    > main {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      > span {
+        font-family: 'Work Sans', serif;
+
+        &.is-error {
+          color: var(--sao-palette-color-branding-error-600);
+        }
+
+        &.is-information {
+          font-size: var(--sao-typography-b5-font-size);
+          line-height: var(--sao-typography-b5-line-height);
+          font-weight: 400;
+          color: var(--sao-palette-color-branding-foreground-50);
+        }
+
+        &:not(.is-information) {
+          font-size: var(--sao-typography-b4-font-size);
+          line-height: var(--sao-typography-b4-line-height);
+          font-weight: 500;
+        }
+
+        &:not(.is-error):not(.is-information) {
+          color: var(--sao-palette-color-branding-foreground-50);
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 32px;
+      height: 32px;
+      background-image: var(
+        --sao-upload-file-icon,
+        url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_303_20321)"><circle cx="16" cy="16" r="16" fill="%235850EC" fill-opacity="0.24"/><circle cx="16" cy="16" r="12" fill="%235850EC" fill-opacity="0.16"/><g clip-path="url(%23clip1_303_20321)"><path d="M17 11H13C12.45 11 12.005 11.45 12.005 12L12 20C12 20.55 12.445 21 12.995 21H19C19.55 21 20 20.55 20 20V14L17 11ZM13 20V12H16.5V14.5H19V20H13Z" fill="%23CDDBFE"/></g></g><defs><clipPath id="clip0_303_20321"><rect width="32" height="32" fill="white"/></clipPath><clipPath id="clip1_303_20321"><rect width="12" height="12" fill="white" transform="translate(10 10)"/></clipPath></defs></svg>')
+      );
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: var(--sao-palette-color-branding-background-o24);
+      transition-property: width;
+      transition-duration: 0.15s;
+      transition-timing-function: ease-in-out;
+    }
+
+    &:not(.has-error):not(.uploaded) {
+      &::after {
+        width: var(--sao-upload-file-progress, 0);
+      }
+    }
+
+    &.has-error {
+      --sao-upload-file-border-color: var(
+        --sao-palette-color-branding-error-o75
+      );
+      --sao-upload-file-background-color: var(
+        --sao-palette-color-branding-error-o16
+      );
+      --sao-upload-file-icon: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_303_20335)"><circle cx="16" cy="16" r="16" fill="%23F97066" fill-opacity="0.16"/><circle cx="16" cy="16" r="12" fill="%23F97066" fill-opacity="0.24"/><g clip-path="url(%23clip1_303_20335)"><path d="M19.5 13.205L18.795 12.5L16 15.295L13.205 12.5L12.5 13.205L15.295 16L12.5 18.795L13.205 19.5L16 16.705L18.795 19.5L19.5 18.795L16.705 16L19.5 13.205Z" fill="%23F04438"/></g></g><defs><clipPath id="clip0_303_20335"><rect width="32" height="32" fill="white"/></clipPath><clipPath id="clip1_303_20335"><rect width="12" height="12" fill="white" transform="translate(10 10)"/></clipPath></defs></svg>');
+    }
+
+    &.uploaded {
+      --sao-upload-file-border-color: var(
+        --sao-palette-color-branding-primary-600
+      );
+
+      > i {
+        --sao-upload-file-icon-color: var(
+          --sao-palette-color-branding-primary-600
+        );
+      }
+    }
+  }
+}

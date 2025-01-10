@@ -1,0 +1,108 @@
+.sao-pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--sao-palette-color-branding-background-700);
+}
+.sao-pagination:has(:nth-child(2)) {
+  justify-content: space-between;
+}
+.sao-pagination:not(:has(:nth-child(2))) {
+  justify-content: flex-end;
+}
+.sao-pagination button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--sao-palette-color-branding-foreground-50);
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  border-radius: 4px;
+  background: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  outline: none;
+}
+.sao-pagination button > i {
+  --sao-icon-size: 20px;
+  --sao-icon-color: var(--sao-palette-color-branding-foreground-100);
+}
+.sao-pagination button:focus-visible {
+  border: 2px solid var(--sao-palette-color-global-blue-500);
+}
+.sao-pagination > main {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.sao-pagination > main > * {
+  height: 100%;
+  padding: 0 16px;
+}
+.sao-pagination > main > :first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.sao-pagination > main > :first-child > span {
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-pagination > main > :last-child {
+  display: inline-flex;
+  align-items: center;
+  border-left: 1px solid var(--sao-palette-color-branding-background-700);
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  color: var(--sao-palette-color-branding-foreground-500);
+}
+.sao-pagination > aside {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+.sao-pagination > aside > * {
+  height: 100%;
+}
+.sao-pagination > aside > :first-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-left: 1px solid var(--sao-palette-color-branding-background-700);
+}
+.sao-pagination > aside > :first-child > span {
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+}
+.sao-pagination > aside > :last-child {
+  display: inline-flex;
+  align-items: center;
+}
+.sao-pagination > aside > :last-child > button {
+  position: relative;
+  height: 100%;
+  width: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.sao-pagination > aside > :last-child > button::before {
+  position: absolute;
+  content: '';
+  top: -3px;
+  left: -3px;
+  width: 1px;
+  height: 48px;
+  background-color: var(--sao-palette-color-branding-background-700);
+}

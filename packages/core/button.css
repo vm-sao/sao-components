@@ -1,0 +1,296 @@
+.sao-button {
+  border-radius: var(--sao-button-border-radius);
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-button-font-size);
+  line-height: var(--sao-button-line-height);
+  color: var(--sao-button-text-color);
+  border: 1px solid var(--sao-button-border-color);
+  background: var(--sao-button-background);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sao-button-gap);
+  width: max-content;
+  outline: none;
+}
+.sao-button:has(i):not(:has(:nth-child(2))) {
+  padding: calc(var(--sao-button-padding-y) - 1px);
+}
+.sao-button:not(:has(i)),
+.sao-button:has(:nth-child(2)) {
+  padding: calc(var(--sao-button-padding-y) - 1px)
+    calc(var(--sao-button-padding-x) - 1px);
+}
+.sao-button > i {
+  --sao-icon-size: var(--sao-button-icon-size);
+  --sao-icon-color: var(--sao-button-text-color);
+}
+.sao-button:disabled,
+.sao-button.disabled {
+  color: var(--sao-button-text-color-disabled);
+  background: var(--sao-button-background-disabled);
+}
+.sao-button:disabled > i,
+.sao-button.disabled > i {
+  --sao-icon-color: var(--sao-button-text-color-disabled);
+}
+.sao-button:not(:disabled):not(.disabled):hover {
+  cursor: pointer;
+  color: var(--sao-button-text-color-hover);
+  background: var(--sao-button-background-hover);
+  border-color: var(--sao-button-border-color-hover);
+}
+.sao-button:not(:disabled):not(.disabled):hover > i {
+  --sao-icon-color: var(--sao-button-text-color-hover);
+}
+.sao-button:not(:disabled):not(.disabled):active {
+  cursor: pointer;
+  color: var(--sao-button-text-color-active);
+  background: var(--sao-button-background-active);
+  border-color: var(--sao-button-border-color-active);
+}
+.sao-button:not(:disabled):not(.disabled):active > i {
+  --sao-icon-color: var(--sao-button-text-color-active);
+}
+.sao-button:not(:disabled):not(.disabled):focus-visible {
+  cursor: pointer;
+  color: var(--sao-button-text-color-focus);
+  background: var(--sao-button-background-focus);
+  border-color: var(--sao-button-border-color-focus);
+  box-shadow: 0 0 0 var(--sao-button-shadow-width)
+    var(--sao-button-shadow-color);
+}
+.sao-button:not(:disabled):not(.disabled):focus-visible > i {
+  --sao-icon-color: var(--sao-button-text-color-focus);
+}
+.sao-button--xsmall {
+  --sao-button-padding-y: 6px;
+  --sao-button-padding-x: 12px;
+  --sao-button-font-size: var(--sao-typography-b4-font-size);
+  --sao-button-line-height: var(--sao-typography-b4-line-height);
+  --sao-button-border-radius: 8px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 8px;
+  --sao-button-icon-size: 20px;
+}
+.sao-button--small {
+  --sao-button-padding-y: 8px;
+  --sao-button-padding-x: 12px;
+  --sao-button-font-size: var(--sao-typography-b4-font-size);
+  --sao-button-line-height: var(--sao-typography-b4-line-height);
+  --sao-button-border-radius: 8px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 8px;
+  --sao-button-icon-size: 20px;
+}
+.sao-button--medium {
+  --sao-button-padding-y: 10px;
+  --sao-button-padding-x: 16px;
+  --sao-button-font-size: var(--sao-typography-b4-font-size);
+  --sao-button-line-height: var(--sao-typography-b4-line-height);
+  --sao-button-border-radius: 8px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 8px;
+  --sao-button-icon-size: 20px;
+}
+.sao-button--default {
+  --sao-button-padding-y: 12px;
+  --sao-button-padding-x: 18px;
+  --sao-button-font-size: var(--sao-typography-b3-font-size);
+  --sao-button-line-height: var(--sao-typography-b3-line-height);
+  --sao-button-border-radius: 8px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 12px;
+  --sao-button-icon-size: 20px;
+}
+.sao-button--large {
+  --sao-button-padding-y: 14px;
+  --sao-button-padding-x: 20px;
+  --sao-button-font-size: var(--sao-typography-b3-font-size);
+  --sao-button-line-height: var(--sao-typography-b3-line-height);
+  --sao-button-border-radius: 8px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 12px;
+  --sao-button-icon-size: 20px;
+}
+.sao-button--xlarge {
+  --sao-button-padding-y: 16px;
+  --sao-button-padding-x: 24px;
+  --sao-button-font-size: var(--sao-typography-b2-font-size);
+  --sao-button-line-height: var(--sao-typography-b2-line-height);
+  --sao-button-border-radius: 10px;
+  --sao-button-shadow-width: 4px;
+  --sao-button-gap: 12px;
+  --sao-button-icon-size: 24px;
+}
+.sao-button--primary {
+  --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-button-background: var(--sao-palette-color-gradient-primary-100);
+  --sao-button-border-color: unset;
+  --sao-button-text-color-hover: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-hover: var(--sao-palette-color-gradient-primary-200);
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-active: var(--sao-palette-color-branding-primary-600);
+  --sao-button-border-color-active: unset;
+  --sao-button-text-color-focus: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-focus: var(--sao-palette-color-gradient-primary-100);
+  --sao-button-border-color-focus: unset;
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-700
+  );
+  --sao-button-background-disabled: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: rgba(0, 0, 0);
+}
+.sao-button--error {
+  --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-button-background: var(--sao-palette-color-branding-error-800);
+  --sao-button-border-color: unset;
+  --sao-button-text-color-hover: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-hover: var(--sao-palette-color-branding-error-600);
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-active: var(--sao-palette-color-branding-error-900);
+  --sao-button-border-color-active: unset;
+  --sao-button-text-color-focus: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-focus: var(--sao-palette-color-branding-error-800);
+  --sao-button-border-color-focus: unset;
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-700
+  );
+  --sao-button-background-disabled: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: rgba(0, 1, 0);
+}
+.sao-button--success {
+  --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-button-background: var(--sao-palette-color-branding-success-700);
+  --sao-button-border-color: unset;
+  --sao-button-text-color-hover: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-hover: var(--sao-palette-color-branding-success-600);
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-active: var(--sao-palette-color-branding-success-800);
+  --sao-button-border-color-active: unset;
+  --sao-button-text-color-focus: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-focus: var(--sao-palette-color-branding-success-700);
+  --sao-button-border-color-focus: unset;
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-700
+  );
+  --sao-button-background-disabled: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: rgba(0, 1, 0);
+}
+.sao-button--secondary {
+  --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-button-background: var(--sao-palette-color-branding-foreground-800);
+  --sao-button-border-color: unset;
+  --sao-button-text-color-hover: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-hover: var(
+    --sao-palette-color-branding-foreground-600
+  );
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-active: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-active: unset;
+  --sao-button-text-color-focus: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-focus: var(
+    --sao-palette-color-branding-foreground-800
+  );
+  --sao-button-border-color-focus: unset;
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-700
+  );
+  --sao-button-background-disabled: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: var(--sao-palette-color-branding-foreground-o24);
+}
+.sao-button--tertiary {
+  --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-button-background: var(--sao-palette-color-branding-primary-o24);
+  --sao-button-border-color: var(--sao-palette-color-branding-primary-600);
+  --sao-button-text-color-hover: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-hover: var(--sao-palette-color-branding-primary-600);
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-active: var(--sao-palette-color-branding-primary-o24);
+  --sao-button-border-color-active: var(
+    --sao-palette-color-branding-primary-300
+  );
+  --sao-button-text-color-focus: var(
+    --sao-palette-color-branding-foreground-50
+  );
+  --sao-button-background-focus: var(--sao-palette-color-branding-primary-o24);
+  --sao-button-border-color-focus: var(
+    --sao-palette-color-branding-primary-600
+  );
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-700
+  );
+  --sao-button-background-disabled: var(
+    --sao-palette-color-branding-foreground-900
+  );
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: var(--sao-palette-color-branding-primary-o24);
+}
+.sao-button--ghost {
+  --sao-button-text-color: var(--sao-palette-color-branding-primary-400);
+  --sao-button-background: transparent;
+  --sao-button-border-color: unset;
+  --sao-button-text-color-hover: var(--sao-palette-color-branding-primary-400);
+  --sao-button-background-hover: var(--sao-palette-color-branding-primary-o24);
+  --sao-button-border-color-hover: unset;
+  --sao-button-text-color-active: var(--sao-palette-color-branding-primary-50);
+  --sao-button-background-active: var(--sao-palette-color-branding-primary-700);
+  --sao-button-border-color-active: unset;
+  --sao-button-text-color-focus: var(--sao-palette-color-branding-primary-400);
+  --sao-button-background-focus: var(--sao-palette-color-branding-primary-900);
+  --sao-button-border-color-focus: unset;
+  --sao-button-text-color-disabled: var(
+    --sao-palette-color-branding-foreground-600
+  );
+  --sao-button-background-disabled: transparent;
+  --sao-button-border-color-disabled: unset;
+  --sao-button-shadow-color: rgba(0, 0, 0);
+}

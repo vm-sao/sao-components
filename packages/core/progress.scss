@@ -1,0 +1,142 @@
+.sao-progress {
+  &-bar {
+    --sao-progress-percentage: 0;
+    --sao-progress-height: 8px;
+    display: inline-flex;
+    width: 100%;
+    color: var(--sao-palette-color-branding-foreground-50);
+    font-family: 'Work Sans', serif;
+    font-size: var(--sao-typography-b4-font-size);
+    line-height: var(--sao-typography-b4-line-height);
+    font-weight: 500;
+
+    &--small {
+      --sao-progress-height: 4px;
+    }
+
+    &--default {
+      --sao-progress-height: 8px;
+    }
+
+    &--horizontal {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+
+      > :first-child {
+        flex: 1 1 0;
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+
+      > :first-child {
+        width: 100%;
+      }
+    }
+
+    > :first-child {
+      height: var(--sao-progress-height);
+      border-radius: 100px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      &::before {
+        width: 100%;
+        background-color: var(--sao-palette-color-branding-background-800);
+      }
+
+      &::after {
+        width: var(--sao-progress-percentage);
+        background-color: var(--sao-palette-color-branding-primary-500);
+      }
+    }
+  }
+
+  &-circle {
+    --sao-progress-pi: 3.14159;
+    width: calc(var(--sao-progress-size) * 1px);
+    height: calc(var(--sao-progress-size) * 1px);
+
+    &--xsmall {
+      --sao-progress-size: 60;
+      --sao-progress-font-size: var(--sao-typography-b5-font-size);
+      --sao-progress-line-height: var(--sao-typography-b5-line-height);
+    }
+
+    &--small {
+      --sao-progress-size: 120;
+      --sao-progress-font-size: var(--sao-typography-b2-font-size);
+      --sao-progress-line-height: var(--sao-typography-b2-line-height);
+    }
+
+    &--medium {
+      --sao-progress-size: 144;
+      --sao-progress-font-size: var(--sao-typography-b1-font-size);
+      --sao-progress-line-height: var(--sao-typography-b1-line-height);
+    }
+
+    &--large {
+      --sao-progress-size: 220;
+      --sao-progress-font-size: var(--sao-typography-h5-font-size);
+      --sao-progress-line-height: var(--sao-typography-h5-line-height);
+    }
+
+    &--xlarge {
+      --sao-progress-size: 260;
+      --sao-progress-font-size: var(--sao-typography-h4-font-size);
+      --sao-progress-line-height: var(--sao-typography-h4-line-height);
+    }
+
+    > circle {
+      --sao-progress-stroke-width: calc(var(--sao-progress-size) / 10);
+      fill: none;
+
+      &:nth-child(1) {
+        stroke: var(--sao-palette-color-branding-background-800);
+        stroke-width: var(--sao-progress-stroke-width);
+      }
+
+      &:nth-child(2) {
+        --sao-progress-stroke-dasharray: calc(
+          calc(var(--sao-progress-size) - var(--sao-progress-stroke-width)) *
+            var(--sao-progress-pi)
+        );
+        --sao-progress-percentage-transform: calc(
+          calc(100 - var(--sao-progress-percentage, 0)) / 100
+        );
+        stroke-dasharray: var(--sao-progress-stroke-dasharray);
+        stroke-dashoffset: calc(
+          var(--sao-progress-stroke-dasharray) *
+            var(--sao-progress-percentage-transform)
+        );
+        stroke: var(--sao-palette-color-branding-primary-500);
+        stroke-width: var(--sao-progress-stroke-width);
+        stroke-linecap: round;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        transition: stroke-dashoffset 0.3s ease;
+      }
+    }
+
+    > text {
+      font-family: 'Work Sans', serif;
+      font-weight: 500;
+      font-size: var(--sao-progress-font-size);
+      line-height: var(--sao-progress-line-height);
+      fill: var(--sao-palette-color-branding-foreground-50);
+    }
+  }
+}

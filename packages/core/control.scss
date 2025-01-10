@@ -1,0 +1,121 @@
+.sao-control {
+  --sao-control-padding: 9px 15px;
+  --sao-control-font-size: var(--sao-typography-b3-font-size);
+  --sao-control-line-height: var(--sao-typography-b3-line-height);
+  --sao-control-resize-bottom: 4px;
+  --sao-control-resize-icon: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 13.5L22.2929 8.70711C22.9229 8.07714 24 8.52331 24 9.41421V19C24 19.5523 23.5523 20 23 20H13.4142C12.5233 20 12.0771 18.9229 12.7071 18.2929L17.5 13.5Z" fill="%23587BB3"/></svg>');
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--sao-control-padding);
+  border-radius: 8px;
+  border: 1px solid var(--sao-control-border-color);
+  background-color: var(--sao-control-background-color);
+  box-shadow: 0 0 0 4px var(--sao-control-shadow-color);
+  position: relative;
+  min-width: 0;
+
+  > i {
+    --sao-icon-size: 24px;
+    --sao-icon-color: var(--sao-control-icon-color);
+  }
+
+  &:has(> .sao-input) {
+    &:has(> textarea.sao-input) {
+      align-items: flex-start;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: var(--sao-control-resize-bottom);
+        right: 14px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: var(--sao-control-resize-icon);
+        cursor: nwse-resize;
+        pointer-events: none;
+      }
+    }
+
+    &:has(> .sao-input:not(:disabled):not(.disabled)) {
+      --sao-control-icon-color: var(
+        --sao-palette-color-branding-foreground-100
+      );
+      --sao-control-text-color: var(--sao-palette-color-branding-foreground-50);
+      --sao-control-placeholder-color: var(
+        --sao-palette-color-branding-foreground-600
+      );
+      --sao-control-border-color: var(
+        --sao-palette-color-branding-background-600
+      );
+      --sao-control-background-color: var(
+        --sao-palette-color-branding-background-900
+      );
+
+      &:has(> .sao-input:not(.invalid):not(.valid)) {
+        &:has(> .sao-input:not(:focus):not(:active):hover) {
+          --sao-control-border-color: var(
+            --sao-palette-color-branding-foreground-300
+          );
+        }
+
+        &:has(> .sao-input:focus),
+        &:has(> .sao-input:active) {
+          --sao-control-shadow-color: rgba(
+            var(--sao-palette-color-global-blue-500-rgb),
+            0.6
+          );
+        }
+      }
+
+      &:has(> .sao-input.invalid) {
+        --sao-control-shadow-color: rgba(
+          var(--sao-palette-color-branding-error-600-rgb),
+          0.6
+        );
+      }
+
+      &:has(> .sao-input.valid) {
+        --sao-control-shadow-color: rgba(
+          var(--sao-palette-color-branding-success-600-rgb),
+          0.6
+        );
+      }
+    }
+
+    &:has(> .sao-input:disabled),
+    &:has(> .sao-input.disabled) {
+      --sao-control-icon-color: var(
+        --sao-palette-color-branding-foreground-700
+      );
+      --sao-control-text-color: var(
+        --sao-palette-color-branding-foreground-700
+      );
+      --sao-control-placeholder-color: var(
+        --sao-palette-color-branding-foreground-700
+      );
+      --sao-control-border-color: var(
+        --sao-palette-color-branding-foreground-900
+      );
+      --sao-control-background-color: var(
+        --sao-palette-color-branding-foreground-900
+      );
+      --sao-control-resize-icon: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 13.5L22.2929 8.70711C22.9229 8.07714 24 8.52331 24 9.41421V19C24 19.5523 23.5523 20 23 20H13.4142C12.5233 20 12.0771 18.9229 12.7071 18.2929L17.5 13.5Z" fill="%23697586"/></svg>');
+    }
+  }
+
+  &--default {
+    --sao-control-padding: 9px 15px;
+    --sao-control-resize-bottom: 4px;
+    --sao-control-font-size: var(--sao-typography-b3-font-size);
+    --sao-control-line-height: var(--sao-typography-b3-line-height);
+  }
+
+  &--large {
+    --sao-control-padding: 13px 15px;
+    --sao-control-resize-bottom: 8px;
+    --sao-control-font-size: var(--sao-typography-b2-font-size);
+    --sao-control-line-height: var(--sao-typography-b2-line-height);
+  }
+}

@@ -1,0 +1,67 @@
+.sao-link {
+  text-decoration: none;
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  > i {
+    --sao-icon-size: 16px;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: var(--sao-palette-color-branding-foreground-600);
+
+    > i {
+      --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+    }
+  }
+
+  &:not(:disabled):not(.disabled) {
+    color: var(--sao-palette-color-global-blue-400);
+
+    > i {
+      --sao-icon-color: var(--sao-palette-color-global-blue-400);
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: var(--sao-palette-color-global-blue-500);
+
+      > i {
+        --sao-icon-color: var(--sao-palette-color-global-blue-500);
+      }
+    }
+
+    &:focus-visible {
+      cursor: pointer;
+      color: var(--sao-palette-color-global-blue-500);
+      outline: 1px solid var(--sao-palette-color-global-blue-500);
+
+      > i {
+        --sao-icon-color: var(--sao-palette-color-global-blue-500);
+      }
+    }
+
+    &:active {
+      cursor: pointer;
+      color: var(--sao-palette-color-branding-foreground-50);
+
+      > i {
+        --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+      }
+    }
+    &:visited {
+      cursor: pointer;
+      color: var(--sao-palette-color-global-purple-600);
+
+      > i {
+        --sao-icon-color: var(--sao-palette-color-global-purple-600);
+      }
+    }
+  }
+}

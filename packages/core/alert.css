@@ -1,0 +1,124 @@
+.sao-alert {
+  display: flex;
+  gap: 12px;
+  padding: 11px 15px;
+  background-color: var(--sao-alert-background-color);
+  border: 1px solid var(--sao-alert-border-color);
+  border-radius: 2px;
+}
+.sao-alert > i {
+  --sao-icon-size: 24px;
+}
+.sao-alert > i.is-collapse {
+  --sao-icon-color: var(--sao-alert-icon-status-color);
+}
+.sao-alert > i.is-close {
+  --sao-icon-color: var(--sao-palette-color-branding-primary-400);
+}
+.sao-alert > h6,
+.sao-alert > main > h6 {
+  flex: 1 1 0;
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-typography-b3-font-size);
+  line-height: var(--sao-typography-b3-line-height);
+  color: var(--sao-alert-title-color);
+  margin: 0;
+}
+.sao-alert > p,
+.sao-alert main > p {
+  flex: 1 1 0;
+  font-family: 'Work Sans', serif;
+  font-weight: 400;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  margin: 0;
+}
+.sao-alert > main {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sao-alert > main > footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+.sao-alert > main > footer > a {
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-typography-b4-font-size);
+  line-height: var(--sao-typography-b4-line-height);
+  color: var(--sao-alert-link-color);
+  text-decoration: none;
+}
+.sao-alert > main > footer > a:focus-visible {
+  outline: 1px solid var(--sao-alert-link-color);
+}
+.sao-alert > main > footer > a:hover,
+.sao-alert > main > footer > a:active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.sao-alert::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+}
+.sao-alert--neutral {
+  --sao-alert-background-color: var(--sao-palette-color-branding-primary-o16);
+  --sao-alert-border-color: var(--sao-palette-color-branding-primary-700);
+  --sao-alert-icon-status-color: var(--sao-palette-color-branding-primary-400);
+  --sao-alert-title-color: var(--sao-palette-color-branding-primary-300);
+  --sao-alert-link-color: var(--sao-palette-color-branding-primary-500);
+}
+.sao-alert--neutral::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1119_250)"><path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="%23A4BCFD"/></g><defs><clipPath id="clip0_1119_250"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+}
+.sao-alert--warning {
+  --sao-alert-background-color: var(--sao-palette-color-branding-warning-o16);
+  --sao-alert-border-color: var(--sao-palette-color-branding-warning-700);
+  --sao-alert-icon-status-color: var(--sao-palette-color-branding-warning-600);
+  --sao-alert-title-color: var(--sao-palette-color-branding-warning-500);
+  --sao-alert-link-color: var(--sao-palette-color-branding-warning-600);
+}
+.sao-alert--warning::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 5.99L19.53 19H4.47L12 5.99ZM12 2L1 21H23L12 2ZM13 16H11V18H13V16ZM13 10H11V14H13V10Z" fill="%23F79009"/></svg>');
+}
+.sao-alert--error {
+  --sao-alert-background-color: var(--sao-palette-color-branding-error-o16);
+  --sao-alert-border-color: var(--sao-palette-color-branding-error-700);
+  --sao-alert-icon-status-color: var(--sao-palette-color-branding-error-600);
+  --sao-alert-title-color: var(--sao-palette-color-branding-error-500);
+  --sao-alert-link-color: var(--sao-palette-color-branding-error-600);
+}
+.sao-alert--error::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1119_256)"><path d="M15.73 3H8.27L3 8.27V15.73L8.27 21H15.73L21 15.73V8.27L15.73 3ZM12 17.3C11.28 17.3 10.7 16.72 10.7 16C10.7 15.28 11.28 14.7 12 14.7C12.72 14.7 13.3 15.28 13.3 16C13.3 16.72 12.72 17.3 12 17.3ZM13 13H11V7H13V13Z" fill="%23F04438"/></g><defs><clipPath id="clip0_1119_256"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+}
+.sao-alert--success {
+  --sao-alert-background-color: var(--sao-palette-color-branding-success-o16);
+  --sao-alert-border-color: var(--sao-palette-color-branding-success-700);
+  --sao-alert-icon-status-color: var(--sao-palette-color-branding-success-700);
+  --sao-alert-title-color: var(--sao-palette-color-branding-success-600);
+  --sao-alert-link-color: var(--sao-palette-color-branding-success-600);
+}
+.sao-alert--success::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1119_261)"><path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM16.59 7.58L10 14.17L7.41 11.59L6 13L10 17L18 9L16.59 7.58Z" fill="%2325AA79"/></g><defs><clipPath id="clip0_1119_261"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+}
+.sao-alert--info {
+  --sao-alert-background-color: var(
+    --sao-palette-color-branding-foreground-o16
+  );
+  --sao-alert-border-color: var(--sao-palette-color-branding-foreground-700);
+  --sao-alert-icon-status-color: var(
+    --sao-palette-color-branding-foreground-500
+  );
+  --sao-alert-title-color: var(--sao-palette-color-branding-foreground-50);
+  --sao-alert-link-color: var(--sao-palette-color-branding-foreground-500);
+}
+.sao-alert--info::before {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_1119_266)"><path d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="%23CDD5DF"/></g><defs><clipPath id="clip0_1119_266"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+}

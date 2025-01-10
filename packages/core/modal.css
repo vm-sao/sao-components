@@ -1,0 +1,36 @@
+.sao-modal {
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  background-color: var(--sao-palette-color-branding-background-900);
+  box-shadow: 0 0 0 2px var(--sao-palette-color-branding-background-800);
+  border-radius: 8px;
+}
+.sao-modal > aside {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.sao-modal > aside > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sao-modal > aside > header > h5 {
+  flex: 1 1 0;
+  font-family: 'Work Sans', serif;
+  font-weight: 500;
+  font-size: var(--sao-typography-b1-font-size);
+  line-height: var(--sao-typography-b1-line-height);
+  color: var(--sao-palette-color-branding-foreground-50);
+  margin: 0;
+}
+.sao-modal > aside > footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}

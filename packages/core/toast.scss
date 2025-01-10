@@ -1,0 +1,70 @@
+.sao-toast {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--sao-palette-color-branding-foreground-50);
+  backdrop-filter: blur(24px);
+  border-radius: 8px;
+  padding: 16px 24px;
+
+  &::before {
+    content: '';
+    width: 28px;
+    height: 28px;
+  }
+
+  > p {
+    flex: 1 1 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: var(--sao-typography-b3-font-size);
+    line-height: var(--sao-typography-b3-line-height);
+    color: var(--sao-toast-text-color);
+    margin: 0;
+  }
+
+  > i {
+    --sao-icon-size: 20px;
+    --sao-icon-color: var(--sao-palette-color-branding-foreground-700);
+  }
+
+  &--information {
+    --sao-toast-text-color: var(--sao-palette-color-global-blue-600);
+
+    &::before {
+      background-image: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_7_20399)"><path d="M12.8333 8.16666H15.1667V10.5H12.8333V8.16666ZM12.8333 12.8333H15.1667V19.8333H12.8333V12.8333ZM14 2.33333C7.56 2.33333 2.33333 7.55999 2.33333 14C2.33333 20.44 7.56 25.6667 14 25.6667C20.44 25.6667 25.6667 20.44 25.6667 14C25.6667 7.55999 20.44 2.33333 14 2.33333ZM14 23.3333C8.855 23.3333 4.66667 19.145 4.66667 14C4.66667 8.85499 8.855 4.66666 14 4.66666C19.145 4.66666 23.3333 8.85499 23.3333 14C23.3333 19.145 19.145 23.3333 14 23.3333Z" fill="%232563EB"/></g><defs><clipPath id="clip0_7_20399"><rect width="28" height="28" fill="white"/></clipPath></defs></svg>');
+    }
+  }
+
+  &--neutral {
+    --sao-toast-text-color: var(--sao-palette-color-branding-foreground-800);
+
+    &::before {
+      background-image: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_7_20404)"><path d="M12.8333 8.16667H15.1667V10.5H12.8333V8.16667ZM12.8333 12.8333H15.1667V19.8333H12.8333V12.8333ZM14 2.33333C7.56 2.33333 2.33333 7.56 2.33333 14C2.33333 20.44 7.56 25.6667 14 25.6667C20.44 25.6667 25.6667 20.44 25.6667 14C25.6667 7.56 20.44 2.33333 14 2.33333ZM14 23.3333C8.855 23.3333 4.66667 19.145 4.66667 14C4.66667 8.855 8.855 4.66667 14 4.66667C19.145 4.66667 23.3333 8.855 23.3333 14C23.3333 19.145 19.145 23.3333 14 23.3333Z" fill="%23697586"/></g><defs><clipPath id="clip0_7_20404"><rect width="28" height="28" fill="white"/></clipPath></defs></svg>');
+    }
+  }
+
+  &--error {
+    --sao-toast-text-color: var(--sao-palette-color-branding-error-700);
+
+    &::before {
+      background-image: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_7_20409)"><path d="M18.3517 3.5H9.64833L3.5 9.64833V18.3517L9.64833 24.5H18.3517L24.5 18.3517V9.64833L18.3517 3.5ZM14 20.1833C13.16 20.1833 12.4833 19.5067 12.4833 18.6667C12.4833 17.8267 13.16 17.15 14 17.15C14.84 17.15 15.5167 17.8267 15.5167 18.6667C15.5167 19.5067 14.84 20.1833 14 20.1833ZM15.1667 15.1667H12.8333V8.16667H15.1667V15.1667Z" fill="%23D92D20"/></g><defs><clipPath id="clip0_7_20409"><rect width="28" height="28" fill="white"/></clipPath></defs></svg>');
+    }
+  }
+
+  &--warning {
+    --sao-toast-text-color: var(--sao-palette-color-branding-warning-700);
+
+    &::before {
+      background-image: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 6.98834L22.785 22.1667H5.215L14 6.98834ZM14 2.33334L1.16667 24.5H26.8333L14 2.33334ZM15.1667 18.6667H12.8333V21H15.1667V18.6667ZM15.1667 11.6667H12.8333V16.3333H15.1667V11.6667Z" fill="%23F79009"/></svg>');
+    }
+  }
+
+  &--success {
+    --sao-toast-text-color: var(--sao-palette-color-branding-success-700);
+
+    &::before {
+      background-image: url('data:image/svg+xml,<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_7_20419)"><path d="M14 2.33334C7.56 2.33334 2.33333 7.56001 2.33333 14C2.33333 20.44 7.56 25.6667 14 25.6667C20.44 25.6667 25.6667 20.44 25.6667 14C25.6667 7.56001 20.44 2.33334 14 2.33334ZM14 23.3333C8.855 23.3333 4.66667 19.145 4.66667 14C4.66667 8.85501 8.855 4.66668 14 4.66668C19.145 4.66668 23.3333 8.85501 23.3333 14C23.3333 19.145 19.145 23.3333 14 23.3333ZM19.355 8.84334L11.6667 16.5317L8.645 13.5217L7 15.1667L11.6667 19.8333L21 10.5L19.355 8.84334Z" fill="%2325AA79"/></g><defs><clipPath id="clip0_7_20419"><rect width="28" height="28" fill="white"/></clipPath></defs></svg>');
+    }
+  }
+}
