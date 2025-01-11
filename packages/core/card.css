@@ -77,7 +77,7 @@
 }
 .sao-card > header > i {
   --sao-icon-size: var(--sao-card-header-icon-size);
-  --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+  background-color: var(--sao-palette-color-branding-foreground-600);
 }
 .sao-card > header + img {
   aspect-ratio: 24 / 9;

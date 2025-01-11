@@ -195,7 +195,7 @@
     > i {
       display: var(--sao-master-card-content-display);
       --sao-icon-size: 16px;
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-100);
+      background-color: var(--sao-palette-color-branding-foreground-100);
     }
 
     &::after {

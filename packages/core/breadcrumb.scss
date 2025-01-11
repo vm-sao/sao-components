@@ -24,7 +24,7 @@
 
     > i {
       --sao-icon-size: 16px;
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+      background-color: var(--sao-palette-color-branding-foreground-50);
     }
 
     &:not(:last-child) {

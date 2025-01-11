@@ -27,7 +27,7 @@
 
     &:is(i) {
       --sao-icon-size: var(--sao-tag-icon-size, 24px);
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+      background-color: var(--sao-palette-color-branding-foreground-50);
     }
 
     &:is(img) {

@@ -17,7 +17,7 @@
 
   > i {
     --sao-icon-size: 24px;
-    --sao-icon-color: var(--sao-control-icon-color);
+    background-color: var(--sao-control-icon-color);
   }
 
   &:has(> .sao-input) {

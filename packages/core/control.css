@@ -17,7 +17,7 @@
 }
 .sao-control > i {
   --sao-icon-size: 24px;
-  --sao-icon-color: var(--sao-control-icon-color);
+  background-color: var(--sao-control-icon-color);
 }
 .sao-control:has(> .sao-input):has(> textarea.sao-input) {
   align-items: flex-start;

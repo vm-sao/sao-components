@@ -27,7 +27,7 @@
 }
 .sao-pagination button > i {
   --sao-icon-size: 20px;
-  --sao-icon-color: var(--sao-palette-color-branding-foreground-100);
+  background-color: var(--sao-palette-color-branding-foreground-100);
 }
 .sao-pagination button:focus-visible {
   border: 2px solid var(--sao-palette-color-global-blue-500);

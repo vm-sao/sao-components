@@ -109,7 +109,7 @@ importers:
     dependencies:
       '@sao-icons/core':
         specifier: latest
-        version: 0.0.6
+        version: 0.0.7
       '@sao-palette/core':
         specifier: latest
         version: 0.0.12
@@ -1975,8 +1975,8 @@ packages:
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
 
-  '@sao-icons/core@0.0.6':
-    resolution: {integrity: sha512-LBWyB+xM6PP5VAMZW8NeH/lr3Uh8WQQFZoQvnZzPuWD458BFQTMaQrWhikIGPcHqqMWcBY6LW583jEIeZefkQQ==}
+  '@sao-icons/core@0.0.7':
+    resolution: {integrity: sha512-JV6VlUSBCVR4aUhw0oioJGAvDn7NGZZBuCibi/587DaAHgLakYLWYtkh1MDKWPQRNv3o2WHpA1jRYXnsEISXVw==}
 
   '@sao-palette/core@0.0.12':
     resolution: {integrity: sha512-MRlIqluCbvcy+QXJwkNB47r7JeQGEIwYJ0iGobdSgBlL347Wob6PDt5Ds3OZdOQE8zeSb6mjipcnVU81aSEQ0Q==}
@@ -8587,7 +8587,7 @@ snapshots:
 
   '@rtsao/scc@1.1.0': {}
 
-  '@sao-icons/core@0.0.6': {}
+  '@sao-icons/core@0.0.7': {}
 
   '@sao-palette/core@0.0.12': {}
 

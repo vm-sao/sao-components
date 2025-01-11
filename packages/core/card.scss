@@ -84,7 +84,7 @@
 
     > i {
       --sao-icon-size: var(--sao-card-header-icon-size);
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+      background-color: var(--sao-palette-color-branding-foreground-600);
     }
 
     & + img {

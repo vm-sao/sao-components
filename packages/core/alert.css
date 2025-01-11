@@ -10,10 +10,10 @@
   --sao-icon-size: 24px;
 }
 .sao-alert > i.is-collapse {
-  --sao-icon-color: var(--sao-alert-icon-status-color);
+  background-color: var(--sao-alert-icon-status-color);
 }
 .sao-alert > i.is-close {
-  --sao-icon-color: var(--sao-palette-color-branding-primary-400);
+  background-color: var(--sao-palette-color-branding-primary-400);
 }
 .sao-alert > h6,
 .sao-alert > main > h6 {

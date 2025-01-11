@@ -22,7 +22,7 @@
 }
 .sao-breadcrumb > * > i {
   --sao-icon-size: 16px;
-  --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+  background-color: var(--sao-palette-color-branding-foreground-50);
 }
 .sao-breadcrumb > *:not(:last-child) {
   padding: 2px 0;

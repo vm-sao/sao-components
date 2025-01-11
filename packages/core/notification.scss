@@ -8,12 +8,12 @@
 
   > i {
     &.is-main {
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-100);
+      background-color: var(--sao-palette-color-branding-foreground-100);
       --sao-icon-size: 28px;
     }
 
     &.is-close {
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-700);
+      background-color: var(--sao-palette-color-branding-foreground-700);
       --sao-icon-size: 20px;
     }
   }

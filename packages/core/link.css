@@ -17,20 +17,20 @@
 }
 .sao-link:disabled > i,
 .sao-link.disabled > i {
-  --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+  background-color: var(--sao-palette-color-branding-foreground-600);
 }
 .sao-link:not(:disabled):not(.disabled) {
   color: var(--sao-palette-color-global-blue-400);
 }
 .sao-link:not(:disabled):not(.disabled) > i {
-  --sao-icon-color: var(--sao-palette-color-global-blue-400);
+  background-color: var(--sao-palette-color-global-blue-400);
 }
 .sao-link:not(:disabled):not(.disabled):hover {
   cursor: pointer;
   color: var(--sao-palette-color-global-blue-500);
 }
 .sao-link:not(:disabled):not(.disabled):hover > i {
-  --sao-icon-color: var(--sao-palette-color-global-blue-500);
+  background-color: var(--sao-palette-color-global-blue-500);
 }
 .sao-link:not(:disabled):not(.disabled):focus-visible {
   cursor: pointer;
@@ -38,19 +38,19 @@
   outline: 1px solid var(--sao-palette-color-global-blue-500);
 }
 .sao-link:not(:disabled):not(.disabled):focus-visible > i {
-  --sao-icon-color: var(--sao-palette-color-global-blue-500);
+  background-color: var(--sao-palette-color-global-blue-500);
 }
 .sao-link:not(:disabled):not(.disabled):active {
   cursor: pointer;
   color: var(--sao-palette-color-branding-foreground-50);
 }
 .sao-link:not(:disabled):not(.disabled):active > i {
-  --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+  background-color: var(--sao-palette-color-branding-foreground-50);
 }
 .sao-link:not(:disabled):not(.disabled):visited {
   cursor: pointer;
   color: var(--sao-palette-color-global-purple-600);
 }
 .sao-link:not(:disabled):not(.disabled):visited > i {
-  --sao-icon-color: var(--sao-palette-color-global-purple-600);
+  background-color: var(--sao-palette-color-global-purple-600);
 }

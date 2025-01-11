@@ -112,7 +112,7 @@
 .sao-upload-file-selected > i {
   margin-left: 4px;
   --sao-icon-size: 18px;
-  --sao-icon-color: var(
+  background-color: var(
     --sao-upload-file-icon-color,
     var(--sao-palette-color-branding-foreground-50)
   );

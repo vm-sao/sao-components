@@ -20,7 +20,7 @@
 
     > i {
       --sao-icon-size: 20px;
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+      background-color: var(--sao-palette-color-branding-foreground-50);
     }
 
     > * {

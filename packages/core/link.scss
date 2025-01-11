@@ -17,7 +17,7 @@
     color: var(--sao-palette-color-branding-foreground-600);
 
     > i {
-      --sao-icon-color: var(--sao-palette-color-branding-foreground-600);
+      background-color: var(--sao-palette-color-branding-foreground-600);
     }
   }
 
@@ -25,7 +25,7 @@
     color: var(--sao-palette-color-global-blue-400);
 
     > i {
-      --sao-icon-color: var(--sao-palette-color-global-blue-400);
+      background-color: var(--sao-palette-color-global-blue-400);
     }
 
     &:hover {
@@ -33,7 +33,7 @@
       color: var(--sao-palette-color-global-blue-500);
 
       > i {
-        --sao-icon-color: var(--sao-palette-color-global-blue-500);
+        background-color: var(--sao-palette-color-global-blue-500);
       }
     }
 
@@ -43,7 +43,7 @@
       outline: 1px solid var(--sao-palette-color-global-blue-500);
 
       > i {
-        --sao-icon-color: var(--sao-palette-color-global-blue-500);
+        background-color: var(--sao-palette-color-global-blue-500);
       }
     }
 
@@ -52,7 +52,7 @@
       color: var(--sao-palette-color-branding-foreground-50);
 
       > i {
-        --sao-icon-color: var(--sao-palette-color-branding-foreground-50);
+        background-color: var(--sao-palette-color-branding-foreground-50);
       }
     }
     &:visited {
@@ -60,7 +60,7 @@
       color: var(--sao-palette-color-global-purple-600);
 
       > i {
-        --sao-icon-color: var(--sao-palette-color-global-purple-600);
+        background-color: var(--sao-palette-color-global-purple-600);
       }
     }
   }

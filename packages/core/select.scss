@@ -72,7 +72,7 @@
 
       > i {
         --sao-icon-size: 24px;
-        --sao-icon-color: var(
+        background-color: var(
           --sao-select-color,
           var(--sao-palette-color-branding-foreground-50)
         );
@@ -82,7 +82,7 @@
     > i {
       opacity: 0;
       --sao-icon-size: 24px;
-      --sao-icon-color: var(
+      background-color: var(
         --sao-select-mark-color,
         var(--sao-palette-color-branding-primary-600)
       );
