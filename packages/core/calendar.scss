@@ -245,7 +245,7 @@
             &.is-start,
             &.is-end {
               --sao-calendar-button-in-range-circle-color: var(
-                --sao-palette-color-gradient-primary-100
+                --sao-palette-image-gradient-primary-100
               );
             }
 
@@ -270,7 +270,7 @@
 
           &.is-selected {
             --sao-calendar-button-out-range-circle-color: var(
-              --sao-palette-color-gradient-primary-100
+              --sao-palette-image-gradient-primary-100
             );
           }
         }

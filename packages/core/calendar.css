@@ -217,7 +217,7 @@
     .disabled
   ).in-range.is-selected.is-end {
   --sao-calendar-button-in-range-circle-color: var(
-    --sao-palette-color-gradient-primary-100
+    --sao-palette-image-gradient-primary-100
   );
 }
 .sao-calendar-button:not(.is-label):not(:disabled):not(
@@ -245,7 +245,7 @@
     .in-range
   ).is-selected {
   --sao-calendar-button-out-range-circle-color: var(
-    --sao-palette-color-gradient-primary-100
+    --sao-palette-image-gradient-primary-100
   );
 }
 .sao-calendar-button:not(.is-label):not(:disabled):not(.disabled):hover {

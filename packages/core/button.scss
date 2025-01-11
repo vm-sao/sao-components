@@ -14,7 +14,7 @@
   border: 1px solid var(--sao-button-border-color, unset);
   background: var(
     --sao-button-background,
-    var(--sao-palette-color-gradient-primary-100)
+    var(--sao-palette-image-gradient-primary-100)
   );
   display: inline-flex;
   align-items: center;
@@ -69,7 +69,7 @@
       );
       background: var(
         --sao-button-background-hover,
-        var(--sao-palette-color-gradient-primary-200)
+        var(--sao-palette-image-gradient-primary-200)
       );
       border-color: var(--sao-button-border-color-hover, unset);
 
@@ -109,7 +109,7 @@
       );
       background: var(
         --sao-button-background-focus,
-        var(--sao-palette-color-gradient-primary-100)
+        var(--sao-palette-image-gradient-primary-100)
       );
       border-color: var(--sao-button-border-color-focus, unset);
       box-shadow: 0 0 0 var(--sao-button-shadow-width, 4px)
@@ -195,14 +195,14 @@
 
   &--primary {
     --sao-button-text-color: var(--sao-palette-color-branding-foreground-50);
-    --sao-button-background: var(--sao-palette-color-gradient-primary-100);
+    --sao-button-background: var(--sao-palette-image-gradient-primary-100);
     --sao-button-border-color: unset;
 
     --sao-button-text-color-hover: var(
       --sao-palette-color-branding-foreground-50
     );
     --sao-button-background-hover: var(
-      --sao-palette-color-gradient-primary-200
+      --sao-palette-image-gradient-primary-200
     );
     --sao-button-border-color-hover: unset;
 
@@ -218,7 +218,7 @@
       --sao-palette-color-branding-foreground-50
     );
     --sao-button-background-focus: var(
-      --sao-palette-color-gradient-primary-100
+      --sao-palette-image-gradient-primary-100
     );
     --sao-button-border-color-focus: unset;
 

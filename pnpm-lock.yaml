@@ -112,7 +112,7 @@ importers:
         version: 0.0.6
       '@sao-palette/core':
         specifier: latest
-        version: 0.0.8
+        version: 0.0.12
       '@sao-typography/core':
         specifier: latest
         version: 0.0.5
@@ -1978,8 +1978,8 @@ packages:
   '@sao-icons/core@0.0.6':
     resolution: {integrity: sha512-LBWyB+xM6PP5VAMZW8NeH/lr3Uh8WQQFZoQvnZzPuWD458BFQTMaQrWhikIGPcHqqMWcBY6LW583jEIeZefkQQ==}
 
-  '@sao-palette/core@0.0.8':
-    resolution: {integrity: sha512-yPAMkNtBSBFJ4Gcq57RG1nYMeXJcPVMY7ItwC6I9LLzu2UQbZubQViNRtg/e69/mNYBihXT/CoCzLz9eBWAmyQ==}
+  '@sao-palette/core@0.0.12':
+    resolution: {integrity: sha512-MRlIqluCbvcy+QXJwkNB47r7JeQGEIwYJ0iGobdSgBlL347Wob6PDt5Ds3OZdOQE8zeSb6mjipcnVU81aSEQ0Q==}
 
   '@sao-typography/core@0.0.5':
     resolution: {integrity: sha512-/hz5DQhu6vAOwayOYzNSfFOG6BQzYKydURdLeEFzAc7aGR0CayDs06Tmd8HQN26s3FmFae3pQ4uFhbJw/fMcog==}
@@ -6489,7 +6489,7 @@ snapshots:
       typescript: 5.6.3
       webpack: 5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.0)
       webpack-dev-middleware: 7.4.2(webpack@5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.0))
-      webpack-dev-server: 5.1.0(webpack@5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      webpack-dev-server: 5.1.0(webpack@5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15)))
       webpack-merge: 6.0.1
       webpack-subresource-integrity: 5.1.0(webpack@5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.0))
     optionalDependencies:
@@ -6519,7 +6519,7 @@ snapshots:
       '@angular-devkit/architect': 0.1900.6(chokidar@4.0.3)
       rxjs: 7.8.1
       webpack: 5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.0)
-      webpack-dev-server: 5.1.0(webpack@5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      webpack-dev-server: 5.1.0(webpack@5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15)))
     transitivePeerDependencies:
       - chokidar
 
@@ -8589,7 +8589,7 @@ snapshots:
 
   '@sao-icons/core@0.0.6': {}
 
-  '@sao-palette/core@0.0.8': {}
+  '@sao-palette/core@0.0.12': {}
 
   '@sao-typography/core@0.0.5': {}
 
@@ -13268,6 +13268,17 @@ snapshots:
 
   webidl-conversions@3.0.1: {}
 
+  webpack-dev-middleware@7.4.2(webpack@5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15))):
+    dependencies:
+      colorette: 2.0.20
+      memfs: 4.15.3
+      mime-types: 2.1.35
+      on-finished: 2.4.1
+      range-parser: 1.2.1
+      schema-utils: 4.3.0
+    optionalDependencies:
+      webpack: 5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15))
+
   webpack-dev-middleware@7.4.2(webpack@5.96.1(@swc/core@1.5.29(@swc/helpers@0.5.15))(esbuild@0.24.0)):
     dependencies:
       colorette: 2.0.20
@@ -13290,7 +13301,7 @@ snapshots:
     optionalDependencies:
       webpack: 5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15))
 
-  webpack-dev-server@5.1.0(webpack@5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15))):
+  webpack-dev-server@5.1.0(webpack@5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15))):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -13318,10 +13329,10 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 7.4.2(webpack@5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15)))
+      webpack-dev-middleware: 7.4.2(webpack@5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15)))
       ws: 8.18.0
     optionalDependencies:
-      webpack: 5.97.1(@swc/core@1.5.29(@swc/helpers@0.5.15))
+      webpack: 5.88.0(@swc/core@1.5.29(@swc/helpers@0.5.15))
     transitivePeerDependencies:
       - bufferutil
       - debug
