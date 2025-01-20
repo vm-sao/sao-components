@@ -1,14 +1,15 @@
 .sao-lozenges {
-  --sao-lozenge-color: var(--sao-lozenge-color-not-bold);
-  --sao-lozenge-background-color: var(--sao-lozenge-background-color-not-bold);
   padding: 1px 6px;
   border-radius: 5px;
   font-family: 'Work Sans', serif;
   font-weight: 600;
   font-size: var(--sao-typography-b5-font-size);
   line-height: var(--sao-typography-b5-line-height);
-  color: var(--sao-lozenge-color);
-  background-color: var(--sao-lozenge-background-color);
+  color: var(--sao-lozenge-color, var(--sao-lozenge-color-not-bold));
+  background-color: var(
+    --sao-lozenge-background-color,
+    var(--sao-lozenge-background-color-not-bold)
+  );
 }
 .sao-lozenges--bold {
   --sao-lozenge-color: var(--sao-lozenge-color-bold);

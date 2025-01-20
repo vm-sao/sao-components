@@ -1,0 +1,59 @@
+{
+  "name": "angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/angular/src",
+  "prefix": "sao",
+  "projectType": "library",
+  "tags": ["vm-sao", "sao-components", "sao-components-angular"],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "packages/angular/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/angular/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/angular/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "cd dist/packages/angular && pnpm publish --access public --no-git-checks"
+        ],
+        "parallel": false
+      }
+    },
+    "auto": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm nx build angular --parallel=false",
+          "pnpm nx publish angular --parallel=false"
+        ],
+        "parallel": false
+      }
+    },
+    "ci": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "pnpm nx lint angular --parallel=false",
+          "pnpm nx build angular --parallel=false",
+          "pnpm nx publish angular --parallel=false --dry-run"
+        ],
+        "parallel": false
+      }
+    }
+  }
+}

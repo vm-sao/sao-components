@@ -1,13 +1,8 @@
 .sao-control {
-  --sao-control-padding: 9px 15px;
-  --sao-control-font-size: var(--sao-typography-b3-font-size);
-  --sao-control-line-height: var(--sao-typography-b3-line-height);
-  --sao-control-resize-bottom: 4px;
-  --sao-control-resize-icon: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 13.5L22.2929 8.70711C22.9229 8.07714 24 8.52331 24 9.41421V19C24 19.5523 23.5523 20 23 20H13.4142C12.5233 20 12.0771 18.9229 12.7071 18.2929L17.5 13.5Z" fill="%23587BB3"/></svg>');
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: var(--sao-control-padding);
+  padding: var(--sao-control-padding, 9px 15px);
   border-radius: 8px;
   border: 1px solid var(--sao-control-border-color);
   background-color: var(--sao-control-background-color);
@@ -27,12 +22,15 @@
       &::after {
         content: '';
         position: absolute;
-        bottom: var(--sao-control-resize-bottom);
+        bottom: var(--sao-control-resize-bottom, 4px);
         right: 14px;
         display: block;
         width: 24px;
         height: 24px;
-        background-image: var(--sao-control-resize-icon);
+        background-image: var(
+          --sao-control-resize-icon,
+          url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.5 13.5L22.2929 8.70711C22.9229 8.07714 24 8.52331 24 9.41421V19C24 19.5523 23.5523 20 23 20H13.4142C12.5233 20 12.0771 18.9229 12.7071 18.2929L17.5 13.5Z" fill="%23587BB3"/></svg>')
+        );
         cursor: nwse-resize;
         pointer-events: none;
       }
@@ -56,7 +54,7 @@
       &:has(> .sao-input:not(.invalid):not(.valid)) {
         &:has(> .sao-input:not(:focus):not(:active):hover) {
           --sao-control-border-color: var(
-            --sao-palette-color-branding-foreground-300
+            --sao-palette-color-branding-background-300
           );
         }
 

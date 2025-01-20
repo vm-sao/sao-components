@@ -9,6 +9,9 @@
 .sao-table tbody > tr > td {
   padding: 12px 16px;
 }
+.sao-table tfoot > tr > td {
+  padding: 12px 16px;
+}
 .sao-table-header {
   display: inline-flex;
   align-items: center;
@@ -30,6 +33,12 @@
 .sao-table--bordered tbody > tr > td {
   border-top: 1px solid var(--sao-palette-color-branding-background-700);
 }
+.sao-table--bordered tfoot > tr > td {
+  border-top: 1px solid var(--sao-palette-color-branding-background-700);
+}
 .sao-table--hoverable tbody > tr:hover {
+  background-color: var(--sao-palette-color-branding-background-700);
+}
+.sao-table--hoverable tfoot > tr:hover {
   background-color: var(--sao-palette-color-branding-background-700);
 }

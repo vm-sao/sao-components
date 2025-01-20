@@ -1,26 +1,26 @@
-.sao-ratio {
+.sao-radio {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: var(--sao-ratio-gap, 14px);
+  gap: var(--sao-radio-gap, 14px);
 
   > input {
     opacity: 0;
     margin: 0;
-    width: var(--sao-ratio-wrapper-size, 24px);
-    height: var(--sao-ratio-wrapper-size, 24px);
+    width: var(--sao-radio-wrapper-size, 24px);
+    height: var(--sao-radio-wrapper-size, 24px);
   }
 
   > span {
     font-family: 'Work Sans', serif;
-    font-size: var(--sao-ratio-font-size, var(--sao-typography-b3-font-size));
+    font-size: var(--sao-radio-font-size, var(--sao-typography-b3-font-size));
     line-height: var(
-      --sao-ratio-line-height,
+      --sao-radio-line-height,
       var(--sao-typography-b3-line-height)
     );
     font-weight: 500;
     color: var(
-      --sao-ratio-color,
+      --sao-radio-color,
       var(--sao-palette-color-branding-foreground-50)
     );
   }
@@ -34,15 +34,15 @@
   }
 
   &::before {
-    width: var(--sao-ratio-wrapper-size, 24px);
-    height: var(--sao-ratio-wrapper-size, 24px);
+    width: var(--sao-radio-wrapper-size, 24px);
+    height: var(--sao-radio-wrapper-size, 24px);
     border: 1px solid
       var(
-        --sao-ratio-wrapper-border-color,
+        --sao-radio-wrapper-border-color,
         var(--sao-palette-color-branding-background-500)
       );
     background-color: var(
-      --sao-ratio-wrapper-background-color,
+      --sao-radio-wrapper-background-color,
       var(--sao-palette-color-branding-background-800)
     );
     left: 0;
@@ -51,14 +51,14 @@
   }
 
   &::after {
-    width: var(--sao-ratio-checked-size, 12px);
-    height: var(--sao-ratio-checked-size, 12px);
-    background-color: var(--sao-ratio-checked-background-color, transparent);
+    width: var(--sao-radio-checked-size, 12px);
+    height: var(--sao-radio-checked-size, 12px);
+    background-color: var(--sao-radio-checked-background-color, transparent);
     top: 50%;
     left: calc(
       calc(
-          var(--sao-ratio-wrapper-size, 24px) - var(
-              --sao-ratio-checked-size,
+          var(--sao-radio-wrapper-size, 24px) - var(
+              --sao-radio-checked-size,
               12px
             )
         ) /
@@ -69,75 +69,75 @@
 
   &:has(> input:disabled),
   &.disabled {
-    --sao-ratio-color: var(--sao-palette-color-branding-foreground-600);
-    --sao-ratio-wrapper-border-color: var(
+    --sao-radio-color: var(--sao-palette-color-branding-foreground-600);
+    --sao-radio-wrapper-border-color: var(
       --sao-palette-color-branding-foreground-800
     );
-    --sao-ratio-wrapper-background-color: var(
+    --sao-radio-wrapper-background-color: var(
       --sao-palette-color-branding-foreground-800
     );
 
     &:has(> input:checked) {
-      --sao-ratio-checked-background-color: var(
+      --sao-radio-checked-background-color: var(
         --sao-palette-color-branding-foreground-600
       );
     }
   }
 
   &:not(:has(> input:disabled)):not(.disabled) {
-    --sao-ratio-color: var(--sao-palette-color-branding-foreground-50);
+    --sao-radio-color: var(--sao-palette-color-branding-foreground-50);
 
     &:has(> input:checked) {
-      --sao-ratio-checked-background-color: var(
+      --sao-radio-checked-background-color: var(
         --sao-palette-color-branding-foreground-50
       );
-      --sao-ratio-wrapper-border-color: var(
+      --sao-radio-wrapper-border-color: var(
         --sao-palette-color-global-blue-500
       );
-      --sao-ratio-wrapper-background-color: var(
+      --sao-radio-wrapper-background-color: var(
         --sao-palette-color-global-blue-500
       );
 
       &:hover {
-        --sao-ratio-wrapper-border-color: var(
+        --sao-radio-wrapper-border-color: var(
           --sao-palette-color-global-blue-400
         );
-        --sao-ratio-wrapper-background-color: var(
+        --sao-radio-wrapper-background-color: var(
           --sao-palette-color-global-blue-400
         );
       }
 
       &:has(> input:focus-visible) {
-        --sao-ratio-wrapper-border-color: var(
+        --sao-radio-wrapper-border-color: var(
           --sao-palette-color-global-blue-300
         );
-        --sao-ratio-wrapper-background-color: var(
+        --sao-radio-wrapper-background-color: var(
           --sao-palette-color-global-blue-300
         );
       }
 
       &:has(> input:focus),
       &:has(> input:focus-visible) {
-        --sao-ratio-checked-background-color: var(
+        --sao-radio-checked-background-color: var(
           --sao-palette-color-global-blue-700
         );
       }
     }
 
     &:not(:has(> input:checked)) {
-      --sao-ratio-checked-background-color: transparent;
-      --sao-ratio-wrapper-border-color: var(
+      --sao-radio-checked-background-color: transparent;
+      --sao-radio-wrapper-border-color: var(
         --sao-palette-color-branding-background-500
       );
-      --sao-ratio-wrapper-background-color: var(
+      --sao-radio-wrapper-background-color: var(
         --sao-palette-color-branding-background-800
       );
 
       &:hover {
-        --sao-ratio-wrapper-border-color: var(
+        --sao-radio-wrapper-border-color: var(
           --sao-palette-color-branding-background-500
         );
-        --sao-ratio-wrapper-background-color: var(
+        --sao-radio-wrapper-background-color: var(
           --sao-palette-color-branding-background-600
         );
       }
@@ -151,28 +151,28 @@
     }
 
     &:has(> input:focus) {
-      --sao-ratio-wrapper-border-color: var(
+      --sao-radio-wrapper-border-color: var(
         --sao-palette-color-global-blue-300
       );
-      --sao-ratio-wrapper-background-color: var(
+      --sao-radio-wrapper-background-color: var(
         --sao-palette-color-global-blue-300
       );
     }
   }
 
   &--small {
-    --sao-ratio-wrapper-size: 18px;
-    --sao-ratio-checked-size: 10px;
-    --sao-ratio-gap: 12px;
-    --sao-ratio-font-size: var(--sao-typography-b4-font-size);
-    --sao-ratio-line-height: var(--sao-typography-b4-line-height);
+    --sao-radio-wrapper-size: 18px;
+    --sao-radio-checked-size: 10px;
+    --sao-radio-gap: 12px;
+    --sao-radio-font-size: var(--sao-typography-b4-font-size);
+    --sao-radio-line-height: var(--sao-typography-b4-line-height);
   }
 
   &--default {
-    --sao-ratio-wrapper-size: 24px;
-    --sao-ratio-checked-size: 12px;
-    --sao-ratio-gap: 14px;
-    --sao-ratio-font-size: var(--sao-typography-b3-font-size);
-    --sao-ratio-line-height: var(--sao-typography-b3-line-height);
+    --sao-radio-wrapper-size: 24px;
+    --sao-radio-checked-size: 12px;
+    --sao-radio-gap: 14px;
+    --sao-radio-font-size: var(--sao-typography-b3-font-size);
+    --sao-radio-line-height: var(--sao-typography-b3-line-height);
   }
 }

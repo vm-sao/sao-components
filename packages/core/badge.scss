@@ -124,9 +124,7 @@
   }
 
   &-count {
-    --sao-badge-padding-y: 0;
-    --sao-badge-padding-x: 6px;
-    padding: var(--sao-badge-padding-y) var(--sao-badge-padding-x);
+    padding: var(--sao-badge-padding-y, 0) var(--sao-badge-padding-x, 6px);
     border-radius: 9999px;
     font-family: 'Work Sans', serif;
     font-size: var(--sao-typography-b5-font-size);

@@ -1,11 +1,11 @@
 .sao-master-card {
   width: 100%;
-  max-width: var(--sao-master-card-max-width);
-  padding: var(--sao-master-card-padding);
-  border-radius: var(--sao-master-card-border-radius);
+  max-width: var(--sao-master-card-max-width, 335px);
+  padding: var(--sao-master-card-padding, 24px);
+  border-radius: var(--sao-master-card-border-radius, 20px);
   display: flex;
   flex-direction: column;
-  gap: var(--sao-master-card-gap);
+  gap: var(--sao-master-card-gap, 63px);
   position: relative;
 }
 .sao-master-card--large {
@@ -87,7 +87,7 @@
     rgba(255, 255, 255, 0.1) 109.75%
   );
   backdrop-filter: blur(53.5px);
-  border-radius: var(--sao-master-card-border-radius);
+  border-radius: var(--sao-master-card-border-radius, 20px);
 }
 .sao-master-card--dark-green {
   --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20478)"/><g filter="url(%23filter0_b_18_20478)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M257.364 185C264.87 166.301 269 145.883 269 124.5C269 74.5193 246.435 29.8088 210.938 0L20 0C8.95431 0 0 8.9543 0 20V165C0 176.046 8.95431 185 20 185H257.364Z" fill="white" fill-opacity="0.06"/><path fill-rule="evenodd" clip-rule="evenodd" d="M239.635 185C245.699 167.964 249 149.617 249 130.5C249 77.0432 223.188 29.6152 183.347 0L20 0C8.95431 0 0 8.9543 0 20V165C0 176.046 8.95431 185 20 185H239.635Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20478" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20478"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20478" result="shape"/></filter><linearGradient id="paint0_linear_18_20478" x1="-85" y1="-38.5" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.0364583"/><stop offset="0.878935" stop-color="%230FB8B8"/></linearGradient></defs></svg>');
@@ -99,21 +99,21 @@
 }
 .sao-master-card > header {
   position: relative;
-  height: var(--sao-master-card-header-height);
+  height: var(--sao-master-card-header-height, 30px);
   width: 100%;
   z-index: 1;
 }
 .sao-master-card > header > img {
-  height: var(--sao-master-card-header-image-height);
-  width: calc(var(--sao-master-card-header-image-height) * 2.6);
+  height: var(--sao-master-card-header-image-height, 24px);
+  width: calc(var(--sao-master-card-header-image-height, 24px) * 2.6);
   object-fit: cover;
 }
 .sao-master-card > header::after,
 .sao-master-card > header::before {
   content: '';
   position: absolute;
-  width: var(--sao-master-card-header-circle-size);
-  height: var(--sao-master-card-header-circle-size);
+  width: var(--sao-master-card-header-circle-size, 30px);
+  height: var(--sao-master-card-header-circle-size, 30px);
   top: 0;
   border-radius: 9999px;
 }
@@ -122,7 +122,7 @@
   background-color: rgba(0, 1, 0);
 }
 .sao-master-card > header::before {
-  right: calc(var(--sao-master-card-header-circle-size) * 0.6);
+  right: calc(var(--sao-master-card-header-circle-size, 30px) * 0.6);
   background-color: rgba(0, 1, 0);
 }
 .sao-master-card > main {
@@ -140,36 +140,54 @@
 .sao-master-card > main > aside > label {
   display: flex;
   flex-direction: column;
-  gap: var(--sao-master-card-content-gap);
-  width: var(--sao-master-card-content-label-width);
+  gap: var(--sao-master-card-content-gap, 6px);
+  width: var(--sao-master-card-content-label-width, 160px);
 }
 .sao-master-card > main > aside > label h6 {
   font-family: 'Work Sans', serif;
   font-weight: 500;
-  font-size: var(--sao-master-card-content-card-holder-font-size);
-  line-height: var(--sao-master-card-content-card-holder-line-height);
+  font-size: var(
+    --sao-master-card-content-card-holder-font-size,
+    var(--sao-typography-b4-font-size)
+  );
+  line-height: var(
+    --sao-master-card-content-card-holder-line-height,
+    var(--sao-typography-b4-line-height)
+  );
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
 .sao-master-card > main > aside > label span {
   font-family: 'Work Sans', serif;
   font-weight: 500;
-  font-size: var(--sao-master-card-content-card-number-font-size);
-  line-height: var(--sao-master-card-content-card-number-line-height);
+  font-size: var(
+    --sao-master-card-content-card-number-font-size,
+    var(--sao-typography-b5-font-size)
+  );
+  line-height: var(
+    --sao-master-card-content-card-number-line-height,
+    var(--sao-typography-b5-line-height)
+  );
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
 .sao-master-card > main > aside > span {
-  display: var(--sao-master-card-content-display);
+  display: var(--sao-master-card-content-display, inline-block);
   font-family: 'Work Sans', serif;
   font-weight: 500;
-  font-size: var(--sao-master-card-content-card-number-font-size);
-  line-height: var(--sao-master-card-content-card-number-line-height);
+  font-size: var(
+    --sao-master-card-content-card-number-font-size,
+    var(--sao-typography-b5-font-size)
+  );
+  line-height: var(
+    --sao-master-card-content-card-number-line-height,
+    var(--sao-typography-b5-line-height)
+  );
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
 .sao-master-card > main > i {
-  display: var(--sao-master-card-content-display);
+  display: var(--sao-master-card-content-display, inline-block);
   --sao-icon-size: 16px;
   background-color: var(--sao-palette-color-branding-foreground-100);
 }
@@ -209,6 +227,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-image: var(--sao-master-card-background-image);
-  border-radius: var(--sao-master-card-border-radius);
+  background-image: var(
+    --sao-master-card-background-image,
+    var(--sao-master-card-background-image-large)
+  );
+  border-radius: var(--sao-master-card-border-radius, 20px);
 }

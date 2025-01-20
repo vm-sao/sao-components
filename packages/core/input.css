@@ -1,4 +1,5 @@
 .sao-input {
+  flex: 1 1 0;
   font-family: 'Work Sans', serif;
   font-size: var(--sao-control-font-size, var(--sao-typography-b3-font-size));
   line-height: var(

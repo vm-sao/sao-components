@@ -1,0 +1,32 @@
+{
+  "name": "@sao-components/angular",
+  "version": "0.0.1-beta.0",
+  "private": false,
+  "author": "Elias Vinh",
+  "license": "MIT",
+  "description": "SAO Components Package for getting components styling",
+  "homepage": "https://github.com/vm-sao/sao-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vm-sao/sao-components.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/vm-sao/sao-components/issues",
+    "email": "anlalayker@gmail.com"
+  },
+  "keywords": [
+    "vm-sao",
+    "sao-components",
+    "sao-components-angular"
+  ],
+  "peerDependencies": {
+    "@sao-components/core": "latest",
+    "@sao-icons/core": "latest",
+    "@angular/core": ">=16.x.x",
+    "@angular/cdk": ">=16.x.x"
+  },
+  "devDependencies": {
+    "@sao-icons/types": "latest"
+  }
+}

@@ -1,5 +1,4 @@
 .sao-avatar {
-  --sao-avatar-shadow-width: 2px;
   width: var(--sao-avatar-size, 24px);
   height: var(--sao-avatar-size, 24px);
   background-color: var(--sao-avatar-background-color, transparent);

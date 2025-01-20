@@ -1,6 +1,4 @@
 .sao-progress-bar {
-  --sao-progress-percentage: 0;
-  --sao-progress-height: 8px;
   display: inline-flex;
   width: 100%;
   color: var(--sao-palette-color-branding-foreground-50);
@@ -50,7 +48,7 @@
   background-color: var(--sao-palette-color-branding-background-800);
 }
 .sao-progress-bar > :first-child::after {
-  width: var(--sao-progress-percentage);
+  width: var(--sao-progress-percentage, 0);
   background-color: var(--sao-palette-color-branding-primary-500);
 }
 .sao-progress-circle {
