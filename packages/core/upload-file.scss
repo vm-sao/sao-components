@@ -34,7 +34,9 @@
     }
 
     &:not(.disabled):not(:has(> input[type='file']:disabled)) {
-      > main > span > strong:hover {
+      > main > span > strong:hover,
+      > main > .sao-upload-file__text > strong:hover,
+      > .sao-upload-file__zone > .sao-upload-file__text > strong:hover {
         cursor: pointer;
         text-decoration: underline;
       }
@@ -61,7 +63,8 @@
       display: none;
     }
 
-    > main {
+    > main,
+    > .sao-upload-file__zone {
       width: 100%;
       display: flex;
       align-items: center;
@@ -69,7 +72,8 @@
       flex-direction: column;
       gap: 8px;
 
-      > span {
+      > span,
+      > .sao-upload-file__text {
         font-family: 'Work Sans', serif;
         font-size: var(--sao-typography-b4-font-size);
         line-height: var(--sao-typography-b4-line-height);
@@ -118,7 +122,7 @@
     );
     overflow: hidden;
 
-    > i {
+    > .sao-icon {
       margin-left: 4px;
       --sao-icon-size: 18px;
       background-color: var(
@@ -202,7 +206,7 @@
         --sao-palette-color-branding-primary-600
       );
 
-      > i {
+      > .sao-icon {
         --sao-upload-file-icon-color: var(
           --sao-palette-color-branding-primary-600
         );

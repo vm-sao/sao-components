@@ -46,6 +46,9 @@
     }
 
     > span,
+    .sao-select-item__text,
+    > .sao-select-item__information > .sao-select-item__text,
+    > aside > .sao-select-item__text,
     > aside > span {
       font-family: 'Work Sans', serif;
       font-size: var(--sao-typography-b3-font-size);
@@ -56,7 +59,8 @@
         var(--sao-palette-color-branding-foreground-50)
       );
 
-      > mark {
+      > mark,
+      .sao-select-item__mark {
         color: var(
           --sao-select-mark-color,
           var(--sao-palette-color-branding-primary-600)
@@ -65,12 +69,13 @@
       }
     }
 
-    > aside {
+    > aside,
+    > .sao-select-item__information {
       display: flex;
       align-items: center;
       gap: 12px;
 
-      > i {
+      > .sao-icon {
         --sao-icon-size: 24px;
         background-color: var(
           --sao-select-color,
@@ -79,7 +84,7 @@
       }
     }
 
-    > i {
+    > .sao-icon {
       opacity: 0;
       --sao-icon-size: 24px;
       background-color: var(

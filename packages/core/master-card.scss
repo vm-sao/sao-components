@@ -105,7 +105,8 @@
     --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20411)"/><g filter="url(%23filter0_b_18_20411)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M240 110.883V165C240 176.046 231.046 185 220 185H-42.9492C-28.2817 110.33 37.5309 54 116.5 54C165.925 54 210.196 76.0655 240 110.883Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20411" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20411"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20411" result="shape"/></filter><linearGradient id="paint0_linear_18_20411" x1="-143" y1="-20" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%23042843"/><stop offset="0.878935" stop-color="%23726E9E"/></linearGradient></defs></svg>');
   }
 
-  > header {
+  > header,
+  > .sao-master-card__header {
     position: relative;
     height: var(--sao-master-card-header-height, 30px);
     width: 100%;
@@ -144,25 +145,29 @@
     }
   }
 
-  > main {
+  > main,
+  > .sao-master-card__main {
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: space-between;
     position: relative;
     z-index: 1;
 
-    > aside {
+    > aside,
+    > .sao-master-card__content {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       overflow-x: hidden;
 
-      > label {
+      > label,
+      > .sao-master-card__information {
         display: flex;
         flex-direction: column;
         gap: var(--sao-master-card-content-gap, 6px);
         width: var(--sao-master-card-content-label-width, 160px);
 
-        h6 {
+        h6,
+        > .sao-master-card__name {
           font-family: 'Work Sans', serif;
           font-weight: 500;
           font-size: var(
@@ -177,7 +182,8 @@
           margin: 0;
         }
 
-        span {
+        span,
+        > .sao-master-card__number {
           font-family: 'Work Sans', serif;
           font-weight: 500;
           font-size: var(
@@ -193,7 +199,8 @@
         }
       }
 
-      > span {
+      > span,
+      > .sao-master-card__expiry {
         display: var(--sao-master-card-content-display, inline-block);
         font-family: 'Work Sans', serif;
         font-weight: 500;
@@ -210,7 +217,7 @@
       }
     }
 
-    > i {
+    > .sao-icon {
       display: var(--sao-master-card-content-display, inline-block);
       --sao-icon-size: 16px;
       background-color: var(--sao-palette-color-branding-foreground-100);

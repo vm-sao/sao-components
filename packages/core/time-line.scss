@@ -12,7 +12,8 @@
     padding: 0 16px 16px 20px;
     position: relative;
 
-    > h6 {
+    > h6,
+    > .sao-time-line-step__title {
       font-family: 'Work Sans', serif;
       font-size: var(--sao-typography-b4-font-size);
       line-height: var(--sao-typography-b4-line-height);
@@ -21,7 +22,8 @@
       margin: 0;
     }
 
-    > p {
+    > p,
+    > .sao-time-line-step__description {
       font-family: 'Work Sans', serif;
       font-size: var(--sao-typography-b5-font-size);
       line-height: var(--sao-typography-b5-line-height);

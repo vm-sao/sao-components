@@ -97,19 +97,23 @@
   --sao-master-card-background-image-large: url('data:image/svg+xml,<svg width="335" height="185" viewBox="0 0 335 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20444)"/><g filter="url(%23filter0_b_18_20444)"><rect width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M335 110.883V165C335 176.046 326.046 185 315 185H52.0508C66.7183 110.33 132.531 54 211.5 54C260.925 54 305.196 76.0655 335 110.883Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20444" x="-80" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20444"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20444" result="shape"/></filter><linearGradient id="paint0_linear_18_20444" x1="-48" y1="-20" x2="382" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%23042843"/><stop offset="0.878935" stop-color="%23726E9E"/></linearGradient></defs></svg>');
   --sao-master-card-background-image-small: url('data:image/svg+xml,<svg width="145" height="185" viewBox="0 0 145 185" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="-95" width="335" height="185" rx="20" fill="url(%23paint0_linear_18_20411)"/><g filter="url(%23filter0_b_18_20411)"><rect x="-95" width="335" height="185" rx="20" fill="white" fill-opacity="0.03"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M240 110.883V165C240 176.046 231.046 185 220 185H-42.9492C-28.2817 110.33 37.5309 54 116.5 54C165.925 54 210.196 76.0655 240 110.883Z" fill="white" fill-opacity="0.06"/><defs><filter id="filter0_b_18_20411" x="-175" y="-80" width="495" height="345" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="40"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_18_20411"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_18_20411" result="shape"/></filter><linearGradient id="paint0_linear_18_20411" x1="-143" y1="-20" x2="287" y2="205.5" gradientUnits="userSpaceOnUse"><stop offset="0.122247" stop-color="%23042843"/><stop offset="0.878935" stop-color="%23726E9E"/></linearGradient></defs></svg>');
 }
-.sao-master-card > header {
+.sao-master-card > header,
+.sao-master-card > .sao-master-card__header {
   position: relative;
   height: var(--sao-master-card-header-height, 30px);
   width: 100%;
   z-index: 1;
 }
-.sao-master-card > header > img {
+.sao-master-card > header > img,
+.sao-master-card > .sao-master-card__header > img {
   height: var(--sao-master-card-header-image-height, 24px);
   width: calc(var(--sao-master-card-header-image-height, 24px) * 2.6);
   object-fit: cover;
 }
 .sao-master-card > header::after,
-.sao-master-card > header::before {
+.sao-master-card > .sao-master-card__header::after,
+.sao-master-card > header::before,
+.sao-master-card > .sao-master-card__header::before {
   content: '';
   position: absolute;
   width: var(--sao-master-card-header-circle-size, 30px);
@@ -117,33 +121,114 @@
   top: 0;
   border-radius: 9999px;
 }
-.sao-master-card > header::after {
+.sao-master-card > header::after,
+.sao-master-card > .sao-master-card__header::after {
   right: 0;
   background-color: rgba(0, 1, 0);
 }
-.sao-master-card > header::before {
+.sao-master-card > header::before,
+.sao-master-card > .sao-master-card__header::before {
   right: calc(var(--sao-master-card-header-circle-size, 30px) * 0.6);
   background-color: rgba(0, 1, 0);
 }
-.sao-master-card > main {
+.sao-master-card > main,
+.sao-master-card > .sao-master-card__main {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   position: relative;
   z-index: 1;
 }
-.sao-master-card > main > aside {
+.sao-master-card > main > aside,
+.sao-master-card > .sao-master-card__main > aside,
+.sao-master-card > main > .sao-master-card__content,
+.sao-master-card > .sao-master-card__main > .sao-master-card__content {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   overflow-x: hidden;
 }
-.sao-master-card > main > aside > label {
+.sao-master-card > main > aside > label,
+.sao-master-card > .sao-master-card__main > aside > label,
+.sao-master-card > main > .sao-master-card__content > label,
+.sao-master-card > .sao-master-card__main > .sao-master-card__content > label,
+.sao-master-card > main > aside > .sao-master-card__information,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > .sao-master-card__information,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > .sao-master-card__information,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__information {
   display: flex;
   flex-direction: column;
   gap: var(--sao-master-card-content-gap, 6px);
   width: var(--sao-master-card-content-label-width, 160px);
 }
-.sao-master-card > main > aside > label h6 {
+.sao-master-card > main > aside > label h6,
+.sao-master-card > .sao-master-card__main > aside > label h6,
+.sao-master-card > main > .sao-master-card__content > label h6,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > label
+  h6,
+.sao-master-card > main > aside > .sao-master-card__information h6,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > .sao-master-card__information
+  h6,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  h6,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  h6,
+.sao-master-card > main > aside > label > .sao-master-card__name,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > label
+  > .sao-master-card__name,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > label
+  > .sao-master-card__name,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > label
+  > .sao-master-card__name,
+.sao-master-card
+  > main
+  > aside
+  > .sao-master-card__information
+  > .sao-master-card__name,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > .sao-master-card__information
+  > .sao-master-card__name,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  > .sao-master-card__name,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  > .sao-master-card__name {
   font-family: 'Work Sans', serif;
   font-weight: 500;
   font-size: var(
@@ -157,7 +242,66 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-master-card > main > aside > label span {
+.sao-master-card > main > aside > label span,
+.sao-master-card > .sao-master-card__main > aside > label span,
+.sao-master-card > main > .sao-master-card__content > label span,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > label
+  span,
+.sao-master-card > main > aside > .sao-master-card__information span,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > .sao-master-card__information
+  span,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  span,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  span,
+.sao-master-card > main > aside > label > .sao-master-card__number,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > label
+  > .sao-master-card__number,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > label
+  > .sao-master-card__number,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > label
+  > .sao-master-card__number,
+.sao-master-card
+  > main
+  > aside
+  > .sao-master-card__information
+  > .sao-master-card__number,
+.sao-master-card
+  > .sao-master-card__main
+  > aside
+  > .sao-master-card__information
+  > .sao-master-card__number,
+.sao-master-card
+  > main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  > .sao-master-card__number,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__information
+  > .sao-master-card__number {
   font-family: 'Work Sans', serif;
   font-weight: 500;
   font-size: var(
@@ -171,7 +315,17 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-master-card > main > aside > span {
+.sao-master-card > main > aside > span,
+.sao-master-card > .sao-master-card__main > aside > span,
+.sao-master-card > main > .sao-master-card__content > span,
+.sao-master-card > .sao-master-card__main > .sao-master-card__content > span,
+.sao-master-card > main > aside > .sao-master-card__expiry,
+.sao-master-card > .sao-master-card__main > aside > .sao-master-card__expiry,
+.sao-master-card > main > .sao-master-card__content > .sao-master-card__expiry,
+.sao-master-card
+  > .sao-master-card__main
+  > .sao-master-card__content
+  > .sao-master-card__expiry {
   display: var(--sao-master-card-content-display, inline-block);
   font-family: 'Work Sans', serif;
   font-weight: 500;
@@ -186,12 +340,14 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-master-card > main > i {
+.sao-master-card > main > .sao-icon,
+.sao-master-card > .sao-master-card__main > .sao-icon {
   display: var(--sao-master-card-content-display, inline-block);
   --sao-icon-size: 16px;
   background-color: var(--sao-palette-color-branding-foreground-100);
 }
-.sao-master-card > main::after {
+.sao-master-card > main::after,
+.sao-master-card > .sao-master-card__main::after {
   content: '';
   position: absolute;
   transform: rotate(90deg);
@@ -211,7 +367,8 @@
   mask-position: center;
   background-color: rgba(0, 1, 0);
 }
-.sao-master-card > main::before {
+.sao-master-card > main::before,
+.sao-master-card > .sao-master-card__main::before {
   content: '';
   position: absolute;
   left: 24px;

@@ -13,14 +13,14 @@
     );
   background-color: var(--sao-tag-background-color, transparent);
 }
-.sao-tag > *:not(i):not(img) {
+.sao-tag > *:not(.sao-icon):not(img) {
   font-family: 'Work Sans', serif;
   font-size: var(--sao-tag-font-size);
   line-height: var(--sao-tag-line-height);
   color: var(--sao-palette-color-branding-foreground-50);
   font-weight: 500;
 }
-.sao-tag > *:is(i) {
+.sao-tag > *:is(.sao-icon) {
   --sao-icon-size: var(--sao-tag-icon-size);
   background-color: var(--sao-palette-color-branding-foreground-50);
 }

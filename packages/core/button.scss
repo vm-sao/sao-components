@@ -23,7 +23,7 @@
   width: max-content;
   outline: none;
 
-  &:has(i):not(:has(:nth-child(2))) {
+  &:has(.sao-icon):not(:has(:nth-child(2))) {
     padding: calc(var(--sao-button-padding-y, 12px) - 1px);
   }
 
@@ -33,7 +33,7 @@
       calc(var(--sao-button-padding-x, 18px) - 1px);
   }
 
-  > i {
+  > .sao-icon {
     --sao-icon-size: var(--sao-button-icon-size, 20px);
     background-color: var(
       --sao-button-text-color,
@@ -52,7 +52,7 @@
       var(--sao-palette-color-branding-foreground-900)
     );
 
-    > i {
+    > .sao-icon {
       background-color: var(
         --sao-button-text-color-disabled,
         var(--sao-palette-color-branding-foreground-700)
@@ -73,7 +73,7 @@
       );
       border-color: var(--sao-button-border-color-hover, unset);
 
-      > i {
+      > .sao-icon {
         background-color: var(
           --sao-button-text-color-hover,
           var(--sao-palette-color-branding-foreground-50)
@@ -93,7 +93,7 @@
       );
       border-color: var(--sao-button-border-color-active, unset);
 
-      > i {
+      > .sao-icon {
         background-color: var(
           --sao-button-text-color-active,
           var(--sao-palette-color-branding-foreground-50)
@@ -118,7 +118,7 @@
           rgba(var(--sao-palette-color-global-purple-500-rgb), 0.4)
         );
 
-      > i {
+      > .sao-icon {
         background-color: var(
           --sao-button-text-color-focus,
           var(--sao-palette-color-branding-foreground-50)

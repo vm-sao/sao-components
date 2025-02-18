@@ -11,7 +11,8 @@
     height: var(--sao-radio-wrapper-size, 24px);
   }
 
-  > span {
+  > span,
+  > .sao-radio__label {
     font-family: 'Work Sans', serif;
     font-size: var(--sao-radio-font-size, var(--sao-typography-b3-font-size));
     line-height: var(

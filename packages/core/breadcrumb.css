@@ -20,7 +20,7 @@
   align-items: center;
   gap: 6px;
 }
-.sao-breadcrumb > * > i {
+.sao-breadcrumb > * > .sao-icon {
   --sao-icon-size: 16px;
   background-color: var(--sao-palette-color-branding-foreground-50);
 }

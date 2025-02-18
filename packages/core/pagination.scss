@@ -12,7 +12,8 @@
     justify-content: flex-end;
   }
 
-  button {
+  button,
+  .sao-pagination__button {
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -27,7 +28,7 @@
     border: 2px solid transparent;
     outline: none;
 
-    > i {
+    > .sao-icon {
       --sao-icon-size: 20px;
       background-color: var(--sao-palette-color-branding-foreground-100);
     }
@@ -37,7 +38,8 @@
     }
   }
 
-  > main {
+  > main,
+  > .sao-pagination__main {
     height: 48px;
     display: inline-flex;
     align-items: center;
@@ -47,12 +49,14 @@
       padding: 0 16px;
     }
 
-    > :first-child {
+    > :first-child,
+    > .sao-pagination__main-control {
       display: inline-flex;
       align-items: center;
       gap: 8px;
 
-      > span {
+      > span,
+      > .sao-pagination__main-control-label {
         font-family: 'Work Sans', serif;
         font-weight: 400;
         font-size: var(--sao-typography-b4-font-size);
@@ -61,7 +65,8 @@
       }
     }
 
-    > :last-child {
+    > :last-child,
+    > .sao-pagination__main-overview {
       display: inline-flex;
       align-items: center;
       border-left: 1px solid var(--sao-palette-color-branding-background-700);
@@ -73,7 +78,8 @@
     }
   }
 
-  > aside {
+  > nav,
+  > .sao-pagination__navigation {
     height: 48px;
     display: inline-flex;
     align-items: center;
@@ -82,14 +88,16 @@
       height: 100%;
     }
 
-    > :first-child {
+    > :first-child,
+    > .sao-pagination__navigation-selection {
       display: inline-flex;
       align-items: center;
       gap: 16px;
       padding: 14px 16px;
       border-left: 1px solid var(--sao-palette-color-branding-background-700);
 
-      > span {
+      > span,
+      > .sao-pagination__navigation-selection-label {
         font-family: 'Work Sans', serif;
         font-weight: 400;
         font-size: var(--sao-typography-b4-font-size);
@@ -98,11 +106,13 @@
       }
     }
 
-    > :last-child {
+    > :last-child,
+    > .sao-pagination__navigation-action-group {
       display: inline-flex;
       align-items: center;
 
-      > button {
+      > button,
+      > .sao-pagination__button {
         position: relative;
         height: 100%;
         width: 48px;

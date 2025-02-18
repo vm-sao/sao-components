@@ -13,7 +13,8 @@
     height: 28px;
   }
 
-  > p {
+  > p,
+  > .sao-toast__description {
     flex: 1 1 0;
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
@@ -23,7 +24,7 @@
     margin: 0;
   }
 
-  > i {
+  > .sao-icon {
     --sao-icon-size: 20px;
     background-color: var(--sao-palette-color-branding-foreground-700);
   }

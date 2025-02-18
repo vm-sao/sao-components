@@ -5,13 +5,15 @@
   flex-direction: column;
   border-bottom: 1px solid var(--sao-palette-color-branding-background-600);
 
-  > header {
+  > header,
+  > .sao-accordion__header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    > h6 {
+    > h6,
+    > .sao-accordion__title {
       font-family: 'Work Sans', serif;
       font-weight: 500;
       font-size: var(--sao-typography-b3-font-size);
@@ -41,7 +43,8 @@
     }
   }
 
-  > main {
+  > main,
+  > .sao-accordion__main {
     width: 100%;
     overflow-y: hidden;
     transition-property: height;
@@ -52,14 +55,16 @@
   &.active {
     gap: 28px;
 
-    > header::after {
+    > header::after,
+    > .sao-accordion__header::after {
       background-color: var(--sao-palette-color-global-blue-500);
       transform: rotate(180deg);
     }
   }
 
   &:not(.active) {
-    > main {
+    > main,
+    > .sao-accordion__main {
       height: 0;
     }
   }

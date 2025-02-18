@@ -6,7 +6,7 @@
   background-color: rgba(var(--sao-palette-color-global-gray-900-rgb), 0.6);
   backdrop-filter: blur(24px);
 
-  > i {
+  > .sao-icon {
     &.is-main {
       background-color: var(--sao-palette-color-branding-foreground-100);
       --sao-icon-size: 28px;
@@ -18,11 +18,13 @@
     }
   }
 
-  > main {
+  > main,
+  > .sao-notification__main {
     display: flex;
     flex: 1 1 0;
 
-    > h6 {
+    > h6,
+    > .sao-notification__title {
       font-family: 'Work Sans', sans-serif;
       font-weight: 500;
       font-size: var(--sao-typography-b3-font-size);
@@ -31,7 +33,8 @@
       margin: 0;
     }
 
-    > p {
+    > p,
+    > .sao-notification__description {
       font-family: 'Work Sans', sans-serif;
       font-weight: 400;
       font-size: var(--sao-typography-b4-font-size);
@@ -40,7 +43,8 @@
       margin: 0;
     }
 
-    > footer {
+    > footer,
+    > .sao-notification__footer {
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -50,7 +54,9 @@
 
   &--horizontal {
     align-items: center;
-    > main {
+
+    > main,
+    > .sao-notification__main {
       gap: 12px;
       justify-content: space-between;
       align-items: center;
@@ -58,11 +64,13 @@
   }
 
   &--vertical {
-    > main {
+    > main,
+    > .sao-notification__main {
       flex-direction: column;
       gap: 8px;
 
-      > footer {
+      > footer,
+      > .sao-notification__footer {
         margin-top: 16px;
       }
     }

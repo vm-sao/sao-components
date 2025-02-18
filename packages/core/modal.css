@@ -6,19 +6,30 @@
   box-shadow: 0 0 0 2px var(--sao-palette-color-branding-background-800);
   border-radius: 8px;
 }
-.sao-modal > aside {
+.sao-modal > aside,
+.sao-modal > .sao-modal__content {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.sao-modal > aside > header {
+.sao-modal > aside > header,
+.sao-modal > .sao-modal__content > header,
+.sao-modal > aside > .sao-modal__header,
+.sao-modal > .sao-modal__content > .sao-modal__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
 }
-.sao-modal > aside > header > h5 {
+.sao-modal > aside > header > h5,
+.sao-modal > .sao-modal__content > header > h5,
+.sao-modal > aside > .sao-modal__header > h5,
+.sao-modal > .sao-modal__content > .sao-modal__header > h5,
+.sao-modal > aside > header > .sao-modal__title,
+.sao-modal > .sao-modal__content > header > .sao-modal__title,
+.sao-modal > aside > .sao-modal__header > .sao-modal__title,
+.sao-modal > .sao-modal__content > .sao-modal__header > .sao-modal__title {
   flex: 1 1 0;
   font-family: 'Work Sans', serif;
   font-weight: 500;
@@ -27,7 +38,10 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-modal > aside > footer {
+.sao-modal > aside > footer,
+.sao-modal > .sao-modal__content > footer,
+.sao-modal > aside > .sao-modal__footer,
+.sao-modal > .sao-modal__content > .sao-modal__footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;

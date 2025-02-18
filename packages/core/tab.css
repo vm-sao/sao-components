@@ -3,14 +3,15 @@
   align-items: center;
   gap: var(--sao-tab-gap, 8px);
 }
-.sao-tab > i {
+.sao-tab > .sao-icon {
   --sao-icon-size: var(--sao-tab-icon-size, 18px);
   background-color: var(
     --sao-tab-color,
     var(--sao-palette-color-branding-foreground-50)
   );
 }
-.sao-tab > span {
+.sao-tab > span,
+.sao-tab > .sao-tab__label {
   font-family: 'Work Sans', serif;
   font-size: var(--sao-tab-font-size, var(--sao-typography-b3-font-size));
   line-height: var(--sao-tab-line-height, var(--sao-typography-b3-line-height));

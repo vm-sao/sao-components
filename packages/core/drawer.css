@@ -9,12 +9,14 @@
   max-width: var(--sao-drawer-width);
   width: 100%;
 }
-.sao-drawer > header {
+.sao-drawer > header,
+.sao-drawer > .sao-drawer__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.sao-drawer > footer {
+.sao-drawer > footer,
+.sao-drawer > .sao-drawer__footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;

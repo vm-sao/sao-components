@@ -15,7 +15,8 @@
   align-items: center;
   gap: 8px;
 }
-.sao-slider-container > span {
+.sao-slider-container > span,
+.sao-slider-container > .sao-slider-container__range-label {
   font-family: 'Work Sans', serif;
   font-size: var(--sao-typography-b4-font-size);
   line-height: var(--sao-typography-b4-line-height);

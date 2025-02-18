@@ -6,19 +6,23 @@
   background-color: rgba(0, 1, 0);
   backdrop-filter: blur(24px);
 }
-.sao-notification > i.is-main {
+.sao-notification > .sao-icon.is-main {
   background-color: var(--sao-palette-color-branding-foreground-100);
   --sao-icon-size: 28px;
 }
-.sao-notification > i.is-close {
+.sao-notification > .sao-icon.is-close {
   background-color: var(--sao-palette-color-branding-foreground-700);
   --sao-icon-size: 20px;
 }
-.sao-notification > main {
+.sao-notification > main,
+.sao-notification > .sao-notification__main {
   display: flex;
   flex: 1 1 0;
 }
-.sao-notification > main > h6 {
+.sao-notification > main > h6,
+.sao-notification > .sao-notification__main > h6,
+.sao-notification > main > .sao-notification__title,
+.sao-notification > .sao-notification__main > .sao-notification__title {
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
   font-size: var(--sao-typography-b3-font-size);
@@ -26,7 +30,10 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-notification > main > p {
+.sao-notification > main > p,
+.sao-notification > .sao-notification__main > p,
+.sao-notification > main > .sao-notification__description,
+.sao-notification > .sao-notification__main > .sao-notification__description {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: var(--sao-typography-b4-font-size);
@@ -34,7 +41,10 @@
   color: var(--sao-palette-color-branding-foreground-o30);
   margin: 0;
 }
-.sao-notification > main > footer {
+.sao-notification > main > footer,
+.sao-notification > .sao-notification__main > footer,
+.sao-notification > main > .sao-notification__footer,
+.sao-notification > .sao-notification__main > .sao-notification__footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -43,15 +53,22 @@
 .sao-notification--horizontal {
   align-items: center;
 }
-.sao-notification--horizontal > main {
+.sao-notification--horizontal > main,
+.sao-notification--horizontal > .sao-notification__main {
   gap: 12px;
   justify-content: space-between;
   align-items: center;
 }
-.sao-notification--vertical > main {
+.sao-notification--vertical > main,
+.sao-notification--vertical > .sao-notification__main {
   flex-direction: column;
   gap: 8px;
 }
-.sao-notification--vertical > main > footer {
+.sao-notification--vertical > main > footer,
+.sao-notification--vertical > .sao-notification__main > footer,
+.sao-notification--vertical > main > .sao-notification__footer,
+.sao-notification--vertical
+  > .sao-notification__main
+  > .sao-notification__footer {
   margin-top: 16px;
 }

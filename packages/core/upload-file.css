@@ -36,6 +36,18 @@
   )
   > main
   > span
+  > strong:hover,
+.sao-upload-file-selecting:not(.disabled):not(
+    :has(> input[type='file']:disabled)
+  )
+  > main
+  > .sao-upload-file__text
+  > strong:hover,
+.sao-upload-file-selecting:not(.disabled):not(
+    :has(> input[type='file']:disabled)
+  )
+  > .sao-upload-file__zone
+  > .sao-upload-file__text
   > strong:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -57,7 +69,8 @@
 .sao-upload-file-selecting > input {
   display: none;
 }
-.sao-upload-file-selecting > main {
+.sao-upload-file-selecting > main,
+.sao-upload-file-selecting > .sao-upload-file__zone {
   width: 100%;
   display: flex;
   align-items: center;
@@ -65,7 +78,10 @@
   flex-direction: column;
   gap: 8px;
 }
-.sao-upload-file-selecting > main > span {
+.sao-upload-file-selecting > main > span,
+.sao-upload-file-selecting > .sao-upload-file__zone > span,
+.sao-upload-file-selecting > main > .sao-upload-file__text,
+.sao-upload-file-selecting > .sao-upload-file__zone > .sao-upload-file__text {
   font-family: 'Work Sans', serif;
   font-size: var(--sao-typography-b4-font-size);
   line-height: var(--sao-typography-b4-line-height);
@@ -75,7 +91,13 @@
     var(--sao-palette-color-branding-foreground-50)
   );
 }
-.sao-upload-file-selecting > main > span > strong {
+.sao-upload-file-selecting > main > span > strong,
+.sao-upload-file-selecting > .sao-upload-file__zone > span > strong,
+.sao-upload-file-selecting > main > .sao-upload-file__text > strong,
+.sao-upload-file-selecting
+  > .sao-upload-file__zone
+  > .sao-upload-file__text
+  > strong {
   font-weight: 500;
   color: var(
     --sao-upload-file-strong-color,
@@ -109,7 +131,7 @@
   );
   overflow: hidden;
 }
-.sao-upload-file-selected > i {
+.sao-upload-file-selected > .sao-icon {
   margin-left: 4px;
   --sao-icon-size: 18px;
   background-color: var(
@@ -176,6 +198,6 @@
 .sao-upload-file-selected.uploaded {
   --sao-upload-file-border-color: var(--sao-palette-color-branding-primary-600);
 }
-.sao-upload-file-selected.uploaded > i {
+.sao-upload-file-selected.uploaded > .sao-icon {
   --sao-upload-file-icon-color: var(--sao-palette-color-branding-primary-600);
 }

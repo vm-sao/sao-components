@@ -5,13 +5,17 @@
   flex-direction: column;
   border-bottom: 1px solid var(--sao-palette-color-branding-background-600);
 }
-.sao-accordion > header {
+.sao-accordion > header,
+.sao-accordion > .sao-accordion__header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.sao-accordion > header > h6 {
+.sao-accordion > header > h6,
+.sao-accordion > .sao-accordion__header > h6,
+.sao-accordion > header > .sao-accordion__title,
+.sao-accordion > .sao-accordion__header > .sao-accordion__title {
   font-family: 'Work Sans', serif;
   font-weight: 500;
   font-size: var(--sao-typography-b3-font-size);
@@ -19,7 +23,8 @@
   color: var(--sao-palette-color-branding-foreground-50);
   margin: 0;
 }
-.sao-accordion > header::after {
+.sao-accordion > header::after,
+.sao-accordion > .sao-accordion__header::after {
   transition-property: transform;
   transition-duration: 0.15s;
   transition-timing-function: ease-in-out;
@@ -38,7 +43,8 @@
   mask-position: center;
   background-color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-accordion > main {
+.sao-accordion > main,
+.sao-accordion > .sao-accordion__main {
   width: 100%;
   overflow-y: hidden;
   transition-property: height;
@@ -48,11 +54,13 @@
 .sao-accordion.active {
   gap: 28px;
 }
-.sao-accordion.active > header::after {
+.sao-accordion.active > header::after,
+.sao-accordion.active > .sao-accordion__header::after {
   background-color: var(--sao-palette-color-global-blue-500);
   transform: rotate(180deg);
 }
-.sao-accordion:not(.active) > main {
+.sao-accordion:not(.active) > main,
+.sao-accordion:not(.active) > .sao-accordion__main {
   height: 0;
 }
 .sao-accordion-group {

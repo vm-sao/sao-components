@@ -44,6 +44,12 @@
 }
 .sao-select > li > span,
 .sao-select-item > span,
+.sao-select > li .sao-select-item__text,
+.sao-select-item .sao-select-item__text,
+.sao-select > li > .sao-select-item__information > .sao-select-item__text,
+.sao-select-item > .sao-select-item__information > .sao-select-item__text,
+.sao-select > li > aside > .sao-select-item__text,
+.sao-select-item > aside > .sao-select-item__text,
 .sao-select > li > aside > span,
 .sao-select-item > aside > span {
   font-family: 'Work Sans', serif;
@@ -57,8 +63,38 @@
 }
 .sao-select > li > span > mark,
 .sao-select-item > span > mark,
+.sao-select > li .sao-select-item__text > mark,
+.sao-select-item .sao-select-item__text > mark,
+.sao-select
+  > li
+  > .sao-select-item__information
+  > .sao-select-item__text
+  > mark,
+.sao-select-item
+  > .sao-select-item__information
+  > .sao-select-item__text
+  > mark,
+.sao-select > li > aside > .sao-select-item__text > mark,
+.sao-select-item > aside > .sao-select-item__text > mark,
 .sao-select > li > aside > span > mark,
-.sao-select-item > aside > span > mark {
+.sao-select-item > aside > span > mark,
+.sao-select > li > span .sao-select-item__mark,
+.sao-select-item > span .sao-select-item__mark,
+.sao-select > li .sao-select-item__text .sao-select-item__mark,
+.sao-select-item .sao-select-item__text .sao-select-item__mark,
+.sao-select
+  > li
+  > .sao-select-item__information
+  > .sao-select-item__text
+  .sao-select-item__mark,
+.sao-select-item
+  > .sao-select-item__information
+  > .sao-select-item__text
+  .sao-select-item__mark,
+.sao-select > li > aside > .sao-select-item__text .sao-select-item__mark,
+.sao-select-item > aside > .sao-select-item__text .sao-select-item__mark,
+.sao-select > li > aside > span .sao-select-item__mark,
+.sao-select-item > aside > span .sao-select-item__mark {
   color: var(
     --sao-select-mark-color,
     var(--sao-palette-color-branding-primary-600)
@@ -66,21 +102,25 @@
   background-color: transparent;
 }
 .sao-select > li > aside,
-.sao-select-item > aside {
+.sao-select-item > aside,
+.sao-select > li > .sao-select-item__information,
+.sao-select-item > .sao-select-item__information {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.sao-select > li > aside > i,
-.sao-select-item > aside > i {
+.sao-select > li > aside > .sao-icon,
+.sao-select-item > aside > .sao-icon,
+.sao-select > li > .sao-select-item__information > .sao-icon,
+.sao-select-item > .sao-select-item__information > .sao-icon {
   --sao-icon-size: 24px;
   background-color: var(
     --sao-select-color,
     var(--sao-palette-color-branding-foreground-50)
   );
 }
-.sao-select > li > i,
-.sao-select-item > i {
+.sao-select > li > .sao-icon,
+.sao-select-item > .sao-icon {
   opacity: 0;
   --sao-icon-size: 24px;
   background-color: var(

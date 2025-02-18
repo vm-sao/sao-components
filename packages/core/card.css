@@ -18,30 +18,98 @@
   aspect-ratio: 1.7777777778;
   border-radius: inherit;
 }
-.sao-card > header {
+.sao-card > header,
+.sao-card > .sao-card__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: var(--sao-card-header-padding, 24px);
 }
-.sao-card > header > aside {
+.sao-card > header > aside,
+.sao-card > .sao-card__header > aside,
+.sao-card > header > .sao-card__header-aside,
+.sao-card > .sao-card__header > .sao-card__header-aside {
   display: flex;
   align-items: center;
   gap: var(--sao-card-header-gap, 12px);
 }
-.sao-card > header > aside > img {
+.sao-card > header > aside > img,
+.sao-card > .sao-card__header > aside > img,
+.sao-card > header > .sao-card__header-aside > img,
+.sao-card > .sao-card__header > .sao-card__header-aside > img {
   width: var(--sao-card-header-avatar-size, 40px);
   height: var(--sao-card-header-avatar-size, 40px);
   border-radius: 9999px;
   border: 1px solid var(--sao-palette-color-branding-background-800);
 }
-.sao-card > header > aside > label {
+.sao-card > header > aside > label,
+.sao-card > .sao-card__header > aside > label,
+.sao-card > header > .sao-card__header-aside > label,
+.sao-card > .sao-card__header > .sao-card__header-aside > label,
+.sao-card > header > aside > .sao-card__header-information,
+.sao-card > .sao-card__header > aside > .sao-card__header-information,
+.sao-card > header > .sao-card__header-aside > .sao-card__header-information,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > .sao-card__header-information {
   display: flex;
   flex-direction: column;
   gap: var(--sao-card-header-title-gap, 2px);
 }
-.sao-card > header > aside > label > h6 {
+.sao-card > header > aside > label > h6,
+.sao-card > .sao-card__header > aside > label > h6,
+.sao-card > header > .sao-card__header-aside > label > h6,
+.sao-card > .sao-card__header > .sao-card__header-aside > label > h6,
+.sao-card > header > aside > .sao-card__header-information > h6,
+.sao-card > .sao-card__header > aside > .sao-card__header-information > h6,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > h6,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > h6,
+.sao-card > header > aside > label > .sao-card__header-information-title,
+.sao-card
+  > .sao-card__header
+  > aside
+  > label
+  > .sao-card__header-information-title,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > label
+  > .sao-card__header-information-title,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > label
+  > .sao-card__header-information-title,
+.sao-card
+  > header
+  > aside
+  > .sao-card__header-information
+  > .sao-card__header-information-title,
+.sao-card
+  > .sao-card__header
+  > aside
+  > .sao-card__header-information
+  > .sao-card__header-information-title,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > .sao-card__header-information-title,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > .sao-card__header-information-title {
   font-family: 'Work Sans', serif;
   font-size: var(
     --sao-card-header-title-font-size,
@@ -55,7 +123,58 @@
   font-weight: 600;
   margin: 0;
 }
-.sao-card > header > aside > label > p {
+.sao-card > header > aside > label > p,
+.sao-card > .sao-card__header > aside > label > p,
+.sao-card > header > .sao-card__header-aside > label > p,
+.sao-card > .sao-card__header > .sao-card__header-aside > label > p,
+.sao-card > header > aside > .sao-card__header-information > p,
+.sao-card > .sao-card__header > aside > .sao-card__header-information > p,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > p,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > p,
+.sao-card > header > aside > label > .sao-card__header-information-description,
+.sao-card
+  > .sao-card__header
+  > aside
+  > label
+  > .sao-card__header-information-description,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > label
+  > .sao-card__header-information-description,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > label
+  > .sao-card__header-information-description,
+.sao-card
+  > header
+  > aside
+  > .sao-card__header-information
+  > .sao-card__header-information-description,
+.sao-card
+  > .sao-card__header
+  > aside
+  > .sao-card__header-information
+  > .sao-card__header-information-description,
+.sao-card
+  > header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > .sao-card__header-information-description,
+.sao-card
+  > .sao-card__header
+  > .sao-card__header-aside
+  > .sao-card__header-information
+  > .sao-card__header-information-description {
   font-family: 'Work Sans', serif;
   font-size: var(
     --sao-card-header-sub-title-font-size,
@@ -69,25 +188,35 @@
   font-weight: 400;
   margin: 0;
 }
-.sao-card > header > i {
+.sao-card > header > .sao-icon,
+.sao-card > .sao-card__header > .sao-icon {
   --sao-icon-size: var(--sao-card-header-icon-size, 28px);
   background-color: var(--sao-palette-color-branding-foreground-600);
 }
-.sao-card > header + img {
+.sao-card > header + img,
+.sao-card > .sao-card__header + img {
   aspect-ratio: 2.6666666667;
+  border-radius: 0;
 }
-.sao-card > header + main {
+.sao-card > header + main,
+.sao-card > .sao-card__header + main,
+.sao-card > header + .sao-card__main,
+.sao-card > .sao-card__header + .sao-card__main {
   padding: 0 var(--sao-card-content-padding, 24px)
     var(--sao-card-content-padding, 24px) var(--sao-card-content-padding, 24px);
 }
-.sao-card > main {
+.sao-card > main,
+.sao-card > .sao-card__main {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--sao-card-content-gap, 12px);
   padding: var(--sao-card-content-padding, 24px);
 }
-.sao-card > main > h2 {
+.sao-card > main > h2,
+.sao-card > .sao-card__main > h2,
+.sao-card > main > .sao-card__main-title,
+.sao-card > .sao-card__main > .sao-card__main-title {
   font-family: 'Work Sans', serif;
   font-size: var(
     --sao-card-content-title-font-size,
@@ -101,7 +230,10 @@
   font-weight: 600;
   margin: 0;
 }
-.sao-card > main > p {
+.sao-card > main > p,
+.sao-card > .sao-card__main > p,
+.sao-card > main > .sao-card__main-description,
+.sao-card > .sao-card__main > .sao-card__main-description {
   font-family: 'Work Sans', serif;
   font-size: var(
     --sao-card-content-description-font-size,
@@ -115,7 +247,8 @@
   font-weight: 400;
   margin: 0;
 }
-.sao-card > footer {
+.sao-card > footer,
+.sao-card > .sao-card__footer {
   width: 100%;
   padding: 0 var(--sao-card-footer-padding, 24px)
     var(--sao-card-footer-padding, 24px) var(--sao-card-footer-padding, 24px);

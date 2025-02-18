@@ -10,7 +10,8 @@
 .sao-pagination:not(:has(:nth-child(2))) {
   justify-content: flex-end;
 }
-.sao-pagination button {
+.sao-pagination button,
+.sao-pagination .sao-pagination__button {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -25,35 +26,61 @@
   border: 2px solid transparent;
   outline: none;
 }
-.sao-pagination button > i {
+.sao-pagination button > .sao-icon,
+.sao-pagination .sao-pagination__button > .sao-icon {
   --sao-icon-size: 20px;
   background-color: var(--sao-palette-color-branding-foreground-100);
 }
-.sao-pagination button:focus-visible {
+.sao-pagination button:focus-visible,
+.sao-pagination .sao-pagination__button:focus-visible {
   border: 2px solid var(--sao-palette-color-global-blue-500);
 }
-.sao-pagination > main {
+.sao-pagination > main,
+.sao-pagination > .sao-pagination__main {
   height: 48px;
   display: inline-flex;
   align-items: center;
 }
-.sao-pagination > main > * {
+.sao-pagination > main > *,
+.sao-pagination > .sao-pagination__main > * {
   height: 100%;
   padding: 0 16px;
 }
-.sao-pagination > main > :first-child {
+.sao-pagination > main > :first-child,
+.sao-pagination > .sao-pagination__main > :first-child,
+.sao-pagination > main > .sao-pagination__main-control,
+.sao-pagination > .sao-pagination__main > .sao-pagination__main-control {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
-.sao-pagination > main > :first-child > span {
+.sao-pagination > main > :first-child > span,
+.sao-pagination > .sao-pagination__main > :first-child > span,
+.sao-pagination > main > .sao-pagination__main-control > span,
+.sao-pagination > .sao-pagination__main > .sao-pagination__main-control > span,
+.sao-pagination > main > :first-child > .sao-pagination__main-control-label,
+.sao-pagination
+  > .sao-pagination__main
+  > :first-child
+  > .sao-pagination__main-control-label,
+.sao-pagination
+  > main
+  > .sao-pagination__main-control
+  > .sao-pagination__main-control-label,
+.sao-pagination
+  > .sao-pagination__main
+  > .sao-pagination__main-control
+  > .sao-pagination__main-control-label {
   font-family: 'Work Sans', serif;
   font-weight: 400;
   font-size: var(--sao-typography-b4-font-size);
   line-height: var(--sao-typography-b4-line-height);
   color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-pagination > main > :last-child {
+.sao-pagination > main > :last-child,
+.sao-pagination > .sao-pagination__main > :last-child,
+.sao-pagination > main > .sao-pagination__main-overview,
+.sao-pagination > .sao-pagination__main > .sao-pagination__main-overview {
   display: inline-flex;
   align-items: center;
   border-left: 1px solid var(--sao-palette-color-branding-background-700);
@@ -63,33 +90,86 @@
   line-height: var(--sao-typography-b4-line-height);
   color: var(--sao-palette-color-branding-foreground-500);
 }
-.sao-pagination > aside {
+.sao-pagination > nav,
+.sao-pagination > .sao-pagination__navigation {
   height: 48px;
   display: inline-flex;
   align-items: center;
 }
-.sao-pagination > aside > * {
+.sao-pagination > nav > *,
+.sao-pagination > .sao-pagination__navigation > * {
   height: 100%;
 }
-.sao-pagination > aside > :first-child {
+.sao-pagination > nav > :first-child,
+.sao-pagination > .sao-pagination__navigation > :first-child,
+.sao-pagination > nav > .sao-pagination__navigation-selection,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-selection {
   display: inline-flex;
   align-items: center;
   gap: 16px;
   padding: 14px 16px;
   border-left: 1px solid var(--sao-palette-color-branding-background-700);
 }
-.sao-pagination > aside > :first-child > span {
+.sao-pagination > nav > :first-child > span,
+.sao-pagination > .sao-pagination__navigation > :first-child > span,
+.sao-pagination > nav > .sao-pagination__navigation-selection > span,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-selection
+  > span,
+.sao-pagination
+  > nav
+  > :first-child
+  > .sao-pagination__navigation-selection-label,
+.sao-pagination
+  > .sao-pagination__navigation
+  > :first-child
+  > .sao-pagination__navigation-selection-label,
+.sao-pagination
+  > nav
+  > .sao-pagination__navigation-selection
+  > .sao-pagination__navigation-selection-label,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-selection
+  > .sao-pagination__navigation-selection-label {
   font-family: 'Work Sans', serif;
   font-weight: 400;
   font-size: var(--sao-typography-b4-font-size);
   line-height: var(--sao-typography-b4-line-height);
   color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-pagination > aside > :last-child {
+.sao-pagination > nav > :last-child,
+.sao-pagination > .sao-pagination__navigation > :last-child,
+.sao-pagination > nav > .sao-pagination__navigation-action-group,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-action-group {
   display: inline-flex;
   align-items: center;
 }
-.sao-pagination > aside > :last-child > button {
+.sao-pagination > nav > :last-child > button,
+.sao-pagination > .sao-pagination__navigation > :last-child > button,
+.sao-pagination > nav > .sao-pagination__navigation-action-group > button,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-action-group
+  > button,
+.sao-pagination > nav > :last-child > .sao-pagination__button,
+.sao-pagination
+  > .sao-pagination__navigation
+  > :last-child
+  > .sao-pagination__button,
+.sao-pagination
+  > nav
+  > .sao-pagination__navigation-action-group
+  > .sao-pagination__button,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-action-group
+  > .sao-pagination__button {
   position: relative;
   height: 100%;
   width: 48px;
@@ -97,7 +177,29 @@
   align-items: center;
   justify-content: center;
 }
-.sao-pagination > aside > :last-child > button::before {
+.sao-pagination > nav > :last-child > button::before,
+.sao-pagination > .sao-pagination__navigation > :last-child > button::before,
+.sao-pagination
+  > nav
+  > .sao-pagination__navigation-action-group
+  > button::before,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-action-group
+  > button::before,
+.sao-pagination > nav > :last-child > .sao-pagination__button::before,
+.sao-pagination
+  > .sao-pagination__navigation
+  > :last-child
+  > .sao-pagination__button::before,
+.sao-pagination
+  > nav
+  > .sao-pagination__navigation-action-group
+  > .sao-pagination__button::before,
+.sao-pagination
+  > .sao-pagination__navigation
+  > .sao-pagination__navigation-action-group
+  > .sao-pagination__button::before {
   position: absolute;
   content: '';
   top: -3px;

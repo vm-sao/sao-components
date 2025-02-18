@@ -6,7 +6,7 @@
   border: 1px solid var(--sao-alert-border-color);
   border-radius: 2px;
 
-  > i {
+  > .sao-icon {
     --sao-icon-size: 24px;
 
     &.is-collapse {
@@ -19,7 +19,10 @@
   }
 
   > h6,
-  > main > h6 {
+  > .sao-alert__title,
+  > main > h6,
+  > main > .sao-alert__title,
+  > .sao-alert__main > .sao-alert__title {
     flex: 1 1 0;
     font-family: 'Work Sans', serif;
     font-weight: 500;
@@ -30,7 +33,10 @@
   }
 
   > p,
-  main > p {
+  > .sao-alert__content,
+  > main > p,
+  > main > .sao-alert__content,
+  > .sao-alert__main > .sao-alert__content {
     flex: 1 1 0;
     font-family: 'Work Sans', serif;
     font-weight: 400;
@@ -40,19 +46,22 @@
     margin: 0;
   }
 
-  > main {
+  > main,
+  > .sao-alert__main {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
 
-    > footer {
+    > footer,
+    > .sao-alert__footer {
       display: flex;
       align-items: center;
       gap: 16px;
       margin-top: 8px;
 
-      > a {
+      > a,
+      > .sao-alert__link {
         font-family: 'Work Sans', serif;
         font-weight: 500;
         font-size: var(--sao-typography-b4-font-size);

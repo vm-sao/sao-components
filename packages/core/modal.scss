@@ -6,19 +6,22 @@
   box-shadow: 0 0 0 2px var(--sao-palette-color-branding-background-800);
   border-radius: 8px;
 
-  > aside {
+  > aside,
+  > .sao-modal__content {
     flex: 1 1 0;
     display: flex;
     flex-direction: column;
     gap: 24px;
 
-    > header {
+    > header,
+    > .sao-modal__header {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
 
-      > h5 {
+      > h5,
+      > .sao-modal__title {
         flex: 1 1 0;
         font-family: 'Work Sans', serif;
         font-weight: 500;
@@ -29,7 +32,8 @@
       }
     }
 
-    > footer {
+    > footer,
+    > .sao-modal__footer {
       display: flex;
       justify-content: flex-end;
       align-items: center;

@@ -19,14 +19,16 @@
     border-radius: inherit;
   }
 
-  > header {
+  > header,
+  > .sao-card__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: var(--sao-card-header-padding, 24px);
 
-    > aside {
+    > aside,
+    > .sao-card__header-aside {
       display: flex;
       align-items: center;
       gap: var(--sao-card-header-gap, 12px);
@@ -38,12 +40,14 @@
         border: 1px solid var(--sao-palette-color-branding-background-800);
       }
 
-      > label {
+      > label,
+      > .sao-card__header-information {
         display: flex;
         flex-direction: column;
         gap: var(--sao-card-header-title-gap, 2px);
 
-        > h6 {
+        > h6,
+        > .sao-card__header-information-title {
           font-family: 'Work Sans', serif;
           font-size: var(
             --sao-card-header-title-font-size,
@@ -58,7 +62,8 @@
           margin: 0;
         }
 
-        > p {
+        > p,
+        > .sao-card__header-information-description {
           font-family: 'Work Sans', serif;
           font-size: var(
             --sao-card-header-sub-title-font-size,
@@ -75,30 +80,34 @@
       }
     }
 
-    > i {
+    > .sao-icon {
       --sao-icon-size: var(--sao-card-header-icon-size, 28px);
       background-color: var(--sao-palette-color-branding-foreground-600);
     }
 
     & + img {
       aspect-ratio: 24 / 9;
+      border-radius: 0;
     }
 
-    & + main {
+    & + main,
+    & + .sao-card__main {
       padding: 0 var(--sao-card-content-padding, 24px)
         var(--sao-card-content-padding, 24px)
         var(--sao-card-content-padding, 24px);
     }
   }
 
-  > main {
+  > main,
+  > .sao-card__main {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--sao-card-content-gap, 12px);
     padding: var(--sao-card-content-padding, 24px);
 
-    > h2 {
+    > h2,
+    > .sao-card__main-title {
       font-family: 'Work Sans', serif;
       font-size: var(
         --sao-card-content-title-font-size,
@@ -113,7 +122,8 @@
       margin: 0;
     }
 
-    > p {
+    > p,
+    > .sao-card__main-description {
       font-family: 'Work Sans', serif;
       font-size: var(
         --sao-card-content-description-font-size,
@@ -129,7 +139,8 @@
     }
   }
 
-  > footer {
+  > footer,
+  > .sao-card__footer {
     width: 100%;
     padding: 0 var(--sao-card-footer-padding, 24px)
       var(--sao-card-footer-padding, 24px) var(--sao-card-footer-padding, 24px);

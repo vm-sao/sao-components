@@ -14,7 +14,7 @@
   background-color: var(--sao-tag-background-color, transparent);
 
   > * {
-    &:not(i):not(img) {
+    &:not(.sao-icon):not(img) {
       font-family: 'Work Sans', serif;
       font-size: var(--sao-tag-font-size, var(--sao-typography-b3-font-size));
       line-height: var(
@@ -25,7 +25,7 @@
       font-weight: 500;
     }
 
-    &:is(i) {
+    &:is(.sao-icon) {
       --sao-icon-size: var(--sao-tag-icon-size, 24px);
       background-color: var(--sao-palette-color-branding-foreground-50);
     }
