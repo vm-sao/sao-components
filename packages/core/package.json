@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/core",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@sao-palette/core": "latest",
     "@sao-typography/core": "latest",
-    "@sao-icons/core": "latest"
+    "@sao-icons/font": "latest"
   },
   "exports": {
     "./avatar": "./avatar.css",

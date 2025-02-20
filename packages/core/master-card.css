@@ -348,6 +348,7 @@
 }
 .sao-master-card > main::after,
 .sao-master-card > .sao-master-card__main::after {
+  --sao-card-main-after-icon: url("data:image/svg+xml,%3Csvg%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20fill%3D'none'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cg%20clip-path%3D'url(%23clip0_20_19787)'%3E%3Cpath%20d%3D'M1%209.00001L3%2011C7.97%206.03001%2016.03%206.03001%2021%2011L23%209.00001C16.93%202.93001%207.08%202.93001%201%209.00001ZM9%2017L12%2020L15%2017C13.35%2015.34%2010.66%2015.34%209%2017ZM5%2013L7%2015C9.76%2012.24%2014.24%2012.24%2017%2015L19%2013C15.14%209.14001%208.87%209.14001%205%2013Z'%20fill%3D'%23FCFCFD'%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D'clip0_20_19787'%3E%3Crect%20width%3D'24'%20height%3D'24'%20fill%3D'white'%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
   content: '';
   position: absolute;
   transform: rotate(90deg);
@@ -358,8 +359,8 @@
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
-  -webkit-mask-image: var(--sao-icon-filtered-notification-wifi);
-  mask-image: var(--sao-icon-filtered-notification-wifi);
+  -webkit-mask-image: var(--sao-card-main-after-icon);
+  mask-image: var(--sao-card-main-after-icon);
   mask-size: contain;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;

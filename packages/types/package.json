@@ -1,0 +1,26 @@
+{
+  "name": "@sao-components/types",
+  "version": "0.0.2",
+  "private": false,
+  "author": "Elias Vinh",
+  "license": "MIT",
+  "description": "SAO Components Package for getting typing",
+  "homepage": "https://github.com/vm-sao/sao-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vm-sao/sao-components.git",
+    "directory": "packages/types"
+  },
+  "bugs": {
+    "url": "https://github.com/vm-sao/sao-components/issues",
+    "email": "anlalayker@gmail.com"
+  },
+  "keywords": [
+    "vm-sao",
+    "sao-components",
+    "sao-components-types"
+  ],
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
