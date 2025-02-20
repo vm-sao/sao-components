@@ -12,7 +12,7 @@
 
   > .sao-icon {
     --sao-icon-size: 24px;
-    background-color: var(--sao-control-icon-color);
+    color: var(--sao-control-icon-color);
   }
 
   &:has(> .sao-input) {

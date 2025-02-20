@@ -10,10 +10,10 @@
   --sao-icon-size: 24px;
 }
 .sao-alert > .sao-icon.is-collapse {
-  background-color: var(--sao-alert-icon-status-color);
+  color: var(--sao-alert-icon-status-color);
 }
 .sao-alert > .sao-icon.is-close {
-  background-color: var(--sao-palette-color-branding-primary-400);
+  color: var(--sao-palette-color-branding-primary-400);
 }
 .sao-alert > h6,
 .sao-alert > .sao-alert__title,

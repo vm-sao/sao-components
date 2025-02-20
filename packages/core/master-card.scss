@@ -220,7 +220,7 @@
     > .sao-icon {
       display: var(--sao-master-card-content-display, inline-block);
       --sao-icon-size: 16px;
-      background-color: var(--sao-palette-color-branding-foreground-100);
+      color: var(--sao-palette-color-branding-foreground-100);
     }
 
     &::after {

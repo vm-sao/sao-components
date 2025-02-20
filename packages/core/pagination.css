@@ -29,7 +29,7 @@
 .sao-pagination button > .sao-icon,
 .sao-pagination .sao-pagination__button > .sao-icon {
   --sao-icon-size: 20px;
-  background-color: var(--sao-palette-color-branding-foreground-100);
+  color: var(--sao-palette-color-branding-foreground-100);
 }
 .sao-pagination button:focus-visible,
 .sao-pagination .sao-pagination__button:focus-visible {

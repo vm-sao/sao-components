@@ -22,7 +22,7 @@
 }
 .sao-tag > *:is(.sao-icon) {
   --sao-icon-size: var(--sao-tag-icon-size);
-  background-color: var(--sao-palette-color-branding-foreground-50);
+  color: var(--sao-palette-color-branding-foreground-50);
 }
 .sao-tag > *:is(img) {
   width: var(--sao-tag-icon-size);

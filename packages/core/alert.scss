@@ -10,11 +10,11 @@
     --sao-icon-size: 24px;
 
     &.is-collapse {
-      background-color: var(--sao-alert-icon-status-color);
+      color: var(--sao-alert-icon-status-color);
     }
 
     &.is-close {
-      background-color: var(--sao-palette-color-branding-primary-400);
+      color: var(--sao-palette-color-branding-primary-400);
     }
   }
 

@@ -191,7 +191,7 @@
 .sao-card > header > .sao-icon,
 .sao-card > .sao-card__header > .sao-icon {
   --sao-icon-size: var(--sao-card-header-icon-size, 28px);
-  background-color: var(--sao-palette-color-branding-foreground-600);
+  color: var(--sao-palette-color-branding-foreground-600);
 }
 .sao-card > header + img,
 .sao-card > .sao-card__header + img {

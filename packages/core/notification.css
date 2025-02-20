@@ -7,11 +7,11 @@
   backdrop-filter: blur(24px);
 }
 .sao-notification > .sao-icon.is-main {
-  background-color: var(--sao-palette-color-branding-foreground-100);
+  color: var(--sao-palette-color-branding-foreground-100);
   --sao-icon-size: 28px;
 }
 .sao-notification > .sao-icon.is-close {
-  background-color: var(--sao-palette-color-branding-foreground-700);
+  color: var(--sao-palette-color-branding-foreground-700);
   --sao-icon-size: 20px;
 }
 .sao-notification > main,

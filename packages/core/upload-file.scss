@@ -125,7 +125,7 @@
     > .sao-icon {
       margin-left: 4px;
       --sao-icon-size: 18px;
-      background-color: var(
+      color: var(
         --sao-upload-file-icon-color,
         var(--sao-palette-color-branding-foreground-50)
       );
