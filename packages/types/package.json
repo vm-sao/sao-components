@@ -1,12 +1,11 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
   "description": "SAO Components Package for getting typing",
   "homepage": "https://github.com/vm-sao/sao-components",
-  "typings": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vm-sao/sao-components.git",
@@ -25,86 +24,32 @@
     "tslib": "^2.3.0"
   },
   "exports": {
-    ".": {
-      "types": "./index.d.ts"
-    },
-    "./index": {
-      "types": "./index.d.ts"
-    },
-    "./common": {
-      "types": "./common/index.d.ts"
-    },
-    "./common/avatar": {
-      "types": "./common/avatar/index.d.ts"
-    },
-    "./common/badge": {
-      "types": "./common/badge/index.d.ts"
-    },
-    "./common/breadcrumb": {
-      "types": "./common/breadcrumb/index.d.ts"
-    },
-    "./common/button": {
-      "types": "./common/button/index.d.ts"
-    },
-    "./common/card": {
-      "types": "./common/card/index.d.ts"
-    },
-    "./common/carousel": {
-      "types": "./common/carousel/index.d.ts"
-    },
-    "./common/lozenges": {
-      "types": "./common/lozenges/index.d.ts"
-    },
-    "./common/master-card": {
-      "types": "./common/master-card/index.d.ts"
-    },
-    "./common/progress": {
-      "types": "./common/progress/index.d.ts"
-    },
-    "./common/tab": {
-      "types": "./common/tab/index.d.ts"
-    },
-    "./common/tag": {
-      "types": "./common/tag/index.d.ts"
-    },
-    "./common/time-line": {
-      "types": "./common/time-line/index.d.ts"
-    },
-    "./form": {
-      "types": "./form/index.d.ts"
-    },
-    "./form/checkbox": {
-      "types": "./form/checkbox/index.d.ts"
-    },
-    "./form/control": {
-      "types": "./form/control/index.d.ts"
-    },
-    "./form/ratio": {
-      "types": "./form/ratio/index.d.ts"
-    },
-    "./form/toggle": {
-      "types": "./form/toggle/index.d.ts"
-    },
-    "./overlay": {
-      "types": "./overlay/index.d.ts"
-    },
-    "./overlay/alert": {
-      "types": "./overlay/alert/index.d.ts"
-    },
-    "./overlay/drawer": {
-      "types": "./overlay/drawer/index.d.ts"
-    },
-    "./overlay/notification": {
-      "types": "./overlay/notification/index.d.ts"
-    },
-    "./overlay/popover": {
-      "types": "./overlay/popover/index.d.ts"
-    },
-    "./overlay/toast": {
-      "types": "./overlay/toast/index.d.ts"
-    },
-    "./overlay/tooltip": {
-      "types": "./overlay/tooltip/index.d.ts"
-    }
+    ".": "./index.ts",
+    "./index": "./index.ts",
+    "./common": "./common/index.ts",
+    "./common/avatar": "./common/avatar/index.ts",
+    "./common/badge": "./common/badge/index.ts",
+    "./common/breadcrumb": "./common/breadcrumb/index.ts",
+    "./common/button": "./common/button/index.ts",
+    "./common/card": "./common/card/index.ts",
+    "./common/carousel": "./common/carousel/index.ts",
+    "./common/lozenges": "./common/lozenges/index.ts",
+    "./common/master-card": "./common/master-card/index.ts",
+    "./common/progress": "./common/progress/index.ts",
+    "./common/tab": "./common/tab/index.ts",
+    "./common/tag": "./common/tag/index.ts",
+    "./common/time-line": "./common/time-line/index.ts",
+    "./form": "./form/index.ts",
+    "./form/checkbox": "./form/checkbox/index.ts",
+    "./form/control": "./form/control/index.ts",
+    "./form/ratio": "./form/ratio/index.ts",
+    "./form/toggle": "./form/toggle/index.ts",
+    "./overlay": "./overlay/index.ts",
+    "./overlay/alert": "./overlay/alert/index.ts",
+    "./overlay/drawer": "./overlay/drawer/index.ts",
+    "./overlay/notification": "./overlay/notification/index.ts",
+    "./overlay/popover": "./overlay/popover/index.ts",
+    "./overlay/toast": "./overlay/toast/index.ts",
+    "./overlay/tooltip": "./overlay/tooltip/index.ts"
   }
 }
