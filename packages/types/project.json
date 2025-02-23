@@ -11,7 +11,7 @@
         "commands": [
           "rm -rf dist/packages/types",
           "mkdir -p dist/packages/types",
-          "rsync -a --exclude='project.json' packages/types/ dist/packages/types/"
+          "rsync -a --exclude='project.json' -exclude='node_modules' packages/types/ dist/packages/types/"
         ],
         "parallel": false
       }
