@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -28,7 +28,29 @@
     ".": "./index.d.ts",
     "./index": "./index.d.ts",
     "./common": "./common/index.d.ts",
+    "./common/avatar": "./common/avatar/index.d.ts",
+    "./common/badge": "./common/badge/index.d.ts",
+    "./common/breadcrumb": "./common/breadcrumb/index.d.ts",
+    "./common/button": "./common/button/index.d.ts",
+    "./common/card": "./common/card/index.d.ts",
+    "./common/carousel": "./common/carousel/index.d.ts",
+    "./common/lozenges": "./common/lozenges/index.d.ts",
+    "./common/master-card": "./common/master-card/index.d.ts",
+    "./common/progress": "./common/progress/index.d.ts",
+    "./common/tab": "./common/tab/index.d.ts",
+    "./common/tag": "./common/tag/index.d.ts",
+    "./common/time-line": "./common/time-line/index.d.ts",
     "./form": "./form/index.d.ts",
-    "./overlay": "./overlay/index.d.ts"
+    "./form/checkbox": "./form/checkbox/index.d.ts",
+    "./form/control": "./form/control/index.d.ts",
+    "./form/ratio": "./form/ratio/index.d.ts",
+    "./form/toggle": "./form/toggle/index.d.ts",
+    "./overlay": "./overlay/index.d.ts",
+    "./overlay/alert": "./overlay/alert/index.d.ts",
+    "./overlay/drawer": "./overlay/drawer/index.d.ts",
+    "./overlay/notification": "./overlay/notification/index.d.ts",
+    "./overlay/popover": "./overlay/popover/index.d.ts",
+    "./overlay/toast": "./overlay/toast/index.d.ts",
+    "./overlay/tooltip": "./overlay/tooltip/index.d.ts"
   }
 }
