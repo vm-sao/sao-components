@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -25,32 +25,86 @@
     "tslib": "^2.3.0"
   },
   "exports": {
-    ".": "./index.d.ts",
-    "./index": "./index.d.ts",
-    "./common": "./common/index.d.ts",
-    "./common/avatar": "./common/avatar/index.d.ts",
-    "./common/badge": "./common/badge/index.d.ts",
-    "./common/breadcrumb": "./common/breadcrumb/index.d.ts",
-    "./common/button": "./common/button/index.d.ts",
-    "./common/card": "./common/card/index.d.ts",
-    "./common/carousel": "./common/carousel/index.d.ts",
-    "./common/lozenges": "./common/lozenges/index.d.ts",
-    "./common/master-card": "./common/master-card/index.d.ts",
-    "./common/progress": "./common/progress/index.d.ts",
-    "./common/tab": "./common/tab/index.d.ts",
-    "./common/tag": "./common/tag/index.d.ts",
-    "./common/time-line": "./common/time-line/index.d.ts",
-    "./form": "./form/index.d.ts",
-    "./form/checkbox": "./form/checkbox/index.d.ts",
-    "./form/control": "./form/control/index.d.ts",
-    "./form/ratio": "./form/ratio/index.d.ts",
-    "./form/toggle": "./form/toggle/index.d.ts",
-    "./overlay": "./overlay/index.d.ts",
-    "./overlay/alert": "./overlay/alert/index.d.ts",
-    "./overlay/drawer": "./overlay/drawer/index.d.ts",
-    "./overlay/notification": "./overlay/notification/index.d.ts",
-    "./overlay/popover": "./overlay/popover/index.d.ts",
-    "./overlay/toast": "./overlay/toast/index.d.ts",
-    "./overlay/tooltip": "./overlay/tooltip/index.d.ts"
+    ".": {
+      "types": "./index.d.ts"
+    },
+    "./index": {
+      "types": "./index.d.ts"
+    },
+    "./common": {
+      "types": "./common/index.d.ts"
+    },
+    "./common/avatar": {
+      "types": "./common/avatar/index.d.ts"
+    },
+    "./common/badge": {
+      "types": "./common/badge/index.d.ts"
+    },
+    "./common/breadcrumb": {
+      "types": "./common/breadcrumb/index.d.ts"
+    },
+    "./common/button": {
+      "types": "./common/button/index.d.ts"
+    },
+    "./common/card": {
+      "types": "./common/card/index.d.ts"
+    },
+    "./common/carousel": {
+      "types": "./common/carousel/index.d.ts"
+    },
+    "./common/lozenges": {
+      "types": "./common/lozenges/index.d.ts"
+    },
+    "./common/master-card": {
+      "types": "./common/master-card/index.d.ts"
+    },
+    "./common/progress": {
+      "types": "./common/progress/index.d.ts"
+    },
+    "./common/tab": {
+      "types": "./common/tab/index.d.ts"
+    },
+    "./common/tag": {
+      "types": "./common/tag/index.d.ts"
+    },
+    "./common/time-line": {
+      "types": "./common/time-line/index.d.ts"
+    },
+    "./form": {
+      "types": "./form/index.d.ts"
+    },
+    "./form/checkbox": {
+      "types": "./form/checkbox/index.d.ts"
+    },
+    "./form/control": {
+      "types": "./form/control/index.d.ts"
+    },
+    "./form/ratio": {
+      "types": "./form/ratio/index.d.ts"
+    },
+    "./form/toggle": {
+      "types": "./form/toggle/index.d.ts"
+    },
+    "./overlay": {
+      "types": "./overlay/index.d.ts"
+    },
+    "./overlay/alert": {
+      "types": "./overlay/alert/index.d.ts"
+    },
+    "./overlay/drawer": {
+      "types": "./overlay/drawer/index.d.ts"
+    },
+    "./overlay/notification": {
+      "types": "./overlay/notification/index.d.ts"
+    },
+    "./overlay/popover": {
+      "types": "./overlay/popover/index.d.ts"
+    },
+    "./overlay/toast": {
+      "types": "./overlay/toast/index.d.ts"
+    },
+    "./overlay/tooltip": {
+      "types": "./overlay/tooltip/index.d.ts"
+    }
   }
 }
