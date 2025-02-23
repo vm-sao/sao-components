@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -23,5 +23,12 @@
   ],
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "exports": {
+    ".": "./index.d.ts",
+    "./index": "./index.d.ts",
+    "./common": "./common/index.d.ts",
+    "./form": "./form/index.d.ts",
+    "./overlay": "./overlay/index.d.ts"
   }
 }
