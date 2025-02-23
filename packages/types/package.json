@@ -1,6 +1,6 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
@@ -24,6 +24,6 @@
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
-  "main": "./src/index.js",
-  "typings": "./src/index.d.ts"
+  "main": "./index.js",
+  "typings": "./index.d.ts"
 }
