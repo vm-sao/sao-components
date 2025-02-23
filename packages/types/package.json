@@ -1,11 +1,12 @@
 {
   "name": "@sao-components/types",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "author": "Elias Vinh",
   "license": "MIT",
   "description": "SAO Components Package for getting typing",
   "homepage": "https://github.com/vm-sao/sao-components",
+  "typings": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/vm-sao/sao-components.git",
