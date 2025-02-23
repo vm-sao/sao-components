@@ -15,6 +15,7 @@
 .sao-card > figure,
 .sao-card > .sao-card__placeholder {
   width: 100%;
+  position: relative;
   aspect-ratio: 1.7777777778;
   border-radius: inherit;
 }
