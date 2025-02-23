@@ -1,7 +1,7 @@
 {
   "name": "angular",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/angular/src",
+  "sourceRoot": "packages/angular",
   "prefix": "sao",
   "projectType": "library",
   "tags": ["vm-sao", "sao-components", "sao-components-angular"],
