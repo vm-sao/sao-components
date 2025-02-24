@@ -21,7 +21,7 @@
       align-items: center;
       gap: 12px;
 
-      > :first-child {
+      > :nth-child(1) {
         flex: 1 1 0;
       }
     }
@@ -31,12 +31,12 @@
       align-items: flex-end;
       gap: 8px;
 
-      > :first-child {
+      > :nth-child(1) {
         width: 100%;
       }
     }
 
-    > :first-child {
+    > :nth-child(1) {
       height: var(--sao-progress-height, 8px);
       border-radius: 100px;
       position: relative;

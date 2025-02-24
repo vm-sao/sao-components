@@ -46,22 +46,22 @@
   height: 100%;
   padding: 0 16px;
 }
-.sao-pagination > main > :first-child,
-.sao-pagination > .sao-pagination__main > :first-child,
+.sao-pagination > main > :nth-child(1),
+.sao-pagination > .sao-pagination__main > :nth-child(1),
 .sao-pagination > main > .sao-pagination__main-control,
 .sao-pagination > .sao-pagination__main > .sao-pagination__main-control {
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
-.sao-pagination > main > :first-child > span,
-.sao-pagination > .sao-pagination__main > :first-child > span,
+.sao-pagination > main > :nth-child(1) > span,
+.sao-pagination > .sao-pagination__main > :nth-child(1) > span,
 .sao-pagination > main > .sao-pagination__main-control > span,
 .sao-pagination > .sao-pagination__main > .sao-pagination__main-control > span,
-.sao-pagination > main > :first-child > .sao-pagination__main-control-label,
+.sao-pagination > main > :nth-child(1) > .sao-pagination__main-control-label,
 .sao-pagination
   > .sao-pagination__main
-  > :first-child
+  > :nth-child(1)
   > .sao-pagination__main-control-label,
 .sao-pagination
   > main
@@ -77,8 +77,8 @@
   line-height: var(--sao-typography-b4-line-height);
   color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-pagination > main > :last-child,
-.sao-pagination > .sao-pagination__main > :last-child,
+.sao-pagination > main > :nth-last-child(1),
+.sao-pagination > .sao-pagination__main > :nth-last-child(1),
 .sao-pagination > main > .sao-pagination__main-overview,
 .sao-pagination > .sao-pagination__main > .sao-pagination__main-overview {
   display: inline-flex;
@@ -100,8 +100,8 @@
 .sao-pagination > .sao-pagination__navigation > * {
   height: 100%;
 }
-.sao-pagination > nav > :first-child,
-.sao-pagination > .sao-pagination__navigation > :first-child,
+.sao-pagination > nav > :nth-child(1),
+.sao-pagination > .sao-pagination__navigation > :nth-child(1),
 .sao-pagination > nav > .sao-pagination__navigation-selection,
 .sao-pagination
   > .sao-pagination__navigation
@@ -112,8 +112,8 @@
   padding: 14px 16px;
   border-left: 1px solid var(--sao-palette-color-branding-background-700);
 }
-.sao-pagination > nav > :first-child > span,
-.sao-pagination > .sao-pagination__navigation > :first-child > span,
+.sao-pagination > nav > :nth-child(1) > span,
+.sao-pagination > .sao-pagination__navigation > :nth-child(1) > span,
 .sao-pagination > nav > .sao-pagination__navigation-selection > span,
 .sao-pagination
   > .sao-pagination__navigation
@@ -121,11 +121,11 @@
   > span,
 .sao-pagination
   > nav
-  > :first-child
+  > :nth-child(1)
   > .sao-pagination__navigation-selection-label,
 .sao-pagination
   > .sao-pagination__navigation
-  > :first-child
+  > :nth-child(1)
   > .sao-pagination__navigation-selection-label,
 .sao-pagination
   > nav
@@ -141,8 +141,8 @@
   line-height: var(--sao-typography-b4-line-height);
   color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-pagination > nav > :last-child,
-.sao-pagination > .sao-pagination__navigation > :last-child,
+.sao-pagination > nav > :nth-last-child(1),
+.sao-pagination > .sao-pagination__navigation > :nth-last-child(1),
 .sao-pagination > nav > .sao-pagination__navigation-action-group,
 .sao-pagination
   > .sao-pagination__navigation
@@ -150,17 +150,17 @@
   display: inline-flex;
   align-items: center;
 }
-.sao-pagination > nav > :last-child > button,
-.sao-pagination > .sao-pagination__navigation > :last-child > button,
+.sao-pagination > nav > :nth-last-child(1) > button,
+.sao-pagination > .sao-pagination__navigation > :nth-last-child(1) > button,
 .sao-pagination > nav > .sao-pagination__navigation-action-group > button,
 .sao-pagination
   > .sao-pagination__navigation
   > .sao-pagination__navigation-action-group
   > button,
-.sao-pagination > nav > :last-child > .sao-pagination__button,
+.sao-pagination > nav > :nth-last-child(1) > .sao-pagination__button,
 .sao-pagination
   > .sao-pagination__navigation
-  > :last-child
+  > :nth-last-child(1)
   > .sao-pagination__button,
 .sao-pagination
   > nav
@@ -177,8 +177,11 @@
   align-items: center;
   justify-content: center;
 }
-.sao-pagination > nav > :last-child > button::before,
-.sao-pagination > .sao-pagination__navigation > :last-child > button::before,
+.sao-pagination > nav > :nth-last-child(1) > button::before,
+.sao-pagination
+  > .sao-pagination__navigation
+  > :nth-last-child(1)
+  > button::before,
 .sao-pagination
   > nav
   > .sao-pagination__navigation-action-group
@@ -187,10 +190,10 @@
   > .sao-pagination__navigation
   > .sao-pagination__navigation-action-group
   > button::before,
-.sao-pagination > nav > :last-child > .sao-pagination__button::before,
+.sao-pagination > nav > :nth-last-child(1) > .sao-pagination__button::before,
 .sao-pagination
   > .sao-pagination__navigation
-  > :last-child
+  > :nth-last-child(1)
   > .sao-pagination__button::before,
 .sao-pagination
   > nav

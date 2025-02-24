@@ -24,17 +24,17 @@
   --sao-icon-size: 16px;
   color: var(--sao-palette-color-branding-foreground-50);
 }
-.sao-breadcrumb > *:not(:last-child) {
+.sao-breadcrumb > *:not(:nth-last-child(1)) {
   padding: 2px 0;
 }
-.sao-breadcrumb > *:not(:last-child)::after {
+.sao-breadcrumb > *:not(:nth-last-child(1))::after {
   content: var(--sao-breadcrumb-separator, '/');
   font-family: 'Roboto', serif;
   font-size: 14px;
   line-height: 20px;
   color: var(--sao-palette-color-branding-foreground-600);
 }
-.sao-breadcrumb > *:last-child {
+.sao-breadcrumb > *:nth-last-child(1) {
   padding: 2px 6px;
   border-radius: 6px;
   background-color: var(--sao-palette-color-branding-primary-900);
